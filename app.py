@@ -19,8 +19,14 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
-def hello_world():
-    return render_template("base.html")
+def home_page():
+    return render_template("home.html")
+
+@app.route("/get_cases")
+def get_cases():
+    cases = list(mongo.db.species.find())
+    print(cases)
+    return "hello world"
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

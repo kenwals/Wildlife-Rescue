@@ -22,11 +22,22 @@ mongo = PyMongo(app)
 def home_page():
     return render_template("home.html")
 
+
 @app.route("/get/cases")
 def get_cases():
     cases = list(mongo.db.species.find())
     print(" ++++++++++", cases)
     return " ..... hello world......."
+
+
+@app.route("/login")
+def login():
+    return " ..... hello world.. LOGIN....."
+
+
+@app.route("/register")
+def register():
+    return " ..... hello world.. REGISTER....."
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

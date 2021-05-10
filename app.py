@@ -23,11 +23,11 @@ def home_page():
     return render_template("home.html")
 
 
-@app.route("/get/cases")
+@app.route("/get_cases")
 def get_cases():
     cases = list(mongo.db.species.find())
     print(" ++++++++++", cases)
-    return " ..... hello world......."
+    return render_template("cases.html")
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -86,7 +86,7 @@ def login():
     return render_template("login.html")
 
 
-@app.route("/profile/<username>", methods=["GET", "POST"])
+@app.route("/profile<username>", methods=["GET", "POST"])
 def profile(username):
     # grab the session user's username from db
     username = mongo.db.users.find_one(

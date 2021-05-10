@@ -21,7 +21,7 @@
               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                   <a class="nav-link"  href="{{ url_for('home_page') }}">Home</a>
-                  <a class="nav-link" href="#">Cases</a>
+                  <a class="nav-link" href="{{ url_for('get_cases') }}">Cases</a>
                   {% if session.user %}
                   <a class="nav-link" href="{{ url_for('profile', username=session['user']) }}"> Profile </a>
                   <a class="nav-link" href="{{ url_for('logout') }}"> Log Out </a>

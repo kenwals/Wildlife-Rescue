@@ -13,8 +13,8 @@
 <title>Wildlife Rescue</title>
 </head>
 <body>
-    <header>
-        <nav class="container-lg navbar navbar-expand-lg navbar-light bg-light">
+    <header id="header">
+        <nav class="container-lg navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
               <a class="navbar-brand" href="#">Wildlife Rescue</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,7 +22,7 @@
               </button>
               <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                 <div class="navbar-nav text-end">
-                  <a class="nav-link"  href="{{ url_for('home_page') }}">Home</a>
+                  <a class="nav-link navbar-link"  href="{{ url_for('home_page') }}">Home</a>
                   <a class="nav-link" href="{{ url_for('get_cases') }}">Cases</a>
                   {% if session.user %}
                   <a class="nav-link" href="{{ url_for('profile', username=session['user']) }}"> Profile </a>
@@ -54,11 +54,27 @@
       {% endblock %}
     </main>
     <footer>
-      <div class="container-xxl">
+      <div class="container-xxl" id="footer">
         <div class="row">
-          <div class="col-md-4">Contact Details: </div>
-          <div class="col-md-4">Address :</div>
-          <div class="col-md-4">Stay Connected: </div>
+          <div class="col-md-4"> <p>Contact Details: </p>
+          <p> email : info@wildliferescue.ie </p>
+          <p> phone : 1890 123 456 789 </p>
+
+          </div>
+          <div class="col-md-4">
+            <p> Address :</p>
+            <p> WILDLIFE RESCUE </p>
+            <p>GATE LODGE HOUSE</p>
+              <p>SOUTH CIRCULAR ROAD</p>
+                <p>DUBLIN 8</p>
+                  <p>D08 Y336</p>
+
+          </div>
+          <div class="col-md-4">
+            <p>Stay Connected: </p>
+          
+          <i class="fab fa-twitter"></i><i class="fab fa-facebook-f"></i><i class="fab fa-instagram"></i>
+        </div>
         </div>  
       </div>
     </footer>

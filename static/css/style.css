@@ -1,7 +1,27 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
+html {
+    font-size: 68%;
+}
 body{
     font-family: 'Rubik', sans-serif; 
     font-size: 1.6rem;
+}
+
+#header {
+    background-color: green;
+    color: white;
+}
+
+.navbar-light .navbar-brand {
+    color: white;
+}
+.navbar-light .navbar-nav .nav-link{
+    color: white;
+}
+
+#footer {
+    background-color: green;
+    color: white;
 }

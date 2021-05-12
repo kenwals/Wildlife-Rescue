@@ -106,6 +106,28 @@ def logout():
     return redirect(url_for("login"))
 
 
+@app.route("/add/case", methods=["GET", "POST"])
+def add_case():
+    if request.method == "POST":
+        case = {
+            "date": request.form.get("date"),
+            "location": request.form.get("location"),
+            "reason": request.form.get("reason"),
+            "criminal": request.form.get("criminal"),
+            "species": request.form.get("species"),
+            "notes": request.form.get("notes"),
+            "created_by": session["user"]
+        }
+        mongo.db.cases.insert_one(case)
+        flash("case Successfully Added")
+        return redirect(url_for("get_cases"))
+
+    reasons = mongo.db.reason.find().sort("status", 1)
+    speciess = mongo.db.species.find().sort("species", 1)
+    return render_template("add-case.html", reasons=reasons, speciess=speciess)
+
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

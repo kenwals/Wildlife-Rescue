@@ -25,9 +25,8 @@ def home_page():
 
 @app.route("/get/cases")
 def get_cases():
-    cases = list(mongo.db.species.find())
-    print(" ++++++++++", cases)
-    return render_template("cases.html")
+    cases = list(mongo.db.cases.find())
+    return render_template("cases.html", cases=cases )
 
 
 @app.route("/register", methods=["GET", "POST"])

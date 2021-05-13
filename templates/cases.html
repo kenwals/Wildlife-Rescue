@@ -1,7 +1,30 @@
 {% extends "base.html" %}
 {% block content %}
+<div class="container-lg"> 
+    <div class="row">
+      <div class="col-md-12">
 
-<h2>cases</h2>
 
+<h2 class="my-3"> Current Cases</h2>
+
+<div class="row">
+    {% if cases|length > 0 %}
+        {% for case in cases %}
+    <div class="col-sm-6 g-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"> {{ case.species }} , {{ case.date }}</h5>
+          <p class="card-text"> reason :  {{ case.reason }} ,  by : {{ case.created_by }}  </p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+        {% endfor %}
+    {% else %}    
+    <h3 class="my-3" > No Results found</h3>
+    {% endif %}
+</div>
+</div>
+</div>
 
 {% endblock %}

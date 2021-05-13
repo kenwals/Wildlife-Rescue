@@ -25,6 +25,7 @@
                   <a class="nav-link navbar-link"  href="{{ url_for('home_page') }}">Home</a>
                   <a class="nav-link" href="{{ url_for('get_cases') }}">Cases</a>
                   {% if session.user %}
+                  <a class="nav-link" href="{{ url_for('add_case') }}"> New Case </a>
                   <a class="nav-link" href="{{ url_for('profile', username=session['user']) }}"> Profile </a>
                   <a class="nav-link" href="{{ url_for('logout') }}"> Log Out </a>
                   {% else %}

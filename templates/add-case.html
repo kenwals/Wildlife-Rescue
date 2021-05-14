@@ -10,6 +10,15 @@
     <input type="date" class="form-control" id="date" name="date">
   </div>
   <div class="mb-3">
+    <label for="species" class="form-label"> Species : </label>
+    <select class="form-select" id="species" aria-label="Species" name="species">
+      <option selected>Choose species of wildlife animal</option>
+      {% for species in speciess %}
+      <option value="{{ species.species }}">{{ species.species }}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <div class="mb-3">
     <label for="location" class="form-label">Location : </label>
     <input type="text" class="form-control" id="location" name="location" placeholder="Please enter the location you found the wildlife animal">
   </div>
@@ -30,15 +39,7 @@
         <option value="No">No</option>
       </select>
     </div>
-    <div class="mb-3">
-      <label for="species" class="form-label"> Species : </label>
-      <select class="form-select" id="species" aria-label="Species" name="species">
-        <option selected>Choose species of wildlife animal</option>
-        {% for species in speciess %}
-        <option value="{{ species.species }}">{{ species.species }}</option>
-        {% endfor %}
-      </select>
-    </div>
+
 </div>
 <div class="col-md-6">
   <div class="mb-3">

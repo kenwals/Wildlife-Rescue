@@ -128,6 +128,24 @@ def add_case():
     return render_template("add-case.html", reasons=reasons, speciess=speciess)
 
 
+@app.route("/edit/case/<case_id>", methods=["GET", "POST"])
+def edit_case(case_id):
+    if request.method == "POST":
+        submit = {
+            "date": request.form.get("date"),
+            "location": request.form.get("location"),
+            "reason": request.form.get("reason"),
+            "criminal": request.form.get("criminal"),
+            "species": request.form.get("species"),
+            "notes": request.form.get("notes")
+        }
+        mongo.db.cases.update({"_id": ObjectId(case_id)}, submit)
+        flash("Case Successfully Updated")
+
+    case = mongo.db.cases.find_one({"_id": ObjectId(case_id)})
+    reasons = mongo.db.reason.find().sort("Reason", 1)
+    speciess = mongo.db.species.find().sort("species", 1)
+    return render_template("edit-case.html", case=case, reasons=reasons, speciess=speciess)
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

@@ -16,7 +16,7 @@
           <h5 class="card-title"> ( Result {{ loop.index }} of {{loop.length }} ) {{ case.species }} , {{ case.date }}</h5>
           <p class="card-text"> reason :  {{ case.reason }} </p>
           <p class="card-text"> created by : {{ case.created_by }}  </p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <a href="{{ url_for('edit_case', case_id=case._id) }}" class="btn btn-primary">Edit Case</a>
         </div>
       </div>
     </div>

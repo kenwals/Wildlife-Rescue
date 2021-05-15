@@ -7,12 +7,11 @@
 <div class="col-md-6">
   <div class="mb-3">
     <label for="date"  class="form-label">Date :</label>
-    <input type="date" class="form-control" id="date" name="date">
+    <input type="date" class="form-control" id="date" name="date" required>
   </div>
   <div class="mb-3">
     <label for="species" class="form-label"> Species : </label>
-    <select class="form-select" id="species" aria-label="Species" name="species">
-      <option selected>Choose species of wildlife animal</option>
+    <select class="form-select" id="species" aria-label="Species" name="species" required>
       {% for species in speciess %}
       <option value="{{ species.species }}">{{ species.species }}</option>
       {% endfor %}
@@ -20,23 +19,21 @@
   </div>
   <div class="mb-3">
     <label for="location" class="form-label">Location : </label>
-    <input type="text" class="form-control" id="location" name="location" placeholder="Please enter the location you found the wildlife animal">
+    <input type="text" class="form-control" id="location" name="location" placeholder="Please enter the location you found the wildlife animal" required>
   </div>
   <div class="mb-3">
     <label for="reason" class="form-label">Reason for rescue :</label>
-    <select class="form-select" id="reason" aria-label="Reason" name="reason">
-      <option selected>choose reason for case</option>
+    <select class="form-select" id="reason" aria-label="Reason" name="reason" placeholder="choose reason for case">
       {% for reason in reasons %}
-      <option value="{{ reason.status }}">{{ reason.status }}</option>
+      <option value="{{ reason.Reason }}">{{ reason.Reason }}</option>
       {% endfor %}
     </select>
   </div>
   <div class="mb-3">
     <label for="criminal" class="form-label"> Deemed Criminal : </label> 
-    <select class="form-select" id="criminal" aria-label="Deemed criminal" name="criminal">
-        <option selected>Deemed Criminal?</option>
+    <select class="form-select" id="criminal" aria-label="Deemed criminal" name="criminal" placeholder="Deemed Criminal?">
         <option value="Yes">Yes</option>
-        <option value="No">No</option>
+        <option value="No" selected>No</option>
       </select>
     </div>
 

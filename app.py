@@ -117,7 +117,7 @@ def add_case():
             "species": request.form.get("species"),
             "notes": request.form.get("notes"),
             "status": "Pending",
-            "created_by": session["name"]
+            "created_by": session["user"]
         }
         mongo.db.cases.insert_one(case)
         flash("case Successfully Added")

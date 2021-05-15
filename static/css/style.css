@@ -1,5 +1,8 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+* {
+    box-sizing: border-box;
+}
 
 html {
     font-size: 68%;
@@ -7,21 +10,23 @@ html {
 body{
     font-family: 'Rubik', sans-serif; 
     font-size: 1.6rem;
+    background-color: #FFFFFD ;
+    color:  #6C6666  ;
 }
 
 #header {
-    background-color: green;
-    color: white;
+    background-color: #ADCE4B ;
+    color: #000;
 }
 
 .navbar-light .navbar-brand {
-    color: white;
+    color: #000 ;
 }
 .navbar-light .navbar-nav .nav-link{
-    color: white;
+    color: #000 ;
 }
 
 #footer {
-    background-color: green;
-    color: white;
+    background-color: #6C6666  ;
+    color:  #FFFFFD  ;
 }

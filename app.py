@@ -91,9 +91,15 @@ def profile(username):
     # grab the session user's username from db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-
+    fullname = mongo.db.users.find_one(
+        {"username": session["user"]})["full-name"]
+    phone = mongo.db.users.find_one(
+        {"username": session["user"]})["phone"]
+    id = mongo.db.users.find_one(
+        {"username": session["user"]})["_id"]
+        
     if session["user"]:
-        return render_template("profile.html", username=username)
+        return render_template("profile.html", username=username, fullname=fullname, phone=phone, id=id)
 
     return redirect(url_for("login"))
 

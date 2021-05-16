@@ -120,6 +120,10 @@ def logout():
 @app.route("/add/case", methods=["GET", "POST"])
 def add_case():
     if request.method == "POST":
+        # this generates a new unique case number
+        caseno = mongo.db.casenumbers.find_one_and_update(
+            {"_id": ObjectId("60a145f44eb297c0b8512ea5")},
+            {"$inc": {"sequence_value": 1}})
         case = {
             "date": request.form.get("date"),
             "location": request.form.get("location"),
@@ -128,10 +132,11 @@ def add_case():
             "species": request.form.get("species"),
             "notes": request.form.get("notes"),
             "status": "Pending",
+            "case-number": caseno["sequence_value"],
             "created_by": session["user"]
         }
         mongo.db.cases.insert_one(case)
-        flash("case Successfully Added")
+        flash("Case is Successfully Added")
         return redirect(url_for("get_cases"))
 
     reasons = mongo.db.reason.find().sort("status", 1)

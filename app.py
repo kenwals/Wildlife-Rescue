@@ -26,7 +26,7 @@ def home_page():
 @app.route("/get/cases")
 def get_cases():
     cases = list(mongo.db.cases.find())
-    return render_template("cases.html", cases=cases )
+    return render_template("cases.html", cases=cases)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -70,7 +70,7 @@ def login():
                         session["user"] = request.form.get("username").lower()
                         session["name"] = existing_user["full-name"]
                         flash("Welcome, {}".format(
-                            session["name"] ))
+                            session["name"]))
                         return redirect(url_for(
                             "profile", username=session["user"]))
             else:
@@ -97,9 +97,14 @@ def profile(username):
         {"username": session["user"]})["phone"]
     id = mongo.db.users.find_one(
         {"username": session["user"]})["_id"]
-        
     if session["user"]:
-        return render_template("profile.html", username=username, fullname=fullname, phone=phone, id=id)
+        return render_template(
+            "profile.html",
+            username=username,
+            fullname=fullname,
+            phone=phone,
+            id=id
+        )
 
     return redirect(url_for("login"))
 
@@ -151,7 +156,12 @@ def edit_case(case_id):
     case = mongo.db.cases.find_one({"_id": ObjectId(case_id)})
     reasons = mongo.db.reason.find().sort("Reason", 1)
     speciess = mongo.db.species.find().sort("species", 1)
-    return render_template("edit-case.html", case=case, reasons=reasons, speciess=speciess)
+    return render_template(
+        "edit-case.html",
+        case=case,
+        reasons=reasons,
+        speciess=speciess
+    )
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

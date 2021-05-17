@@ -13,10 +13,14 @@
     <div class="col-sm-6 g-4">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title"> ( Result {{ loop.index }} of {{loop.length }} ) {{ case.species }} , {{ case.date }}</h5>
-          <p class="card-text"> reason :  {{ case.reason }} </p>
-          <p class="card-text"> created by : {{ case.created_by }}  </p>
+          <h4 class="card-title fs-3 fw-bold"> {{ case.species }} </h4>
+          <p class="card-text fs-4"> Reason :  {{ case.reason }} </p>
+          <p class="card-text fs-4"> Status :  {{ case.status }} </p>
+          <p class="card-text fs-4"> created by : {{ case.created_by }}  </p>
           <a href="{{ url_for('edit_case', case_id=case._id) }}" class="btn btn-primary">Edit Case</a>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted"> Case ID: {{ case.case_number }} , {{ case.date }} , ({{ loop.index }} of {{loop.length }})</small>
         </div>
       </div>
     </div>

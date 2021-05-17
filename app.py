@@ -131,7 +131,7 @@ def add_case():
             "species": request.form.get("species"),
             "notes": request.form.get("notes"),
             "status": "Pending",
-            "case-number": caseno["sequence_value"],
+            "case_number": caseno["sequence_value"],
             "created_by": session["user"]
         }
         mongo.db.cases.insert_one(case)

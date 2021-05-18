@@ -152,7 +152,10 @@ def edit_case(case_id):
             "reason": request.form.get("reason"),
             "criminal": request.form.get("criminal"),
             "species": request.form.get("species"),
-            "notes": request.form.get("notes")
+            "notes": request.form.get("notes"),
+            "status": request.form.get("status"),
+            "case_number": request.form.get("case_number"),
+            "created_by": session["user"]
         }
         mongo.db.cases.update({"_id": ObjectId(case_id)}, submit)
         flash("Case Successfully Updated")
@@ -160,11 +163,13 @@ def edit_case(case_id):
     case = mongo.db.cases.find_one({"_id": ObjectId(case_id)})
     reasons = mongo.db.reason.find().sort("Reason", 1)
     speciess = mongo.db.species.find().sort("species", 1)
+    statuses = mongo.db.status.find().sort("status", 1)
     return render_template(
         "edit-case.html",
         case=case,
         reasons=reasons,
-        speciess=speciess
+        speciess=speciess,
+        statuses=statuses
     )
 
 if __name__ == "__main__":

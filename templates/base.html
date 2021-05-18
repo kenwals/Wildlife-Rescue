@@ -27,13 +27,13 @@
                 <div class="navbar-nav text-end">
                   <a class="nav-link navbar-link"  href="{{ url_for('home_page') }}">Home</a>
                   {% if session.user %}
-                  <a class="nav-link" href="{{ url_for('get_cases') }}">Cases</a>
+                  <a class="nav-link" href="{{ url_for('get_cases') }}"> Cases </a>
                   <a class="nav-link" href="{{ url_for('add_case') }}"> New Case </a>
                   <a class="nav-link" href="{{ url_for('profile', username=session['user']) }}"> Profile </a>
-                  <a class="nav-link" href="{{ url_for('logout') }}"> Log Out </a>
+                  <a class="nav-link" href="{{ url_for('logout') }}"> Log Out <i class="bi bi-box-arrow-right"></i> </a>
                   {% else %}
                   <a class="nav-link" href="{{ url_for('register') }}">Register</a>
-                  <a class="nav-link" href="{{ url_for('login') }}">login</a>
+                  <a class="nav-link" href="{{ url_for('login') }}"> Login <i class="bi bi-box-arrow-in-right"></i></a>
                   {% endif %}
                   <a class="nav-link disabled visually-hidden" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                 </div>

@@ -1,10 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="container-lg">
-<h3 class="my-3">Edit Case</h3>
+<h3 class="my-3">Edit Case (# {{ case.case_number }})</h3>
 
 <form class="row g-3 mx-auto" method="POST" action="{{ url_for('edit_case', case_id=case._id) }}">
 <div class="col-md-6">
+  <div class="mb-3 visually-hidden">
+    <label for="casenumber" class="form-label visually-hidden">Case Number: </label>
+	<input class="form-control visually-hidden" type="text" aria-label="case number" id="casenumber" name="case_number" value="{{ case.case_number }}">
+  </div>
   <div class="mb-3">
     <label for="date"  class="form-label">Date :</label>
     <input type="date" class="form-control" id="date" name="date" value="{{ case.date }}" required>
@@ -47,6 +51,18 @@
 
 </div>
 <div class="col-md-6">
+  <div class="mb-3">
+    <label for="status" class="form-label">Status:</label>
+    <select class="form-select" id="status" aria-label="status" name="status" >
+      {% for status in statuses %}
+      {% if  status.status == case.status %}
+      <option value="{{ status.status }}" selected>{{ status.status }}</option>
+      {% else %}
+      <option value="{{ status.status }}">{{ status.status }}</option>
+      {% endif %}
+      {% endfor %}
+    </select>
+  </div>
   <div class="mb-3">
   <label for="notes" class="form-label">Any notes or comments</label>
   <textarea class="form-control" name="notes" id="notes" rows="10" cols="30">{{ case.notes }}</textarea>

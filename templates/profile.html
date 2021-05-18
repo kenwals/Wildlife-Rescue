@@ -3,17 +3,30 @@
 
 <div class="container-lg">
 <div class="row">
-    <div class="col">
+    <div class="col-md-12">
         <div>
             <h3 class="text-center">
                 {{ username }}'s Profile
             </h3>
-            <br>  {{ id }}
-            <br>  {{ phone }}
-            <br>  {{ fullname }}     
         </div>
     </div>
 </div>
+
+<form class="row g-3">
+    <div class="col-md-12">
+        <label for="inputName" class="form-label">Full Name</label>
+        <input type="text" class="form-control" id="inputName" placeholder="{{ fullname }}">
+    </div>
+    <div class="col-12">
+        <label for="inputAddress" class="form-label">Phone Number</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="{{ phone }}">
+    </div>
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">Sign in</button>
+    </div>
+</form>
+            <br>  {{ id }}
+
 </div>
 
 {% endblock %}

@@ -12,21 +12,31 @@
     </div>
 </div>
 
-<form class="row g-3">
-    <div class="col-md-12">
+<form class="row g-3" method="POST" action="{{ url_for('profile', username=session["user"]) }}">
+    <fieldset id="fieldsetProfile" disabled="disabled col-md-12">
+    <div class="visually-hidden">
+        <label for="profileId" class="form-label visually-hidden">Profile Number: </label>
+        <input class="form-control visually-hidden" type="text" aria-label="profile id number" id="profileId" name="profileId" value="{{ id }}">
+    </div>
+    <div>
         <label for="inputName" class="form-label">Full Name</label>
-        <input type="text" class="form-control" id="inputName" placeholder="{{ fullname }}">
+        <input type="text" class="form-control" id="inputName" name="name" value="{{ fullname }}">
     </div>
-    <div class="col-12">
+    <div>
         <label for="inputAddress" class="form-label">Phone Number</label>
-        <input type="text" class="form-control" id="inputAddress" placeholder="{{ phone }}">
+        <input type="text" class="form-control" id="inputAddress" name="phone" value="{{ phone }}">
     </div>
-    <div class="col-12">
-        <button type="submit" class="btn btn-primary">Sign in</button>
+    <div>
+        <button id="updateProfileBtn"" type="submit" class="btn btn-primary visually-hidden">Update your contact details</button>
     </div>
+    </fieldset>
+    <div class="mb-3">
+        <button id="editProfileBtn"" type="button" class="btn btn-primary">Edit your contact details</button>
+    </div>
+
 </form>
-            <br>  {{ id }}
+            
 
 </div>
-
+<script src="{{ url_for('static', filename='js/profile-edit.js') }}"></script>
 {% endblock %}

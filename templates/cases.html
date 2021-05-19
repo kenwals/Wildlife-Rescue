@@ -6,19 +6,27 @@
       <h2 class="my-3"> Current Cases</h2>
       </div>
       <div class="col-md-6">
+        <form action="{{ url_for('search') }}" method="post">
         <div class="input-group mb-3 my-3">
-          <i class="bi bi-search pe-3"></i>
-          <input type="text" class="form-control" aria-label="Text input with dropdown button">
-          <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Filter <i class="bi bi-funnel-fill"></i></button>
-          <ul class="dropdown-menu dropdown-menu-end">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Separated link</a></li>
-          </ul>
+          
+          <input type="text" class="form-control" name="query" id="query" minlength="3" aria-label="Recipient's username" aria-describedby="button-addon2" required>
+          <div class="btn-group">
+            <button type="submit" class="btn btn-outline-secondary"> Search <i class="bi bi-search pe-3"></i> </button>
+            <button type="button" class="btn dropdown-toggle dropdown-toggle-split btn-outline-secondary" data-bs-toggle="dropdown" aria-expanded="false">
+              <span class="visually-hidden">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Separated link</a></li>
+            </ul>
+          </div>
+     
         </div>
-      </div>
+     
+      </div> </form>
     </div>
 
 <div class="row">

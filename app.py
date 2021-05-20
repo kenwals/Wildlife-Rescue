@@ -99,7 +99,7 @@ def profile(username):
             "full-name": request.form.get("name"),
             "phone": request.form.get("phone"),
             }
-        mongo.db.users.update({"username": session["user"]}, { "$set": submit})
+        mongo.db.users.update_one({"username": session["user"]}, { "$set": submit})
         flash("Contact Details Successfully Updated")
 
     # grab the session user's username from db
@@ -167,7 +167,7 @@ def edit_case(case_id):
             "notes": request.form.get("notes"),
             "status": request.form.get("status")
         }
-        mongo.db.cases.update({"_id": ObjectId(case_id)}, { "$set": submit})
+        mongo.db.cases.update_one({"_id": ObjectId(case_id)}, {"$set": submit})
         flash("Case Successfully Updated")
 
     case = mongo.db.cases.find_one({"_id": ObjectId(case_id)})
@@ -183,8 +183,8 @@ def edit_case(case_id):
     )
 
 @app.route("/delete/case/<case_id>")
-def delete_task(case_id):
-    mongo.db.tasks.remove({"_id": ObjectId(case_id)})
+def delete_case(case_id):
+    mongo.db.cases.delete_one({"_id": ObjectId(case_id)})
     flash("Case Successfully Deleted")
     return redirect(url_for("get_cases"))
 

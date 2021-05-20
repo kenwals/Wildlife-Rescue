@@ -160,11 +160,9 @@ def edit_case(case_id):
             "criminal": request.form.get("criminal"),
             "species": request.form.get("species"),
             "notes": request.form.get("notes"),
-            "status": request.form.get("status"),
-            "case_number": request.form.get("case_number"),
-            "created_by": session["user"]
+            "status": request.form.get("status")
         }
-        mongo.db.cases.update({"_id": ObjectId(case_id)}, submit)
+        mongo.db.cases.update({"_id": ObjectId(case_id)}, { "$set": submit})
         flash("Case Successfully Updated")
 
     case = mongo.db.cases.find_one({"_id": ObjectId(case_id)})

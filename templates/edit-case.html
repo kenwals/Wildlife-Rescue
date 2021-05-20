@@ -69,11 +69,14 @@
   </div>
   <div class="mb-3">
     <button id="saveCaseBtn"" type="submit" class="btn btn-success visually-hidden">Save changes</button>
+    <a id="deleteCaseBtn" class="btn btn-danger visually-hidden" href="{{ url_for('delete_case', case_id=case._id) }}">Delete Case</a>
   </div>
 </fieldset>
+{% if session.user|lower == case.created_by|lower %}
 <div class="mb-3">
   <button id="editCaseBtn"" type="button" class="btn btn-primary">Edit this case</button>
 </div>
+{% endif %}
 <div class="mb-3">
   <a href="{{ url_for('get_cases') }}" class="btn btn-link fs-4">Go Back</a>
 </div>

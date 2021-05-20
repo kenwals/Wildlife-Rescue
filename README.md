@@ -96,6 +96,12 @@ The Database will be done using Python and Flask fronted onto a MongoDB backend.
 
 ### Surface
 
+#### Colours
+
+#### Icons
+
+#### Images
+
 #### Fonts:
 
 Rubik
@@ -184,6 +190,37 @@ You should also mention in this section any interesting bugs or problems you dis
 
 If this section grows too long, you may want to split it off into a separate file and link to it from here.
 
+### Performance Testing
+
+### Bugs encountered on the way
+
+### Known issues
+
+### Project barriers and solutions
+
+### Version control
+
+### Functionality Testing
+
+### Responsiveness Testing
+
+### CSS3 validator
+
+### HTML5 validator
+
+### JavaScript validator
+
+### Usability Testing
+
+### Compatibility Testing
+
+### Testing User Stories
+
+#### Visitor Stories
+
+#### Owner Story
+
+
 ## Deployment
 
 This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
@@ -195,14 +232,26 @@ In particular, you should provide all details of the differences between the dep
 
 In addition, if it is not obvious, you should also describe how to run your code locally.
 
+### GitHub
+
+### Gitpod
+
+### GitHub Pages
+
+### Local Deployment
+
+### Forking
 
 ## Credits
 
 ### Content
 - The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
 
+### Resources
+
 ### Media
 - The photos used in this site were obtained from ...
+
 
 ### Acknowledgements
 

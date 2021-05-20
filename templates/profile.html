@@ -14,10 +14,6 @@
 
 <form class="row g-3" method="POST" action="{{ url_for('profile', username=session["user"]) }}">
     <fieldset id="fieldsetProfile" disabled="disabled col-md-12">
-    <div class="visually-hidden">
-        <label for="profileId" class="form-label visually-hidden">Profile Number: </label>
-        <input class="form-control visually-hidden" type="text" aria-label="profile id number" id="profileId" name="profileId" value="{{ id }}">
-    </div>
     <div>
         <label for="inputName" class="form-label">Full Name</label>
         <input type="text" class="form-control" id="inputName" name="name" value="{{ fullname }}">

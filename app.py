@@ -94,6 +94,14 @@ def login():
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
+    if request.method == "POST":
+        submit = {
+            "full-name": request.form.get("name"),
+            "phone": request.form.get("phone"),
+            }
+        mongo.db.users.update({"username": session["user"]}, { "$set": submit})
+        flash("Contact Details Successfully Updated")
+
     # grab the session user's username from db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
@@ -101,15 +109,12 @@ def profile(username):
         {"username": session["user"]})["full-name"]
     phone = mongo.db.users.find_one(
         {"username": session["user"]})["phone"]
-    id = mongo.db.users.find_one(
-        {"username": session["user"]})["_id"]
     if session["user"]:
         return render_template(
             "profile.html",
             username=username,
             fullname=fullname,
-            phone=phone,
-            id=id
+            phone=phone
         )
 
     return redirect(url_for("login"))
@@ -176,6 +181,12 @@ def edit_case(case_id):
         speciess=speciess,
         statuses=statuses
     )
+
+@app.route("/delete/case/<case_id>")
+def delete_task(case_id):
+    mongo.db.tasks.remove({"_id": ObjectId(case_id)})
+    flash("Case Successfully Deleted")
+    return redirect(url_for("get_cases"))
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

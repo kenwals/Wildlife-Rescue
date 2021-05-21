@@ -141,6 +141,7 @@ def add_case():
             "reason": request.form.get("reason"),
             "criminal": request.form.get("criminal"),
             "species": request.form.get("species"),
+            "image_url": request.form.get("image_url"),
             "notes": request.form.get("notes"),
             "status": "Pending",
             "case_number": caseno["sequence_value"],
@@ -164,6 +165,7 @@ def edit_case(case_id):
             "reason": request.form.get("reason"),
             "criminal": request.form.get("criminal"),
             "species": request.form.get("species"),
+            "image_url": request.form.get("image_url"),
             "notes": request.form.get("notes"),
             "status": request.form.get("status")
         }

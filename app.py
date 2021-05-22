@@ -3,6 +3,7 @@ from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
+from flask_paginate import Pagination, get_page_args
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
@@ -25,15 +26,56 @@ def home_page():
 
 @app.route("/get/cases")
 def get_cases():
-    cases = list(mongo.db.cases.find())
-    return render_template("cases.html", cases=cases)
+    page, per_page, offset = get_page_args(page_parameter='page', per_page_parameter='per_page')
+    # If you are hard coding the number of items per page then uncomment the two lines below
+    # per_page = 6
+    # offset = page * per_page
+
+    # Gets all the values
+    cases = mongo.db.cases.find()
+
+    # Gets the total values to be used later
+    total = cases.count()
+
+    # Paginates the values
+    paginatedCases = cases[offset: offset + per_page]
+
+    pagination = Pagination(page=page, per_page=per_page, total=total,
+                            css_framework='bootstrap5')
+
+    return render_template("cases.html", 
+                            cases=paginatedCases,
+                            page=page,
+                            per_page=per_page,
+                            pagination=pagination,
+                            )
 
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
+    page, per_page, offset = get_page_args(page_parameter='page', per_page_parameter='per_page')
+    # If you are hard coding the number of items per page then uncomment the two lines below
+    # per_page = 6
+    # offset = page * per_page
+
+    # Gets all the values
     query = request.form.get("query")
-    cases = list(mongo.db.cases.find({"$text": {"$search": query}}))
-    return render_template("cases.html", cases=cases)
+    cases = mongo.db.cases.find({"$text": {"$search": query}})
+
+    # Gets the total values to be used later
+    total = cases.count()
+
+    # Paginates the values
+    paginatedCases = cases[offset: offset + per_page]
+
+    pagination = Pagination(page=page, per_page=per_page, total=total,
+                            css_framework='bootstrap5')
+    return render_template("cases.html", 
+                            cases=paginatedCases,
+                            page=page,
+                            per_page=per_page,
+                            pagination=pagination,
+                            )
 
 
 @app.route("/register", methods=["GET", "POST"])

@@ -35,7 +35,7 @@ def get_cases():
     cases = mongo.db.cases.find()
 
     # Gets the total values to be used later
-    total = cases.count()
+    total = mongo.db.cases.count_documents({})
 
     # Paginates the values
     paginatedCases = cases[offset: offset + per_page]
@@ -63,7 +63,7 @@ def search():
     cases = mongo.db.cases.find({"$text": {"$search": query}})
 
     # Gets the total values to be used later
-    total = cases.count()
+    total = mongo.db.cases.count_documents({"$text": {"$search": query}})
 
     # Paginates the values
     paginatedCases = cases[offset: offset + per_page]

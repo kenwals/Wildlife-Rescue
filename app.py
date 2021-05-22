@@ -198,7 +198,7 @@ def add_case():
     return render_template("add-case.html", reasons=reasons, speciess=speciess)
 
 
-@app.route("/edit/case/<case_id>", methods=["GET", "POST"])
+@app.route("/view/case/<case_id>", methods=["GET", "POST"])
 def edit_case(case_id):
     if request.method == "POST":
         submit = {
@@ -219,7 +219,7 @@ def edit_case(case_id):
     speciess = mongo.db.species.find().sort("species", 1)
     statuses = mongo.db.status.find().sort("status", 1)
     return render_template(
-        "edit-case.html",
+        "view-case.html",
         case=case,
         reasons=reasons,
         speciess=speciess,

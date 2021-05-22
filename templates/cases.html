@@ -30,7 +30,8 @@
     </div>
 
 <div class="row">
-    {% if cases|length > 0 %}
+    {% if cases %}
+    {{ pagination.links }}
         {% for case in cases %}
     <div class="col-sm-6 g-4">
       <div class="card">
@@ -47,6 +48,7 @@
       </div>
     </div>
         {% endfor %}
+        {{ pagination.links }}
     {% else %}    
     <h3 class="my-3" > No Results found</h3>
     {% endif %}

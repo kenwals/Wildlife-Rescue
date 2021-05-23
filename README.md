@@ -2,7 +2,7 @@
 
 This is a Data Centric web app for a fictional wildlife animal rescue charity.
 
-There are various wildlife charities that rescue or rehabilitate animals whom have been involved in accidents or become ill. Sometimes members of the public find these animals and become their carers. 
+There are various wildlife charities that rescue or rehabilitate animals whom have been involved in accidents or become ill. Sometimes members of the public find these animals and become their carers.
 
 A part of taking care of the animals is completing paperwork as the animal's care may requires licensing. The aim of this app is to make the process easier. Members of the public can register incident cases and the charity or Governing body can follow up .
 
@@ -38,7 +38,7 @@ As an owner of this database site, I want to be able to search and filter result
 
 ### Structure
 
-This site is put together with HTML, using the bootstrap framework along with CSS. 
+This site is put together with HTML, using the bootstrap framework along with CSS.
 
 The Database will be done using Python and Flask fronted onto a MongoDB backend.
 
@@ -69,9 +69,9 @@ The Database will be done using Python and Flask fronted onto a MongoDB backend.
 3. date stamp (automatically generated when record created)
 4. reported by (username from logged in session)
 5. date of incident
-6. Status 
-7. location INDEXED FIELD ? 
-8. Photo image URL address 
+6. Status
+7. location INDEXED FIELD ?
+8. Photo image URL address
 9. species INDEXED FIELD
 10. reason INDEXED FIELD
 11. criminal (yes/No)
@@ -86,13 +86,7 @@ The Database will be done using Python and Flask fronted onto a MongoDB backend.
 5. Phone number:
 6. superuser (default to no):
 
-
-
 #### Wireframe
-
-
-
-
 
 ### Surface
 
@@ -102,20 +96,16 @@ The Database will be done using Python and Flask fronted onto a MongoDB backend.
 
 #### Images
 
-#### Fonts:
+#### Fonts
 
 Rubik
-
-
-
-
-
 
 ## Features
 
 In this section, you should go over the different parts of your project, and describe each in a sentence or so.
 
 ### Existing Features
+
 - Feature 1 - allows users X to achieve Y, by having them fill out Z
 - ...
 
@@ -124,6 +114,7 @@ For some/all of your features, you may choose to reference the specific project 
 In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
 
 ### Features Left to Implement
+
 - Another feature idea
 
 ## Technologies Used
@@ -167,8 +158,6 @@ In this section, you should mention all of the languages, frameworks, libraries,
 - [markdown table of contents creator](https://ecotrust-canada.github.io/markdown-toc/)
 - [site preview tool](http://ami.responsivedesign.is/)
 - [Grammarly](https://chrome.google.com/webstore/detail/grammarly-for-chrome/kbfnbcaeplbcioakkpcpgfkobkghlhen?hl=en)
-
-
 
 ## Testing
 
@@ -220,12 +209,12 @@ If this section grows too long, you may want to split it off into a separate fil
 
 #### Owner Story
 
-
 ## Deployment
 
 This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
 
 In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
+
 - Different values for environment variables (Heroku Config Vars)?
 - Different configuration files?
 - Separate git branch?
@@ -245,13 +234,14 @@ In addition, if it is not obvious, you should also describe how to run your code
 ## Credits
 
 ### Content
+
 - The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
 
 ### Resources
 
 ### Media
-- The photos used in this site were obtained from ...
 
+- The photos used in this site were obtained from ...
 
 ### Acknowledgements
 

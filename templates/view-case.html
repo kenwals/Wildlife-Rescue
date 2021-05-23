@@ -76,7 +76,7 @@
     <a id="deleteCaseBtn" class="btn btn-danger visually-hidden" href="{{ url_for('delete_case', case_id=case._id) }}">Delete Case</a>
   </div>
 </fieldset>
-{% if session.user|lower == case.created_by|lower %}
+{% if (session.user|lower == case.created_by|lower) or (session.user|lower == 'admin@wildliferescue.com')  %}
 <div class="mb-3">
   <button id="editCaseBtn"" type="button" class="btn btn-primary">Edit this case</button>
 </div>

@@ -23,14 +23,13 @@
               <li><a class="dropdown-item" href="#">Separated link</a></li>
             </ul>
           </div>
-     
         </div>
-     
       </div> </form>
     </div>
-
 <div class="row">
+    <div class="text-center">
     {{ pagination.info }}
+    </div>
     {% for case in cases %}
     <div class="col-sm-6 g-4">
       <div class="card">
@@ -48,11 +47,6 @@
     </div>
     {% endfor %}
     {{ pagination.links }}
-
 </div>
-
-
-
 </div>
-
 {% endblock %}

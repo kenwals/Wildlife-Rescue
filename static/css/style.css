@@ -27,6 +27,34 @@ body{
     color: #000 ;
 }
 
+.alert-heron{
+    background-color: #FEE579 ;
+}
+
+.minimum-height{
+    min-height: 40vh;
+}
+
+.maximum-width{
+    max-width: 33rem;
+}
+
+.pagination-page-info {
+    padding: .6em;
+    padding-left: 0;
+    width: 40em;
+    margin: .5em;
+    margin-left: 0;
+    font-size: 12px;
+}
+.pagination-page-info b {
+    color: black;
+    background: #6aa6ed;
+    padding-left: 2px;
+    padding: .1em .25em;
+    font-size: 150%;
+}
+
 #footer {
     background-color: #6C6666  ;
     color:  #FFFFFD  ;

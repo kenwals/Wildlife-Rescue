@@ -5,10 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="Description" content="Wildlife Rescue case details portal"/>
-<link rel="apple-touch-icon" sizes="180x180" href="static/favicons/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="static/favicons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="static/favicons/favicon-16x16.png">
-<link rel="manifest" href="static/favicons/site.webmanifest">
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicons/favicon.ico') }}">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
 {% block styles %}
@@ -25,17 +22,16 @@
               </button>
               <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                 <div class="navbar-nav text-end">
-                  <a class="nav-link navbar-link"  href="{{ url_for('home_page') }}"> Home <i class="bi bi-house"></i></a>
+                  <a class="nav-link navbar-link mx-3"  href="{{ url_for('home_page') }}"> Home <i class="bi bi-house"></i></a>
                   {% if session.user %}
-                  <a class="nav-link" href="{{ url_for('get_cases') }}"> Cases <i class="bi bi-archive"></i></a>
-                  <a class="nav-link" href="{{ url_for('add_case') }}"> New Case <i class="bi bi-card-checklist"></i></a>
-                  <a class="nav-link" href="{{ url_for('profile', username=session['user']) }}"> Profile <i class="bi bi-person-badge"></i></a>
-                  <a class="nav-link" href="{{ url_for('logout') }}"> Log Out <i class="bi bi-box-arrow-right"></i> </a>
+                  <a class="nav-link mx-3" href="{{ url_for('get_cases') }}"> Cases <i class="bi bi-archive"></i></a>
+                  <a class="nav-link mx-3" href="{{ url_for('add_case') }}"> New Case <i class="bi bi-card-checklist"></i></a>
+                  <a class="nav-link mx-3" href="{{ url_for('profile', username=session['user']) }}"> Profile <i class="bi bi-person-badge"></i></a>
+                  <a class="nav-link mx-3" href="{{ url_for('logout') }}"> Log Out <i class="bi bi-box-arrow-right"></i> </a>
                   {% else %}
-                  <a class="nav-link" href="{{ url_for('register') }}"> Register <i class="bi bi-pencil-square"></i></a>
-                  <a class="nav-link" href="{{ url_for('login') }}"> Login <i class="bi bi-box-arrow-in-right"></i></a>
+                  <a class="nav-link mx-3" href="{{ url_for('register') }}"> Register <i class="bi bi-pencil-square"></i></a>
+                  <a class="nav-link mx-3" href="{{ url_for('login') }}"> Login <i class="bi bi-box-arrow-in-right"></i></a>
                   {% endif %}
-                  <a class="nav-link disabled visually-hidden" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                 </div>
               </div>
             </div>
@@ -47,13 +43,13 @@
       {% if messages %}
       {% for message in messages %}
       <div class="row">
-          <h4 class="text-center alert alert-info">{{ message }}</h4>
+          <h4 class="text-center alert alert-heron">{{ message }}</h4>
       </div>
       {% endfor %}
       {% endif %}
       {% endwith %}
   </section>
-    <main>
+    <main class="minimum-height">
       {% block content %}
       {% endblock %}
     </main>

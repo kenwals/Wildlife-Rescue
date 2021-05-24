@@ -3,6 +3,7 @@ from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
+from flask_paginate import Pagination, get_page_args
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
@@ -25,15 +26,56 @@ def home_page():
 
 @app.route("/get/cases")
 def get_cases():
-    cases = list(mongo.db.cases.find())
-    return render_template("cases.html", cases=cases)
+    page, per_page, offset = get_page_args(page_parameter='page', per_page_parameter='per_page')
+    # If you are hard coding the number of items per page then uncomment the two lines below
+    # per_page = 6
+    # offset = page * per_page
+
+    # Gets all the values
+    cases = mongo.db.cases.find()
+
+    # Gets the total values to be used later
+    total = mongo.db.cases.count_documents({})
+
+    # Paginates the values
+    paginatedCases = cases[offset: offset + per_page]
+
+    pagination = Pagination(page=page, per_page=per_page, total=total,
+                            css_framework='bootstrap5')
+
+    return render_template("cases.html", 
+                            cases=paginatedCases,
+                            page=page,
+                            per_page=per_page,
+                            pagination=pagination,
+                            )
 
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
+    page, per_page, offset = get_page_args(page_parameter='page', per_page_parameter='per_page')
+    # If you are hard coding the number of items per page then uncomment the two lines below
+    # per_page = 6
+    # offset = page * per_page
+
+    # Gets all the values
     query = request.form.get("query")
-    cases = list(mongo.db.cases.find({"$text": {"$search": query}}))
-    return render_template("cases.html", cases=cases)
+    cases = mongo.db.cases.find({"$text": {"$search": query}})
+
+    # Gets the total values to be used later
+    total = mongo.db.cases.count_documents({"$text": {"$search": query}})
+
+    # Paginates the values
+    paginatedCases = cases[offset: offset + per_page]
+
+    pagination = Pagination(page=page, per_page=per_page, total=total,
+                            css_framework='bootstrap5')
+    return render_template("cases.html", 
+                            cases=paginatedCases,
+                            page=page,
+                            per_page=per_page,
+                            pagination=pagination,
+                            )
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -55,10 +97,8 @@ def register():
         }
         mongo.db.users.insert_one(register)
 
-        # put the new user into 'session' cookie
-        session["user"] = request.form.get("username").lower()
         flash("Registration Successful!")
-        return redirect(url_for("profile", username=session["user"]))
+        return redirect(url_for("login"))
 
     return render_template("register.html")
 
@@ -156,7 +196,7 @@ def add_case():
     return render_template("add-case.html", reasons=reasons, speciess=speciess)
 
 
-@app.route("/edit/case/<case_id>", methods=["GET", "POST"])
+@app.route("/view/case/<case_id>", methods=["GET", "POST"])
 def edit_case(case_id):
     if request.method == "POST":
         submit = {
@@ -177,7 +217,7 @@ def edit_case(case_id):
     speciess = mongo.db.species.find().sort("species", 1)
     statuses = mongo.db.status.find().sort("status", 1)
     return render_template(
-        "edit-case.html",
+        "view-case.html",
         case=case,
         reasons=reasons,
         speciess=speciess,

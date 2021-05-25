@@ -270,25 +270,70 @@ When making the case number increment based on code i read in the MongoDB manual
 
 ## Deployment
 
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
-
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
-
-- Different values for environment variables (Heroku Config Vars)?
-- Different configuration files?
-- Separate git branch?
-
-In addition, if it is not obvious, you should also describe how to run your code locally.
+For easy deployment on Heruko.com , you will need a GitHub user account and possibly a Gitpod user account. If you wish to make changes to this repository, please follow the GitHub steps first.
 
 ### GitHub
 
+GitHub is a code hosting platform for version control and collaboration. It's free to enrol for a user account and I would recommend you have one if you wish to deploy this repository and make changes.
+
+When you have a GitHub account you can simply click on the Fork button on the top right corner. This will clone the Wildlife-Rescue repository for your GitHub account, then you can make any changes you like.
+
 ### Gitpod
 
-### GitHub Pages
+The site can be edited easily on a Gitpod online workspace, you first register a free user account on <http://gitpod.io/>, then download the Gitpod extension on your preferred internet browser. On signing up you will be expected to have a GitHub user account.
+
+Once you have the extension on your browser, a green Gitpod button will appear beside this repository in GitHub. For best results fork the repository in your personal account before you open it in Gitpod.
+
+### Heruko 
+
+Heruko is a cloud platform that can hosts dynamic web applications.Once you have the completed site in your own repository, you can deploy it to Heruko by the following steps.
+
+1. Before you setup Heruko , you first need to create some files that are necessary for it to run on the Heruko server.
+2. Open a terminal window in your IDE on the root folder of the project, run the command below, this will create a new file called procfile.
+
+    `` echo web: python run.py > Procfile ``
+
+3. Now run the command line below. this will create a new file called requirements.txt
+
+    `` pip3 freeze --local > requirements.txt ``
+
+4. Create a [Heruko user account](https://signup.heroku.com/login)
+5. Click on the New button and choose Create a new app.
+6. Input an app name and choose a region that is closest to you.
+7. To input the necessary environmental variables, simply go to Settings tab, and under Config Vars, Click on Reveal Config Vars
+8. Now you can deploy, the simplest way is to deploy from github, Click on the Deploy tab, Under Deployment method click on Github. A search window will prompt you to connect to the appropriate repository. You can then choose to do a manual or automatic deployment. 
 
 ### Local Deployment
 
+If you prefer working on the repository locally on your preferred Desktop IDE, you can clone the repository to your desktop by the following steps.
+
+1. Go to [the wildlife-rescue github page](https://github.com/kenwals/Wildlife-Rescue).
+2. Above the list of files, click on the **code** button.
+3. To clone the repository using **HTTPS,** under "Clone with HTTPS", click the paste icon.
+   To clone the repository using an **SSH key**, click Use SSH, then click the paste icon.
+   To clone a repository using **GitHub CLI,** click Use GitHub CLI, then click the paste icon.
+4. Open your preferred Terminal interface.
+5. Change the current working directory to the location where you want the cloned directory.
+6. Type **git clone**, then paste the URL you copied earlier above.
+7. Press Enter to create your local clone.
+8. To run the app.py locally you will need to have a mongoDB account, with the supporting variables inputted in the env.py file,
+ you may also need to install the packages listed Python app file.
+
+more detailed instructions available [here](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
+
 ### Forking
+
+You may wish to contribute to this website and have your contribution published, if so, you are welcome to follow these steps below.
+
+1. Go to the GitHub website and log in.
+2. Open <https://github.com/kenwals/Wildlife-Rescue>
+3. In the top right-hand corner you will see a fork button, click on this **Fork button**.
+4. This will create a copy of the Wildlife-Rescue repository in your Github account.
+5. Once you're finished making changes you can locate the **New Pull Request** button just above the file listing in the original repository (<https://github.com/kenwals/wildlife-rescue>).
+6. If your pull request is approved, it will be merged into the master version of the Wildlife-rescue repository at a future date.
+
+more detailed instructions available [here](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo)
+
 
 ## Credits
 

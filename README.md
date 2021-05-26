@@ -116,7 +116,7 @@ Reason, Species, Status
 
 #### Colours
 
-Colour are natural and sourced from a nature photo. 
+Colour are natural and sourced from a nature photo.
 
 #FFFFFD Black White - taken from the colour of the feathers of a Grey Heron bird 
 
@@ -228,7 +228,7 @@ If this section grows too long, you may want to split it off into a separate fil
 
 ### Bugs encountered on the way
 
-favicon
+
 
 depreciated code ( count, update, ) exanple : DeprecationWarning: update is deprecated. Use replace_one, update_one or 
 update_many instead. mongo.db.cases.update({"_id": ObjectId(case_id)}, { "$set": submit})
@@ -237,7 +237,13 @@ update_many instead. mongo.db.cases.update({"_id": ObjectId(case_id)}, { "$set":
 
 ### Known issues
 
-pagination orientation problem
+Pagination orientation problem
+
+For Pagination , I am using flask-paginate. At the time this project was being developed , this module didn't appear to support Bootstrap5 . So I have had to configure it to Bootstrap4. 
+
+Favicon
+
+Favicons doesn't work on Android devices . 
 
 ### Project barriers and solutions
 

@@ -105,6 +105,32 @@ def get_my_cases():
                             pagination=pagination,
                             )                            
 
+@app.route("/open/cases")
+def get_open_cases():
+    page, per_page, offset = get_page_args(page_parameter='page', per_page_parameter='per_page')
+    # If you are hard coding the number of items per page then uncomment the two lines below
+    # per_page = 6
+    # offset = page * per_page
+
+    # Gets all the values that have status not equal to closed
+    query = {"status" : { "$ne" : "Closed"}}
+    cases = mongo.db.cases.find(query)
+
+    # Gets the total values to be used later
+    total = mongo.db.cases.count_documents(query)
+
+    # Paginates the values
+    paginatedCases = cases[offset: offset + per_page]
+
+    pagination = Pagination(page=page, per_page=per_page, total=total,
+                            css_framework='bootstrap4')
+
+    return render_template("cases.html", 
+                            cases=paginatedCases,
+                            page=page,
+                            per_page=per_page,
+                            pagination=pagination,
+                            )                            
 
 @app.route("/search", methods=["GET", "POST"])
 def search():

@@ -24,7 +24,7 @@ def home_page():
     return render_template("home.html")
 
 
-@app.route("/get/cases")
+@app.route("/all/cases")
 def get_cases():
     page, per_page, offset = get_page_args(page_parameter='page', per_page_parameter='per_page')
     # If you are hard coding the number of items per page then uncomment the two lines below

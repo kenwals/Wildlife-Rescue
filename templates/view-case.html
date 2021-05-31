@@ -12,16 +12,13 @@
     <input type="date" class="form-control" id="date" name="date" value="{{ case.date }}" required>
   </div>
   <div class="mb-3">
-    <label for="species" class="form-label"> Species : </label>
-    <select class="form-select" id="species" aria-label="Species" name="species" required>
+    <label for="species" class="form-label">Species :</label>
+    <input class="form-control" list="specieslistOptions" id="species" aria-label="Species" name="species" required value="{{ case.species }}">
+    <datalist id="specieslistOptions">
       {% for species in speciess %}
-      {% if species.species == case.species %}
-      <option value="{{ species.species }}" selected>{{ species.species }}</option>
-      {% else %}
-      <option value="{{ species.species }}">{{ species.species }}</option>
-      {% endif %}
+      <option value="{{ species.species }}">
       {% endfor %}
-    </select>
+    </datalist>
   </div>
   <div class="mb-3">
     <label for="location" class="form-label">Location : </label>

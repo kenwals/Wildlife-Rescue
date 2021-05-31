@@ -25,16 +25,13 @@
     <input type="text" class="form-control" id="location" name="location" value="{{ case.location }}" required>
   </div>
   <div class="mb-3">
-    <label for="reason" class="form-label">Reason for rescue :</label>
-    <select class="form-select" id="reason" aria-label="Reason" name="reason" >
+    <label for="reason" class="form-label">Reason for rescue : </label>
+    <input class="form-control" list="reasonOptions" id="reason" aria-label="Reason" name="reason" value="{{ case.reason}}">
+    <datalist id="reasonOptions">
       {% for reason in reasons %}
-      {% if reason.Reason == case.reason %}
-      <option value="{{ reason.Reason }}" selected>{{ reason.Reason }}</option>
-      {% else %}
-      <option value="{{ reason.Reason }}">{{ reason.Reason }}</option>
-      {% endif %}
+      <option value="{{ reason.Reason }}">
       {% endfor %}
-    </select>
+    </datalist>
   </div>
   <div class="mb-3">
     <label for="criminal" class="form-label"> Deemed Criminal : </label> 

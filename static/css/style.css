@@ -42,6 +42,14 @@ body{
 .pagination-page-info {
     max-width: 33rem;
     text-align: center;
+    padding: .6em;
+    width: 40em;
+    margin: .5em;
+    margin-left: 0;
+}
+.pagination-page-info b {
+    padding-left: .6em;
+    padding: .1em .25em;
 }
 
 #footer {

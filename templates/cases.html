@@ -16,11 +16,9 @@
               <span class="fw-bold">Filters <i class="bi bi-funnel"></i></span>
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Separated link</a></li>
+              <li><a class="dropdown-item" href="{{ url_for('get_cases_pending') }}"> All Pending cases</a></li>
+              <li><a class="dropdown-item" href="{{ url_for('get_open_cases') }}">All Open cases</a></li>
+              <li><a class="dropdown-item" href="{{ url_for('get_my_cases') }}">My Cases</a></li>
             </ul>
           </div>
         </div>

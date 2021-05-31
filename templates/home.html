@@ -8,12 +8,14 @@
     </div>
     <div class="col-md-4">
       <p> At Wildlife Rescue, our aim keep track of all wildlife incidents - from initial contact to final outcome.This information will then be used to inform the necessary road authorities.</p>
-      <p> Do you need to log details of a Rescue Case ?
+      <p> Do you need to log details of a Rescue Case ?  </p>
+      <div class="text-center mb-3">
       {% if session.user %}
-      <a href="{{ url_for('add_case') }}" class="btn btn-success"> click here </a>
+      <a href="{{ url_for('add_case') }}" class="btn btn-success">Create a new Case</a>
       {% else %}
-      <a href="{{ url_for('login') }}" class="btn btn-primary"> Log In </a> or <a href="{{ url_for('register') }}" class="btn btn-secondary"> Register </a>
-      {% endif %} </p>
+      <a href="{{ url_for('login') }}" class="btn btn-primary"> Log In </a> / <a href="{{ url_for('register') }}" class="btn btn-secondary"> Register </a>
+      {% endif %}
+      </div>
       <p>There are three approaches to helping wildlife and it can be hard to choose the right course of action, especially if you’re stressed and nervous. If in doubt, call a wildlife rescue centre for advice.</p>
     </div>
   </div>

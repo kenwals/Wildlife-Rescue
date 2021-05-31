@@ -63,7 +63,7 @@ def get_cases_pending():
     cases = mongo.db.cases.find(query)
 
     # Gets the total values to be used later
-    total = mongo.db.cases.count_documents({})
+    total = mongo.db.cases.count_documents(query)
 
     # Paginates the values
     paginatedCases = cases[offset: offset + per_page]
@@ -90,7 +90,7 @@ def get_my_cases():
     cases = mongo.db.cases.find(query)
 
     # Gets the total values to be used later
-    total = mongo.db.cases.count_documents({})
+    total = mongo.db.cases.count_documents(query)
 
     # Paginates the values
     paginatedCases = cases[offset: offset + per_page]

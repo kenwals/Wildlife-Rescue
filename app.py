@@ -150,7 +150,7 @@ def search():
     paginatedCases = cases[offset: offset + per_page]
 
     pagination = Pagination(page=page, per_page=per_page, total=total,
-                            css_framework='bootstrap5')
+                            css_framework='bootstrap4')
     return render_template("cases.html", 
                             cases=paginatedCases,
                             page=page,

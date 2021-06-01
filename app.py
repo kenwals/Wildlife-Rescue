@@ -145,7 +145,7 @@ def get_open_cases():
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
-    page, per_page, offset = get_page_args(page_parameter='page,
+    page, per_page, offset = get_page_args(page_parameter='page',
                                            per_page_parameter='per_page')
     # If you are hard coding the number of items per page
     # then uncomment the two lines below

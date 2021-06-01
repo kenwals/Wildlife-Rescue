@@ -55,3 +55,8 @@ body{
     background-color: #6C6666  ;
     color:  #FFFFFD  ;
 }
+
+.footer-list-item {
+	color: #FFFFFD ;
+	padding: 1rem;
+}

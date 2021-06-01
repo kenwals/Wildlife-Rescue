@@ -7,6 +7,7 @@
 
 html {
     font-size: 68%;
+    background-color: #6C6666  ;
 }
 body{
     font-family: 'Rubik', sans-serif; 
@@ -42,9 +43,21 @@ body{
 .pagination-page-info {
     max-width: 33rem;
     text-align: center;
+    padding: .6em;
+    margin: .5em;
+    margin-left: 0;
+}
+.pagination-page-info b {
+    padding-left: .6em;
+    padding: .1em .25em;
 }
 
 #footer {
     background-color: #6C6666  ;
     color:  #FFFFFD  ;
+}
+
+.footer-list-item {
+	color: #FFFFFD ;
+	padding: 1rem;
 }

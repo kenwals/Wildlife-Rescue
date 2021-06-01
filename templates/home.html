@@ -4,16 +4,18 @@
 <div class="container-lg">
   <div class="row my-3">
     <div class="col-md-8">
-      <img src="static\images\sascha-bosshard-b027q9eF3Yo-unsplash_adobespark.jpg" class="img-fluid rounded-3" alt="...">
+      <img src="static/images/sascha-bosshard-b027q9eF3Yo-unsplash_adobespark.jpg" class="img-fluid rounded-3" alt="...">
     </div>
     <div class="col-md-4">
       <p> At Wildlife Rescue, our aim keep track of all wildlife incidents - from initial contact to final outcome.This information will then be used to inform the necessary road authorities.</p>
-      <p> Do you need to log details of a Rescue Case ?
+      <p> Do you need to log details of a Rescue Case ?  </p>
+      <div class="text-center mb-3">
       {% if session.user %}
-      <a href="{{ url_for('add_case') }}" class="btn btn-success"> click here </a>
+      <a href="{{ url_for('add_case') }}" class="btn btn-success">Create a new Case</a>
       {% else %}
-      <a href="{{ url_for('login') }}" class="btn btn-primary"> Log In </a> or <a href="{{ url_for('register') }}" class="btn btn-secondary"> Register </a>
-      {% endif %} </p>
+      <a href="{{ url_for('login') }}" class="btn btn-primary"> Log In </a> / <a href="{{ url_for('register') }}" class="btn btn-secondary"> Register </a>
+      {% endif %}
+      </div>
       <p>There are three approaches to helping wildlife and it can be hard to choose the right course of action, especially if you’re stressed and nervous. If in doubt, call a wildlife rescue centre for advice.</p>
     </div>
   </div>
@@ -21,21 +23,21 @@
     <div class="col-md-12">
       <div class="card-group">
         <div class="card mx-2 border-white">
-          <img src="static\images\baby-deer-rescue-1024x528.jpg" class="card-img-top rounded-3" alt="...">
+          <img src="static/images/baby-deer-rescue-1024x528.jpg" class="card-img-top rounded-3" alt="...">
           <div class="card-body">
             <h5 class="card-title fs-3">1. Leave it alone. </h5>
             <p class="card-text">Sometimes a wild animal is not injured but has been left by a parent so it can gather food. For example, young deer should not be touched nor should fledgling birds unless they are in danger.</p>
           </div>
         </div>
         <div class="card mx-2 border-white">
-          <img src="static\images\fox-rescue-1024x528.jpg" class="card-img-top rounded-3" alt="...">
+          <img src="static/images/fox-rescue-1024x528.jpg" class="card-img-top rounded-3" alt="...">
           <div class="card-body">
             <h5 class="card-title fs-3">2. Let the animal recover </h5>
             <p class="card-text">Let the animal recover from shock in a cool, dark place. A wild animal that’s had a knock, say flying into a window or being hit by a car, could be concussed and may recover given time.</p>
           </div>
         </div>
         <div class="card mx-2 border-white">
-          <img src="static\images\how-to-pick-up-a-hedgehog-1024x623.jpg" class="card-img-top rounded-3" alt="...">
+          <img src="static/images/how-to-pick-up-a-hedgehog-1024x623.jpg" class="card-img-top rounded-3" alt="...">
           <div class="card-body">
             <h5 class="card-title fs-3">3. Take the animal to a wildlife centre or a vet.</h5>
             <p class="card-text"> Take the animal to a wildlife centre or a vet. Injured wildlife needs specialist attention. The most responsible course of action is taking injured wildlife to someone who knows exactly what to do to prevent any further suffering.</p>

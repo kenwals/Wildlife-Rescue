@@ -9,39 +9,33 @@
   <fieldset id="fieldset1" disabled="disabled">
   <div class="mb-3">
     <label for="date"  class="form-label">Date :</label>
-    <input type="date" class="form-control" id="date" name="date" value="{{ case.date }}" required>
+    <input type="date" class="form-control fs-4" id="date" name="date" value="{{ case.date }}" required>
   </div>
   <div class="mb-3">
-    <label for="species" class="form-label"> Species : </label>
-    <select class="form-select" id="species" aria-label="Species" name="species" required>
+    <label for="species" class="form-label">Species :</label>
+    <input class="form-control fs-4" list="specieslistOptions" id="species" aria-label="Species" name="species" required value="{{ case.species }}">
+    <datalist id="specieslistOptions">
       {% for species in speciess %}
-      {% if species.species == case.species %}
-      <option value="{{ species.species }}" selected>{{ species.species }}</option>
-      {% else %}
-      <option value="{{ species.species }}">{{ species.species }}</option>
-      {% endif %}
+      <option value="{{ species.species }}">
       {% endfor %}
-    </select>
+    </datalist>
   </div>
   <div class="mb-3">
     <label for="location" class="form-label">Location : </label>
-    <input type="text" class="form-control" id="location" name="location" value="{{ case.location }}" required>
+    <input type="text" class="form-control fs-4" id="location" name="location" value="{{ case.location }}" required>
   </div>
   <div class="mb-3">
-    <label for="reason" class="form-label">Reason for rescue :</label>
-    <select class="form-select" id="reason" aria-label="Reason" name="reason" >
+    <label for="reason" class="form-label">Reason for rescue : </label>
+    <input class="form-control fs-4" list="reasonOptions" id="reason" aria-label="Reason" name="reason" value="{{ case.reason}}">
+    <datalist id="reasonOptions">
       {% for reason in reasons %}
-      {% if reason.Reason == case.reason %}
-      <option value="{{ reason.Reason }}" selected>{{ reason.Reason }}</option>
-      {% else %}
-      <option value="{{ reason.Reason }}">{{ reason.Reason }}</option>
-      {% endif %}
+      <option value="{{ reason.Reason }}">
       {% endfor %}
-    </select>
+    </datalist>
   </div>
   <div class="mb-3">
     <label for="criminal" class="form-label"> Deemed Criminal : </label> 
-    <select class="form-select" id="criminal" aria-label="Deemed criminal" name="criminal" value="{{ case.criminal }}">
+    <select class="form-select fs-4" id="criminal" aria-label="Deemed criminal" name="criminal" value="{{ case.criminal }}">
         <option value="Yes">Yes</option>
         <option value="No" selected>No</option>
       </select>
@@ -53,11 +47,11 @@
   <fieldset id="fieldset2" disabled="disabled">
     <div class="mb-3">
       <label for="image" class="form-label">Image : </label>
-      <input type="url" class="form-control" id="image" name="image_url" value="{{ case.image_url }}">
+      <input type="url" class="form-control fs-4" id="image" name="image_url" value="{{ case.image_url }}">
     </div>
   <div class="mb-3">
     <label for="status" class="form-label">Status:</label>
-    <select class="form-select" id="status" aria-label="status" name="status" >
+    <select class="form-select fs-4" id="status" aria-label="status" name="status" >
       {% for status in statuses %}
       {% if  status.status == case.status %}
       <option value="{{ status.status }}" selected>{{ status.status }}</option>
@@ -69,7 +63,7 @@
   </div>
   <div class="mb-3">
   <label for="notes" class="form-label">Any notes or comments</label>
-  <textarea class="form-control" name="notes" id="notes" rows="10" cols="30">{{ case.notes }}</textarea>
+  <textarea class="form-control fs-4" name="notes" id="notes" rows="10" cols="30">{{ case.notes }}</textarea>
   </div>
   <div class="mb-3">
     <button id="saveCaseBtn"" type="submit" class="btn btn-success visually-hidden">Save changes</button>

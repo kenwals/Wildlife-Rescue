@@ -66,13 +66,13 @@
   <textarea class="form-control fs-4" name="notes" id="notes" rows="10" cols="30">{{ case.notes }}</textarea>
   </div>
   <div class="mb-3">
-    <button id="saveCaseBtn"" type="submit" class="btn btn-success visually-hidden">Save changes</button>
-    <a id="deleteCaseBtn" class="btn btn-danger visually-hidden" href="{{ url_for('delete_case', case_id=case._id) }}">Delete Case</a>
+    <button id="saveCaseBtn"" type="submit" class="btn btn-success visually-hidden fs-4">Save changes</button>
+    <a id="deleteCaseBtn" class="btn btn-danger visually-hidden fs-4" href="{{ url_for('delete_case', case_id=case._id) }}">Delete Case</a>
   </div>
 </fieldset>
 {% if (session.user|lower == case.created_by|lower) or (session.user|lower == 'admin@wildliferescue.com')  %}
 <div class="mb-3">
-  <button id="editCaseBtn"" type="button" class="btn btn-primary">Edit this case</button>
+  <button id="editCaseBtn"" type="button" class="btn btn-primary fs-4">Edit this case</button>
 </div>
 {% endif %}
 <div class="mb-3">

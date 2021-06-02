@@ -6,6 +6,7 @@ function ready() {
         document.getElementById("editCaseBtn").classList.add("visually-hidden");
         document.getElementById("saveCaseBtn").classList.remove("visually-hidden");
         document.getElementById("deleteCaseBtn").classList.remove("visually-hidden");
+        document.getElementById("upload_widget").classList.remove("visually-hidden");
       }
     
     document.getElementById("editCaseBtn").addEventListener("click", formEnable);

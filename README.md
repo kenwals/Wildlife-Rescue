@@ -188,11 +188,12 @@ In this section, you should mention all of the languages, frameworks, libraries,
 
 #### Tools
 
+- JSfiddle : I used this online IDE to build and play with [Cloudinary API](https://jsfiddle.net/kenwals/8ze3u4ok/33/) and [Google places API](https://jsfiddle.net/kenwals/gv2oe4dp/8/) before i added them to this project confidently
+- Wireframe: [Balsamiq](https://balsamiq.com/)
 - IDE: Visual Studio Code (VS Code).
 - Version control: Git
-- Wireframe: [Balsamiq](https://balsamiq.com/)
 - Browser Developer tools : [Google Chrome](https://www.google.com/chrome) for console.logging everything.
-- Kanban planner : [Github projects](https://github.com/kenwals/ ).
+- Kanban planner : [Github projects](https://github.com/kenwals/Wildlife-Rescue/projects/1).
 - Markdown editor: [Typora](https://typora.io/) was used when appropriate, VS code editor was used for most updates.
 - File renaming utility: PowerRename from [PowerToys on Windows 10](https://www.windowscentral.com/how-bulk-rename-your-files-windows-10-powertoys)
 - Pomodoro timer : [Tomato Clock](https://chrome.google.com/webstore/detail/tomato-clock/enemipdanmallpjakiehedcgjmibjihj)
@@ -243,7 +244,7 @@ update_many instead. mongo.db.cases.update({"_id": ObjectId(case_id)}, { "$set":
 
 Pagination orientation problem
 
-For Pagination , I am using flask-paginate. At the time this project was being developed , this module didn't appear to support Bootstrap5 . So I have had to configure it to Bootstrap4. 
+For Pagination , I am using flask-paginate. At the time this project was being developed , this module didn't appear to support Bootstrap5 . So I have had to configure it to Bootstrap4. Still a problem placing 
 
 Favicon
 
@@ -251,12 +252,13 @@ Favicons doesn't work on Android devices .
 
 ### Project barriers and solutions
 
-MongoDB verse PyMongo 
+MongoDB verses PyMongo 
 
-When making the case number increment based on code i read in the MongoDB manual , i couldn't get it working in my Python coee. But then i read [this article](https://stackoverflow.com/questions/17054494/pymongo-inc-having-issues/17054663). Hereby learning that PyMongo is slightly different from MongoDB .
-
+When making the case number increment based on code i read in the MongoDB manual , i couldn't get it working in my Python code. But then i read [this article](https://stackoverflow.com/questions/17054494/pymongo-inc-having-issues/17054663). Hereby learning that PyMongo is slightly different from MongoDB!.
 
 ### Version control
+
+For version control, I used the UI on VS Code for making git commits or the GitHub desktop app, Merging was done on the GitHub site. I used branches when I was working on new features or bundles of changes.
 
 ### Functionality Testing
 
@@ -353,7 +355,7 @@ more detailed instructions available [here](https://docs.github.com/en/free-pro-
         https://wildlife-incidents.com/ 
         http://irishwildlifematters.ie/animals/
 - images are sourced from here https://diygarden.co.uk/wildlife/rescue-guide/ 
-- The foundation of this site is sourced from Code Institute Educational material - Tim's Task Manager project.
+- The foundation of this site is sourced from Code Institute Educational material - Tim Nelson's Task Manager project.
  
 
 

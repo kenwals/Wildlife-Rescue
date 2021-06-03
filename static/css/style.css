@@ -40,6 +40,10 @@ body{
     max-width: 33rem;
 }
 
+.img-thumbnail{
+    max-width: 20rem;
+}
+
 .pagination-page-info {
     max-width: 33rem;
     text-align: center;

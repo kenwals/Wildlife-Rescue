@@ -380,8 +380,9 @@ more detailed instructions available [here](https://docs.github.com/en/free-pro-
 
 ### Media
 
-- images are sourced from [here](https://diygarden.co.uk/wildlife/rescue-guide/)
+- images on front page are sourced from [here](https://diygarden.co.uk/wildlife/rescue-guide/)
 
 ### Acknowledgements
 
-- I received inspiration for this project from Feargal Timon at https://wildlife-incidents.com/ 
+- I received inspiration for this project from Feargal Timon at https://wildlife-incidents.com/ and Galway swan rescue.
+- Kudos to Ed Bradly for his excellent advice and tips on #data-centric-dev Slack channel and on the recorded zoom call from March.

@@ -39,7 +39,7 @@
           <p class="card-text fs-4"> Reason :  {{ case.reason }} </p>
           <p class="card-text fs-4"> Status :  {{ case.status }} </p>
           <p class="card-text fs-4"> created by : {{ case.created_by }}  </p>
-          <a href="{{ url_for('edit_case', case_id=case._id) }}" class="btn btn-info fs-4">More Info</a>
+          <a href="{{ url_for('edit_case', case_id=case._id) }}" class="btn btn-info fs-4">View More Info</a>
         </div>
         <div class="card-footer">
           <small class="text-muted"> Case ID: {{ case.case_number }} , Date : {{ case.date }} </small>

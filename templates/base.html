@@ -14,7 +14,7 @@
 <title>Wildlife Rescue</title>
 </head>
 <body>
-    <header id="header">
+    <header id="header" class="fixed-top">
         <nav class="container-lg navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
               <a class="navbar-brand fs-3 fw-bold" href="{{ url_for('home_page') }}">Wildlife Rescue</a>
@@ -51,7 +51,7 @@
       {% endif %}
       {% endwith %}
   </section>
-    <main class="minimum-height">
+    <main class="minimum-height pt-5 mt-5">
       {% block content %}
       {% endblock %}
     </main>

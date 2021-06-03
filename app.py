@@ -33,17 +33,18 @@ def get_cases():
     # per_page = 6
     # offset = page * per_page
 
-    # Gets all the values
+    # Gets all the case values
     cases = mongo.db.cases.find()
 
-    # Gets the total values to be used later
+    # Gets the count total case values to be used later
     total = mongo.db.cases.count_documents({})
 
     # Paginates the values
     paginatedCases = cases[offset: offset + per_page]
 
+    # please note boostrap4 is used here as bootstrap5 doesn't seem to be supported
     pagination = Pagination(page=page, per_page=per_page, total=total,
-                            css_framework='bootstrap4')
+                            css_framework='bootstrap4')  
 
     return render_template("cases.html",
                            cases=paginatedCases,
@@ -72,6 +73,7 @@ def get_cases_pending():
     # Paginates the values
     paginatedCases = cases[offset: offset + per_page]
 
+    # please note boostrap4 is used here as bootstrap5 doesn't seem to be supported
     pagination = Pagination(page=page, per_page=per_page, total=total,
                             css_framework='bootstrap4')
 
@@ -92,7 +94,7 @@ def get_my_cases():
     # per_page = 6
     # offset = page * per_page
 
-    # Gets all the values that have status pending
+    # Gets all the values that are created by the current user 
     query = {"created_by": session["user"]}
     cases = mongo.db.cases.find(query)
 
@@ -102,6 +104,7 @@ def get_my_cases():
     # Paginates the values
     paginatedCases = cases[offset: offset + per_page]
 
+    # please note boostrap4 is used here as bootstrap5 doesn't seem to be supported
     pagination = Pagination(page=page, per_page=per_page, total=total,
                             css_framework='bootstrap4')
 
@@ -132,6 +135,7 @@ def get_open_cases():
     # Paginates the values
     paginatedCases = cases[offset: offset + per_page]
 
+    # please note boostrap4 is used here as bootstrap5 doesn't seem to be supported
     pagination = Pagination(page=page, per_page=per_page, total=total,
                             css_framework='bootstrap4')
 
@@ -152,7 +156,7 @@ def search():
     # per_page = 6
     # offset = page * per_page
 
-    # Gets all the values
+    # Gets all the values that match the user entered search query
     query = request.form.get("query")
     cases = mongo.db.cases.find({"$text": {"$search": query}})
 
@@ -162,6 +166,7 @@ def search():
     # Paginates the values
     paginatedCases = cases[offset: offset + per_page]
 
+    # please note boostrap4 is used here as bootstrap5 doesn't seem to be supported
     pagination = Pagination(page=page, per_page=per_page, total=total,
                             css_framework='bootstrap4')
     return render_template("cases.html",

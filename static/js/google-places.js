@@ -9,7 +9,6 @@ function initAutocomplete() {
             fields: ["place_id", "geometry", "name"]
         });
     autocomplete.addListener("place_changed", onPlaceChanged);
-    console.log("gm initiated");
 }
 
 function onPlaceChanged() {

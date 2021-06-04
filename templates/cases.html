@@ -16,9 +16,9 @@
               <span class="fw-bold fs-4">Filters <i class="bi bi-funnel"></i></span>
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fs-4" href="{{ url_for('get_my_cases') }}">My Cases</a></li>
-              <li><a class="dropdown-item fs-4" href="{{ url_for('get_cases_pending') }}">All Pending cases</a></li>
-              <li><a class="dropdown-item fs-4" href="{{ url_for('get_open_cases') }}">All Open cases</a></li>
+              <li><a class="dropdown-item fs-4" href="{{ url_for('get_cases', filter='user') }}">My Cases</a></li>
+              <li><a class="dropdown-item fs-4" href="{{ url_for('get_cases', filter='pending') }}">All Pending cases</a></li>
+              <li><a class="dropdown-item fs-4" href="{{ url_for('get_cases', filter='open') }}">All Open cases</a></li>
             </ul>
           </div>
         </div>

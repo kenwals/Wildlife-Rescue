@@ -1,4 +1,5 @@
 import os
+import datetime
 from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
@@ -213,6 +214,7 @@ def add_case():
         if request.form.get("notes"):
             note = {
                     "case_id": ObjectId(case_id),
+                    "date_time": datetime.datetime.now(),
                     "note": request.form.get("notes")
             }
             note_id = mongo.db.notes.insert_one(note)
@@ -245,6 +247,7 @@ def edit_case(case_id):
         if request.form.get("notes"):
             note = {
                     "case_id": ObjectId(case_id),
+                    "date_time": datetime.datetime.now(),
                     "note": request.form.get("notes")
             }
             note_id = mongo.db.notes.insert_one(note)
@@ -256,7 +259,7 @@ def edit_case(case_id):
         flash("Case Successfully Updated")
 
     case = mongo.db.cases.find_one({"_id": ObjectId(case_id)})
-    notes_array = mongo.db.notes.find({"case_id": ObjectId(case_id)})
+    notes_array = mongo.db.notes.find({"case_id": ObjectId(case_id)}).sort("date_time", -1)
     reasons = mongo.db.reason.find().sort("Reason", 1)
     speciess = mongo.db.species.find().sort("species", 1)
     statuses = mongo.db.status.find().sort("status", 1)

@@ -195,6 +195,7 @@ def add_case():
         caseno = mongo.db.casenumbers.find_one_and_update(
             {"_id": ObjectId("60a145f44eb297c0b8512ea5")},
             {"$inc": {"sequence_value": 1}})
+
         case = {
             "date": request.form.get("date"),
             "location": request.form.get("location"),
@@ -202,12 +203,24 @@ def add_case():
             "criminal": request.form.get("criminal"),
             "species": request.form.get("species"),
             "image_url": request.form.get("image_url"),
-            "notes": request.form.get("notes"),
+            "notes": [],
             "status": "Pending",
             "case_number": caseno["sequence_value"],
             "created_by": session["user"]
         }
-        mongo.db.cases.insert_one(case)
+        _id = mongo.db.cases.insert_one(case)
+        case_id = _id.inserted_id
+        if request.form.get("notes"):
+            note = {
+                    "case_id": ObjectId(case_id),
+                    "note": request.form.get("notes")
+            }
+            note_id = mongo.db.notes.insert_one(note)
+            mongo.db.cases.update_one(
+                {"_id": ObjectId(case_id)}, 
+                {"$push": { "notes" : ObjectId(note_id.inserted_id)}}
+                )
+
         flash("Case is Successfully Added")
         return redirect(url_for("get_cases"))
 
@@ -226,10 +239,20 @@ def edit_case(case_id):
             "criminal": request.form.get("criminal"),
             "species": request.form.get("species"),
             "image_url": request.form.get("image_url"),
-            "notes": request.form.get("notes"),
             "status": request.form.get("status")
         }
         mongo.db.cases.update_one({"_id": ObjectId(case_id)}, {"$set": submit})
+        if request.form.get("notes"):
+            note = {
+                    "case_id": ObjectId(case_id),
+                    "note": request.form.get("notes")
+            }
+            note_id = mongo.db.notes.insert_one(note)
+            mongo.db.cases.update_one(
+                {"_id": ObjectId(case_id)}, 
+                {"$push": { "notes" : ObjectId(note_id.inserted_id)}}
+                )       
+
         flash("Case Successfully Updated")
 
     case = mongo.db.cases.find_one({"_id": ObjectId(case_id)})

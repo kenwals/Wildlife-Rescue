@@ -1,4 +1,5 @@
 import os
+import datetime
 from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
@@ -195,6 +196,7 @@ def add_case():
         caseno = mongo.db.casenumbers.find_one_and_update(
             {"_id": ObjectId("60a145f44eb297c0b8512ea5")},
             {"$inc": {"sequence_value": 1}})
+
         case = {
             "date": request.form.get("date"),
             "location": request.form.get("location"),
@@ -202,12 +204,25 @@ def add_case():
             "criminal": request.form.get("criminal"),
             "species": request.form.get("species"),
             "image_url": request.form.get("image_url"),
-            "notes": request.form.get("notes"),
+            "notes": [],
             "status": "Pending",
             "case_number": caseno["sequence_value"],
             "created_by": session["user"]
         }
-        mongo.db.cases.insert_one(case)
+        _id = mongo.db.cases.insert_one(case)
+        case_id = _id.inserted_id
+        if request.form.get("notes"):
+            note = {
+                    "case_id": ObjectId(case_id),
+                    "date_time": datetime.datetime.now(),
+                    "note": request.form.get("notes")
+            }
+            note_id = mongo.db.notes.insert_one(note)
+            mongo.db.cases.update_one(
+                {"_id": ObjectId(case_id)}, 
+                {"$push": { "notes" : ObjectId(note_id.inserted_id)}}
+                )
+
         flash("Case is Successfully Added")
         return redirect(url_for("get_cases"))
 
@@ -226,13 +241,25 @@ def edit_case(case_id):
             "criminal": request.form.get("criminal"),
             "species": request.form.get("species"),
             "image_url": request.form.get("image_url"),
-            "notes": request.form.get("notes"),
             "status": request.form.get("status")
         }
         mongo.db.cases.update_one({"_id": ObjectId(case_id)}, {"$set": submit})
+        if request.form.get("notes"):
+            note = {
+                    "case_id": ObjectId(case_id),
+                    "date_time": datetime.datetime.now(),
+                    "note": request.form.get("notes")
+            }
+            note_id = mongo.db.notes.insert_one(note)
+            mongo.db.cases.update_one(
+                {"_id": ObjectId(case_id)}, 
+                {"$push": { "notes" : ObjectId(note_id.inserted_id)}}
+                )       
+
         flash("Case Successfully Updated")
 
     case = mongo.db.cases.find_one({"_id": ObjectId(case_id)})
+    notes_array = mongo.db.notes.find({"case_id": ObjectId(case_id)}).sort("date_time", -1)
     reasons = mongo.db.reason.find().sort("Reason", 1)
     speciess = mongo.db.species.find().sort("species", 1)
     statuses = mongo.db.status.find().sort("status", 1)
@@ -241,6 +268,7 @@ def edit_case(case_id):
         case=case,
         reasons=reasons,
         speciess=speciess,
+        notes_array=notes_array,
         statuses=statuses
     )
 
@@ -248,6 +276,7 @@ def edit_case(case_id):
 @app.route("/delete/case/<case_id>")
 def delete_case(case_id):
     mongo.db.cases.delete_one({"_id": ObjectId(case_id)})
+    mongo.db.notes.delete_many({"case_id": ObjectId(case_id)})
     flash("Case Successfully Deleted")
     return redirect(url_for("get_cases"))
 

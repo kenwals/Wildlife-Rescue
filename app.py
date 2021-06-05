@@ -28,14 +28,13 @@ def home_page():
 def get_cases():
     page, per_page, offset = get_page_args(page_parameter='page',
                                            per_page_parameter='per_page')
-
-    filter = request.args.get("filter")
     # If you are hard coding the number of
     # items per page then uncomment the two lines below
     # per_page = 6
     # offset = page * per_page
 
-    # Gets all the case values
+    filter = request.args.get("filter")
+
     if filter == "pending":
         query = {"status": "Pending"}
     elif filter == "user":
@@ -44,7 +43,8 @@ def get_cases():
         query = {"status": {"$ne": "Closed"}}
     else:
         query = {}
-    #import pdb; pdb.set_trace()
+
+    # Gets all the case values
     cases = mongo.db.cases.find(query)
 
     # Gets the count total case values to be used later

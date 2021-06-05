@@ -13,7 +13,7 @@
       {% if session.user %}
       <a href="{{ url_for('add_case') }}" class="btn btn-success fs-4">Create a new Case</a>
       {% else %}
-      <a href="{{ url_for('login') }}" class="btn btn-primary fs-4"> Log In </a> / <a href="{{ url_for('register') }}" class="btn btn-secondary fs-4"> Register </a>
+      <a href="{{ url_for('register') }}" class="btn btn-primary fs-4"> Register </a> / <a href="{{ url_for('login') }}" class="btn btn-outline-secondary fs-4"> Log In </a>
       {% endif %}
       </div>
       <p>There are three approaches to helping wildlife and it can be hard to choose the right course of action, especially if you’re stressed and nervous. If in doubt, call us! </p>

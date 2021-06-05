@@ -24,7 +24,7 @@ def home_page():
     return render_template("home.html")
 
 
-@app.route("/all/cases")
+@app.route("/cases")
 def get_cases():
     page, per_page, offset = get_page_args(page_parameter='page',
                                            per_page_parameter='per_page')
@@ -33,11 +33,22 @@ def get_cases():
     # per_page = 6
     # offset = page * per_page
 
+    filter = request.args.get("filter")
+
+    if filter == "pending":
+        query = {"status": "Pending"}
+    elif filter == "user":
+        query = {"created_by": session["user"]}
+    elif filter == "open":
+        query = {"status": {"$ne": "Closed"}}
+    else:
+        query = {}
+
     # Gets all the case values
-    cases = mongo.db.cases.find()
+    cases = list(mongo.db.cases.find(query))
 
     # Gets the count total case values to be used later
-    total = mongo.db.cases.count_documents({})
+    total = len(cases)
 
     # Paginates the values
     paginatedCases = cases[offset: offset + per_page]
@@ -45,99 +56,6 @@ def get_cases():
     # please note boostrap4 is used here as bootstrap5 doesn't seem to be supported
     pagination = Pagination(page=page, per_page=per_page, total=total,
                             css_framework='bootstrap4')  
-
-    return render_template("cases.html",
-                           cases=paginatedCases,
-                           page=page,
-                           per_page=per_page,
-                           pagination=pagination,
-                           )
-
-
-@app.route("/pending/cases")
-def get_cases_pending():
-    page, per_page, offset = get_page_args(page_parameter='page',
-                                           per_page_parameter='per_page')
-    # If you are hard coding the number of items per page
-    # then uncomment the two lines below
-    # per_page = 6
-    # offset = page * per_page
-
-    # Gets all the values that have status pending
-    query = {"status": "Pending"}
-    cases = mongo.db.cases.find(query)
-
-    # Gets the total values to be used later
-    total = mongo.db.cases.count_documents(query)
-
-    # Paginates the values
-    paginatedCases = cases[offset: offset + per_page]
-
-    # please note boostrap4 is used here as bootstrap5 doesn't seem to be supported
-    pagination = Pagination(page=page, per_page=per_page, total=total,
-                            css_framework='bootstrap4')
-
-    return render_template("cases.html",
-                           cases=paginatedCases,
-                           page=page,
-                           per_page=per_page,
-                           pagination=pagination,
-                           )
-
-
-@app.route("/my/cases")
-def get_my_cases():
-    page, per_page, offset = get_page_args(page_parameter='page',
-                                           per_page_parameter='per_page')
-    # If you are hard coding the number of items per page
-    # then uncomment the two lines below
-    # per_page = 6
-    # offset = page * per_page
-
-    # Gets all the values that are created by the current user 
-    query = {"created_by": session["user"]}
-    cases = mongo.db.cases.find(query)
-
-    # Gets the total values to be used later
-    total = mongo.db.cases.count_documents(query)
-
-    # Paginates the values
-    paginatedCases = cases[offset: offset + per_page]
-
-    # please note boostrap4 is used here as bootstrap5 doesn't seem to be supported
-    pagination = Pagination(page=page, per_page=per_page, total=total,
-                            css_framework='bootstrap4')
-
-    return render_template("cases.html",
-                           cases=paginatedCases,
-                           page=page,
-                           per_page=per_page,
-                           pagination=pagination,
-                           )
-
-
-@app.route("/open/cases")
-def get_open_cases():
-    page, per_page, offset = get_page_args(page_parameter='page',
-                                           per_page_parameter='per_page')
-    # If you are hard coding the number of items per page
-    # then uncomment the two lines below
-    # per_page = 6
-    # offset = page * per_page
-
-    # Gets all the values that have status not equal to closed
-    query = {"status": {"$ne": "Closed"}}
-    cases = mongo.db.cases.find(query)
-
-    # Gets the total values to be used later
-    total = mongo.db.cases.count_documents(query)
-
-    # Paginates the values
-    paginatedCases = cases[offset: offset + per_page]
-
-    # please note boostrap4 is used here as bootstrap5 doesn't seem to be supported
-    pagination = Pagination(page=page, per_page=per_page, total=total,
-                            css_framework='bootstrap4')
 
     return render_template("cases.html",
                            cases=paginatedCases,
@@ -158,10 +76,10 @@ def search():
 
     # Gets all the values that match the user entered search query
     query = request.form.get("query")
-    cases = mongo.db.cases.find({"$text": {"$search": query}})
+    cases = list(mongo.db.cases.find({"$text": {"$search": query}}))
 
     # Gets the total values to be used later
-    total = mongo.db.cases.count_documents({"$text": {"$search": query}})
+    total = len(cases)
 
     # Paginates the values
     paginatedCases = cases[offset: offset + per_page]

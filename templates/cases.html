@@ -16,9 +16,9 @@
               <span class="fw-bold fs-4">Filters <i class="bi bi-funnel"></i></span>
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item fs-4" href="{{ url_for('get_my_cases') }}">My Cases</a></li>
-              <li><a class="dropdown-item fs-4" href="{{ url_for('get_cases_pending') }}">All Pending cases</a></li>
-              <li><a class="dropdown-item fs-4" href="{{ url_for('get_open_cases') }}">All Open cases</a></li>
+              <li><a class="dropdown-item fs-4" href="{{ url_for('get_cases', filter='user') }}">My Cases</a></li>
+              <li><a class="dropdown-item fs-4" href="{{ url_for('get_cases', filter='pending') }}">All Pending cases</a></li>
+              <li><a class="dropdown-item fs-4" href="{{ url_for('get_cases', filter='open') }}">All Open cases</a></li>
             </ul>
           </div>
         </div>
@@ -26,7 +26,7 @@
       </div> 
     </div>
 <div class="row">
-    <div class="col-md-12 text-center">
+    <div class="col-md-6 offset-md-4 text-center">
     {{ pagination.info }}
     </div>
 </div>
@@ -39,7 +39,7 @@
           <p class="card-text fs-4"> Reason :  {{ case.reason }} </p>
           <p class="card-text fs-4"> Status :  {{ case.status }} </p>
           <p class="card-text fs-4"> created by : {{ case.created_by }}  </p>
-          <a href="{{ url_for('edit_case', case_id=case._id) }}" class="btn btn-info fs-4">View More Info</a>
+          <a href="{{ url_for('edit_case', case_id=case._id) }}" class="btn btn-link fs-4">More Info</a>
         </div>
         <div class="card-footer">
           <small class="text-muted"> Case ID: {{ case.case_number }} , Date : {{ case.date }} </small>
@@ -49,7 +49,7 @@
     {% endfor %}
 </div>
 <div class="row">
-    <div class="col-md-12 mt-3 text-center">
+    <div class="col-md-6 offset-md-4 mt-5 ps-5 text-center">
     {{ pagination.links }}
     </div>
 </div>

@@ -260,7 +260,6 @@ def edit_case(case_id):
     reasons = mongo.db.reason.find().sort("Reason", 1)
     speciess = mongo.db.species.find().sort("species", 1)
     statuses = mongo.db.status.find().sort("status", 1)
-    print(statuses)
     return render_template(
         "view-case.html",
         case=case,

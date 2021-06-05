@@ -276,6 +276,7 @@ def edit_case(case_id):
 @app.route("/delete/case/<case_id>")
 def delete_case(case_id):
     mongo.db.cases.delete_one({"_id": ObjectId(case_id)})
+    mongo.db.notes.delete_many({"case_id": ObjectId(case_id)})
     flash("Case Successfully Deleted")
     return redirect(url_for("get_cases"))
 

@@ -256,14 +256,20 @@ def edit_case(case_id):
         flash("Case Successfully Updated")
 
     case = mongo.db.cases.find_one({"_id": ObjectId(case_id)})
+    #print(case)
+    #notes_array = []
+    notes_array = mongo.db.notes.find({"case_id": ObjectId(case_id)})
+    print(notes_array)
     reasons = mongo.db.reason.find().sort("Reason", 1)
     speciess = mongo.db.species.find().sort("species", 1)
     statuses = mongo.db.status.find().sort("status", 1)
+    print(statuses)
     return render_template(
         "view-case.html",
         case=case,
         reasons=reasons,
         speciess=speciess,
+        notes_array=notes_array,
         statuses=statuses
     )
 

@@ -1,5 +1,6 @@
 import os
 import datetime
+from functools import wraps
 from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
@@ -19,6 +20,20 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
+# @login_required decorator
+# https://flask.palletsprojects.com/en/2.0.x/patterns/viewdecorators/#login-required-decorator
+# Taken from Tim Nelson's updated task manager repo 
+def login_required(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        # no "user" in session
+        if "user" not in session:
+            flash("You must log in to view this page")
+            return redirect(url_for("login"))
+        # user is in session
+        return f(*args, **kwargs)
+    return decorated_function
+
 
 @app.route("/")
 def home_page():
@@ -26,6 +41,7 @@ def home_page():
 
 
 @app.route("/cases")
+@login_required
 def get_cases():
     page, per_page, offset = get_page_args(page_parameter='page',
                                            per_page_parameter='per_page')
@@ -153,6 +169,7 @@ def login():
 
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
+@login_required
 def profile(username):
     if request.method == "POST":
         submit = {
@@ -182,6 +199,7 @@ def profile(username):
 
 
 @app.route("/logout")
+@login_required
 def logout():
     # remove user from session cookie
     flash("You have been logged out")
@@ -190,6 +208,7 @@ def logout():
 
 
 @app.route("/add/case", methods=["GET", "POST"])
+@login_required
 def add_case():
     if request.method == "POST":
         # this generates a new unique case number
@@ -232,6 +251,7 @@ def add_case():
 
 
 @app.route("/view/case/<case_id>", methods=["GET", "POST"])
+@login_required
 def edit_case(case_id):
     if request.method == "POST":
         submit = {
@@ -274,6 +294,7 @@ def edit_case(case_id):
 
 
 @app.route("/delete/case/<case_id>")
+@login_required
 def delete_case(case_id):
     mongo.db.cases.delete_one({"_id": ObjectId(case_id)})
     mongo.db.notes.delete_many({"case_id": ObjectId(case_id)})

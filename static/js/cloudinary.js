@@ -5,10 +5,8 @@ var myWidget = cloudinary.createUploadWidget({
     cropping: true
   }, (error, result) => {
     if (!error && result && result.event === "success") {
-      console.log(result.info.url);
       document.getElementById("image").value = result.info.url;
       document.getElementById("img-thumbnail").src = result.info.url;
-      console.log(document.getElementById("image").value);
     }
   })
 

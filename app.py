@@ -187,7 +187,7 @@ def profile(username):
         {"username": session["user"]})["full-name"]
     phone = mongo.db.users.find_one(
         {"username": session["user"]})["phone"]
-    if session["user"]:
+    if "user" in session:
         return render_template(
             "profile.html",
             username=username,

@@ -72,7 +72,8 @@ def get_cases():
 
     # please note boostrap4 is used here as bootstrap5 doesn't seem to be supported
     pagination = Pagination(page=page, per_page=per_page, total=total,
-                            css_framework='bootstrap4')  
+                            css_framework='bootstrap4',
+                            record_name='cases')  
 
     return render_template("cases.html",
                            cases=paginatedCases,
@@ -103,7 +104,8 @@ def search():
 
     # please note boostrap4 is used here as bootstrap5 doesn't seem to be supported
     pagination = Pagination(page=page, per_page=per_page, total=total,
-                            css_framework='bootstrap4')
+                            css_framework='bootstrap4',
+                            record_name='cases')
     return render_template("cases.html",
                            cases=paginatedCases,
                            page=page,

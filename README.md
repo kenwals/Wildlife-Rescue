@@ -174,6 +174,9 @@ Font used is Rubik from Google fonts.
 ### Features Left to Implement
 
 - Refactor homepage layout , colours and images
+- Change password functionality
+- Portal to edit user access
+- Firebase Authentication API
 
 ## Technologies Used
 

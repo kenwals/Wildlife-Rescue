@@ -125,7 +125,7 @@ status: STRING
 
 ![wireframe 1 homepage](wireframe/wireframe1-homepage.png)
 ![wireframe 2 all cases view](wireframe/wireframe2-all-cases-view.png)
-![wireframe 3 case view](wireframe\wireframe3-case-view.png)
+![wireframe 3 case view](wireframe/wireframe3-case-view.png)
 
 
 ### Surface

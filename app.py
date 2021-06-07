@@ -45,11 +45,8 @@ def home_page():
 def get_cases():
     page, per_page, offset = get_page_args(page_parameter='page',
                                            per_page_parameter='per_page')
-    # If you are hard coding the number of
-    # items per page then uncomment the two lines below
-    # per_page = 6
-    # offset = page * per_page
 
+    # graps the keyword from the url that is equal to filter
     filter = request.args.get("filter")
 
     if filter == "pending":
@@ -61,10 +58,10 @@ def get_cases():
     else:
         query = {}
 
-    # Gets all the case values
+    # Gets all the case values that match the above query
     cases = list(mongo.db.cases.find(query))
 
-    # Gets the count total case values to be used later
+    # Gets the count total of results needed for pagination
     total = len(cases)
 
     # Paginates the values
@@ -87,22 +84,18 @@ def get_cases():
 def search():
     page, per_page, offset = get_page_args(page_parameter='page',
                                            per_page_parameter='per_page')
-    # If you are hard coding the number of items per page
-    # then uncomment the two lines below
-    # per_page = 6
-    # offset = page * per_page
 
-    # Gets all the values that match the user entered search query
+    # Gets all the values that match the user entered in search box
     query = request.form.get("query")
     cases = list(mongo.db.cases.find({"$text": {"$search": query}}))
 
-    # Gets the total values to be used later
+    # Gets the count total of results needed for pagination
     total = len(cases)
 
     # Paginates the values
     paginatedCases = cases[offset: offset + per_page]
 
-    # please note boostrap4 is used here as bootstrap5 doesn't seem to be supported
+    # Please note boostrap4 is used here as bootstrap5 doesn't seem to be supported
     pagination = Pagination(page=page, per_page=per_page, total=total,
                             css_framework='bootstrap4',
                             record_name='cases')
@@ -174,6 +167,7 @@ def login():
 @login_required
 def profile(username):
     if request.method == "POST":
+        # Here user is updating their contact details
         submit = {
             "full-name": request.form.get("name"),
             "phone": request.form.get("phone"),
@@ -225,20 +219,27 @@ def add_case():
             "criminal": request.form.get("criminal"),
             "species": request.form.get("species"),
             "image_url": request.form.get("image_url"),
-            "notes": [],
+            "notes": [], # notes is an array variable
             "status": "Pending",
             "case_number": caseno["sequence_value"],
             "created_by": session["user"]
         }
+        # case is added to DB, and case ObjectID is returned
         _id = mongo.db.cases.insert_one(case)
+        # Case id to isolated from the ObjectID
         case_id = _id.inserted_id
         if request.form.get("notes"):
+            # if user enters a note:
             note = {
                     "case_id": ObjectId(case_id),
                     "date_time": datetime.datetime.now(),
                     "note": request.form.get("notes")
             }
+            # Notes is added to the notes table in DB, 
+            # The note ObjectID is returned
             note_id = mongo.db.notes.insert_one(note)
+            # case document notes array field is then
+            # pushed the linked note ID
             mongo.db.cases.update_one(
                 {"_id": ObjectId(case_id)}, 
                 {"$push": { "notes" : ObjectId(note_id.inserted_id)}}
@@ -256,6 +257,7 @@ def add_case():
 @login_required
 def edit_case(case_id):
     if request.method == "POST":
+        # here the updated form values is gathered for DB
         submit = {
             "date": request.form.get("date"),
             "location": request.form.get("location"),
@@ -266,13 +268,18 @@ def edit_case(case_id):
             "status": request.form.get("status")
         }
         mongo.db.cases.update_one({"_id": ObjectId(case_id)}, {"$set": submit})
+        # if user enters a note:
         if request.form.get("notes"):
             note = {
                     "case_id": ObjectId(case_id),
                     "date_time": datetime.datetime.now(),
                     "note": request.form.get("notes")
             }
+            # Notes is added to the notes table in DB, 
+            # The note ObjectID is returned
             note_id = mongo.db.notes.insert_one(note)
+            # case document notes array field is then
+            # pushed the linked note ID
             mongo.db.cases.update_one(
                 {"_id": ObjectId(case_id)}, 
                 {"$push": { "notes" : ObjectId(note_id.inserted_id)}}
@@ -280,6 +287,7 @@ def edit_case(case_id):
 
         flash("Case Successfully Updated")
 
+    # here the values for the case form are pulled from the DB
     case = mongo.db.cases.find_one({"_id": ObjectId(case_id)})
     notes_array = mongo.db.notes.find({"case_id": ObjectId(case_id)}).sort("date_time", -1)
     reasons = mongo.db.reason.find().sort("Reason", 1)
@@ -298,7 +306,9 @@ def edit_case(case_id):
 @app.route("/delete/case/<case_id>")
 @login_required
 def delete_case(case_id):
+    # case is deleted from case table
     mongo.db.cases.delete_one({"_id": ObjectId(case_id)})
+    # linked notes is deleted from notes table
     mongo.db.notes.delete_many({"case_id": ObjectId(case_id)})
     flash("Case Successfully Deleted")
     return redirect(url_for("get_cases"))

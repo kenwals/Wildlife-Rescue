@@ -130,15 +130,16 @@ status: STRING
 
 #### Colours
 
-Colour are natural and sourced from a nature photo.
+![Colours referance](wireframe/wildlife-rescue-colour-referance.png)
 
-#FFFFFD Black White - taken from the colour of the feathers of a Grey Heron bird 
+Colour are natural and sourced from [a nature photo](https://photos.app.goo.gl/3nmoGsiUrAF82Fns5).
 
-#ADCE4B Turmeric - taken from Green river reeds on the River Liffey 
+- #FFFFFD Black White - taken from the colour of the feathers of a Grey Heron bird 
+- #ADCE4B Turmeric - taken from Green river reeds on the River Liffey 
+- #6C6666 Dove Gray - taken from the colour of the feathers of a Grey Heron bird
+- #FEE579 Kournikova  - taken from the colour of the beak of a Grey Heron bird
 
-#6C6666 Dove Gray - taken from the colour of the feathers of a Grey Heron bird
 
-#FEE579 Kournikova  - taken from the colour of the beak of a Grey Heron bird
 
 #### Icons
 
@@ -151,6 +152,8 @@ images are sourced from here and here https://diygarden.co.uk/wildlife/rescue-gu
 #### Fonts
 
 Font used is Rubik from Google fonts.
+
+  ![font sample](wireframe/font-sample.png)
 
 ## Features
 

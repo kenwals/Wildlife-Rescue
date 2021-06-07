@@ -4,22 +4,24 @@
 * {
     box-sizing: border-box;
 }
-
+/* */
 html {
     font-size: 68%;
-    background-color: #6C6666  ;
+    background-color: #6C6666  ; /* Dove Gray */
 }
 body{
     font-family: 'Rubik', sans-serif; 
     font-size: 1.6rem;
-    background-color: #FFFFFD ;
-    color:  #6C6666  ;
+    background-color: #FFFFFD ; /* Black White */
+    color:  #6C6666  ; /* Dove Gray */
 }
 
 #header {
-    background-color: #ADCE4B ;
-    color: #000;
+    background-color: #ADCE4B ;  /* Tumeric */
+    color: #000; 
 }
+
+/* navbar section  */
 
 .navbar-light .navbar-brand {
     color: #000 ;
@@ -28,21 +30,24 @@ body{
     color: #000 ;
 }
 
+/* Alerts section */
 .alert-heron{
-    background-color: #FEE579 ;
+    background-color: #FEE579 ; /* Kournikova */ 
 }
 
 .minimum-height{
     min-height: 83rem;
-}
+} /* this ensures footer is alligned on all pages */
 
 .maximum-width{
     max-width: 33rem;
-}
+} /* this keeps sections narrow for smaller screens */
 
 .img-thumbnail{
     max-width: 20rem;
-}
+} /* this is the image thumbnail on the view case screen */
+
+/* Pagination section on the cases screen */
 
 .pagination-page-info {
     max-width: 33rem;
@@ -51,6 +56,7 @@ body{
     margin: .5em;
     margin-left: 0;
 }
+
 .pagination-page-info b {
     padding-left: .6em;
     padding: .1em .25em;
@@ -60,12 +66,14 @@ span.sr-only{
     display: none;
   } /* this hides the phrase 'current' showing up in the pagination info section */
 
+/* Footer section */
+
 #footer {
-    background-color: #6C6666  ;
-    color:  #FFFFFD  ;
+    background-color: #6C6666  ; /* Dove Gray */
+    color:  #FFFFFD  ; /* Black White */
 }
 
 .footer-list-item {
-	color: #FFFFFD ;
+	color: #FFFFFD ; /* Black White */
 	padding: 1rem;
 }

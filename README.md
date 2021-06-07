@@ -177,16 +177,15 @@ Font used is Rubik from Google fonts.
 
 ## Technologies Used
 
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
-
 ### Frontend
 
 #### Languages
 
 - HTML
 - CSS
-- JavaScript
 - Python
+- JavaScript
+
 
 #### Libraries and Frameworks
 
@@ -194,12 +193,14 @@ In this section, you should mention all of the languages, frameworks, libraries,
 - [Flask](https://flask.palletsprojects.com/en/1.1.x/)
 - [Jinja](https://jinja.palletsprojects.com/en/2.11.x/)
 - [Werkzeug](https://werkzeug.palletsprojects.com/en/1.0.x/)
+- [PyMongo](https://pymongo.readthedocs.io/en/stable/)
 - Fonts : [Google Fonts](https://fonts.google.com/)
 - Icons : [Bootstrap](https://icons.getbootstrap.com/)
 
 #### Tools
 
 - JSfiddle : I used this online IDE to build and play with [Cloudinary API](https://jsfiddle.net/kenwals/8ze3u4ok/33/) and [Google places API](https://jsfiddle.net/kenwals/gv2oe4dp/8/) before i added them to this project confidently
+- [MongoDB compass](https://www.mongodb.com/products/compass): Really handy desktop application for viewing and maintaining my DB.
 - Wireframe: [Balsamiq](https://balsamiq.com/)
 - IDE: Visual Studio Code (VS Code).
 - Version control: Git
@@ -216,9 +217,11 @@ In this section, you should mention all of the languages, frameworks, libraries,
 - Python linter :  [Pep8 online](http://pep8online.com/)
 - markdown linter : markdownlint extension on VS Code.
 - Colour names : [Name that color ](https://chir.ag/projects/name-that-color/#6195ED)
+- Colour swatches : [Coolors](https://coolors.co/)
 - [markdown table of contents creator](https://ecotrust-canada.github.io/markdown-toc/)
 - [site preview tool](http://ami.responsivedesign.is/)
 - [Grammarly](https://chrome.google.com/webstore/detail/grammarly-for-chrome/kbfnbcaeplbcioakkpcpgfkobkghlhen?hl=en)
+- [Microsoft Excel](https://www.microsoft.com/en-ww/microsoft-365/excel) : used for slicing and dicing wildlife species list.
 
 ## Testing
 

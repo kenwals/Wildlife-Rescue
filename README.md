@@ -159,27 +159,21 @@ Font used is Rubik from Google fonts.
 
 ## Features
 
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
-
-
 ### Existing Features
 
-- Pagination on cases page.
-- autocomplete on certain fields in the new case and edit case screen.
-- filtered views on cases
+- Pagination on cases results page.
+- Autocomplete on certain fields in the new case and edit case screen.
+- filtered views on cases results cases
 - Visitor can register , login and update their contact details
-- Visitor has full CRUD access to the case they create. 
-- Google places integration
-- Unique case Id generated for each case
-- Cloudinary image upload integration
-
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
-
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
+- Visitor has full CRUD access to each case they create.
+- Google places integration on the case location field
+- Unique case number generated for each case
+- Cloudinary image upload integration case image field
+- Each case has a notes journal , so case notes history can be audited.
 
 ### Features Left to Implement
 
-- Refactor homepage layout?
+- Refactor homepage layout , colours and images
 
 ## Technologies Used
 

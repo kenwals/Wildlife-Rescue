@@ -366,19 +366,13 @@ You may wish to contribute to this website and have your contribution published,
 
 more detailed instructions available [here](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo)
 
-
 ## Credits
 
 ### Content
 
-- The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
-        https://wildlife-incidents.com/ 
-        http://irishwildlifematters.ie/animals/
-- images are sourced from here https://diygarden.co.uk/wildlife/rescue-guide/ 
-- The foundation of this site is sourced from Code Institute Educational material - Tim Nelson's Task Manager project.
- 
-
-
+- The foundation of this site is sourced from Code Institute Educational material - [Tim Nelson's Task Manager project](https://github.com/TravelTimN/flask-task-manager-project/tree/demo).
+- Homepage text was sourced from [DIY Garden rescue guide](https://diygarden.co.uk/wildlife/rescue-guide/)
+- Homepage text, lists of species, reasons, and statuses were sourced from [wildlife incidents app](https://wildlife-incidents.com/)
 
 ### Resources
 
@@ -402,9 +396,11 @@ more detailed instructions available [here](https://docs.github.com/en/free-pro-
 
 ### Media
 
-- images on front page are sourced from [here](https://diygarden.co.uk/wildlife/rescue-guide/)
+- Images on front page are sourced from [here](https://diygarden.co.uk/wildlife/rescue-guide/) and [here](https://unsplash.com/photos/b027q9eF3Yo)
 
 ### Acknowledgements
 
 - I received inspiration for this project from Feargal Timon at https://wildlife-incidents.com/ and Galway swan rescue.
 - Kudos to Ed Bradly for his excellent advice and tips on #data-centric-dev Slack channel and on the recorded zoom call from March.
+- My Mentor [Maranatha Ilesanmi](https://github.com/mbilesanmi)
+- Code Institute's [Tim Nelson](https://github.com/TravelTimN/) who gave me some useful pointers with this project.

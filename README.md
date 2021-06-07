@@ -30,6 +30,8 @@ As a user of this database , I want to be able to edit my contact details.
 
 As a user of this database , I want to be able to upload an image as part of my case.
 
+As a user of this database , I want some of the form fields to autocomplete or auto suggest while i type.
+
 ##### Owner goals
 
 As an owner of this database site, I want each case incident to have a unique case number.

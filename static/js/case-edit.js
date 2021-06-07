@@ -7,6 +7,7 @@ function ready() {
         document.getElementById("saveCaseBtn").classList.remove("visually-hidden");
         document.getElementById("deleteCaseBtn").classList.remove("visually-hidden");
         document.getElementById("upload_widget").classList.remove("visually-hidden");
+        document.getElementById("heading-case-view-page").innerText = "Edit Case";
       }
     
     document.getElementById("editCaseBtn").addEventListener("click", formEnable);

@@ -13,7 +13,7 @@
     </div>
 </div>
 
-<form class="row mx-auto mt-3 g-3 maximum-width" method="POST" action="{{ url_for('profile', username=session["user"]) }}">
+<form class="row mx-auto mt-3 g-3 maximum-width" method="POST" action="{{ url_for('profile', username=session['user']) }}">
     <fieldset id="fieldsetProfile" disabled="disabled col-md-12">
     <div>
         <label for="inputName" class="form-label">Full Name</label>
@@ -32,7 +32,6 @@
     </div>
 
 </form>
-            
 
 </div>
 <script src="{{ url_for('static', filename='js/profile-edit.js') }}"></script>

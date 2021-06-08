@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="container-lg">
-<h3 class="my-3 fw-bold">New Case</h3>
+<h3 class="my-3 fw-bold">New Case</h3>  <!-- This is the new Case screen -->
 
 <form class="row g-3 mx-auto" method="POST" action="{{ url_for('add_case') }}">
 <div class="col-md-6 maximum-width">
@@ -14,12 +14,12 @@
     <input class="form-control fs-4" list="specieslistOptions" id="species" aria-label="Species" name="species" required placeholder="Type to search...">
     <datalist id="specieslistOptions">
       {% for species in speciess %}
-      <option value="{{ species.species }}">
+      <option value="{{ species.species }}"> <!-- This option tag syntax might be showing a linting error but the autocomplete displays better this way -->
       {% endfor %}
     </datalist>
   </div>
   <div class="mb-3">
-    <label for="location" class="form-label">Location : </label>
+    <label for="location" class="form-label">Location : </label> <!-- Google places API is linked to this input field -->
     <input type="text" class="form-control fs-4" id="location" name="location" placeholder="Please enter the location you found the wildlife animal" required>
   </div>
   <div class="mb-3">
@@ -27,7 +27,7 @@
     <input class="form-control fs-4" list="reasonOptions" id="reason" aria-label="Reason" name="reason" placeholder="Type to search..." required>
     <datalist id="reasonOptions">
       {% for reason in reasons %}
-      <option value="{{ reason.Reason }}">
+      <option value="{{ reason.Reason }}"> <!-- This option tag syntax might be showing a linting error but the autocomplete displays better this way -->
       {% endfor %}
     </datalist>
   </div>
@@ -42,9 +42,9 @@
 <div class="col-md-6 maximum-width">
   <div class="mb-3">
     <img src="{{ url_for('static', filename='images/blank-image.png') }}" class="img-thumbnail" id="img-thumbnail" alt="blank image or case image">
-    <label for="image" class="form-label visually-hidden">Image : </label>
+    <label for="image" class="form-label visually-hidden">Image : </label> 
     <button id="upload_widget" class="btn btn-outline-secondary fs-4 mx-3" type="button">Image upload</button>
-    <input type="url" class="form-control fs-4 visually-hidden" id="image" name="image_url">
+    <input type="url" class="form-control fs-4 visually-hidden" id="image" name="image_url"> <!-- Cloudinary API is linked to this imput field -->
   </div>
   <div class="mb-3">
   <label for="notes" class="form-label">Any notes or comments :</label>

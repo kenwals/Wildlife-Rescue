@@ -228,6 +228,10 @@ Font used is Rubik from Google fonts.
 
 ## Testing
 
+I tested the site as I went along, manually testing or using automated online testing tools. I focused on getting the site working on a small mobile phone screen first (iPhone 5 simulation on the Chrome Developer tools), and then subsequently all other screen sizes. Print values to terminal was used a lot when working with Python. Consoling to log when working with JavaScript.
+
+
+===
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
 Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
@@ -250,28 +254,32 @@ If this section grows too long, you may want to split it off into a separate fil
 
 ### Bugs encountered on the way
 
+#### Depreciated code warnings 
 
+While i was developing this web app. I was seeing DeprecationWarning messages coming up in the terminal log. These warnings were coming up for commands such as count and update.  So all MongoDB commands you see in my app now are using the correct and current PyMongo syntax.
 
-depreciated code ( count, update, ) exanple : DeprecationWarning: update is deprecated. Use replace_one, update_one or 
+Example warning message:
+```
+DeprecationWarning: update is deprecated. Use replace_one, update_one or 
 update_many instead. mongo.db.cases.update({"_id": ObjectId(case_id)}, { "$set": submit})
+```
 
+#### Favicon handling in Python Flask
 
+Favicons was causing errors with flask in the early stages, but i eventually got them working for all devices by experimenting with the format I think Flask expected it to be.
 
 ### Known issues
 
-Pagination orientation problem
+#### Pagination orientation problem
 
-For Pagination , I am using flask-paginate. At the time this project was being developed , this module didn't appear to support Bootstrap5 . So I have had to configure it to Bootstrap4. Still a problem placing 
+For Pagination , I am using flask-paginate. At the time this project was being developed , this module didn't appear to support Bootstrap5 . So I have had to configure it to Bootstrap4. I uses CSS to hide a "Current Page" label section that was looking off. A Bootstrap offset container is also used as i was unable to center allign the pagination otherwise. 
 
-Favicon
-
-Favicons doesn't work on Android devices . 
 
 ### Project barriers and solutions
 
 MongoDB verses PyMongo 
 
-When making the case number increment based on code i read in the MongoDB manual , i couldn't get it working in my Python code. But then i read [this article](https://stackoverflow.com/questions/17054494/pymongo-inc-having-issues/17054663). Hereby learning that PyMongo is slightly different from MongoDB!.
+When trying to make the case number increment based on code i read in the MongoDB manual, i couldn't get it working in my Python code. Googling the answer wasn't always leading me to the bottom of the problem, as I didn't realise PyMongo has a different syntax then MongoDB. But then i read [this article](https://stackoverflow.com/questions/17054494/pymongo-inc-having-issues/17054663). Hereby learning that PyMongo is slightly different from MongoDB!. So after this , i was back and forth between the two documentation sites , any useful MongoDB commands i needed to use i had to translate to PyMongo . 
 
 ### Version control
 

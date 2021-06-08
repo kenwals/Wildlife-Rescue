@@ -11,7 +11,7 @@
       <p>Do you need to log the details of a Rescue Case?</p>
       <div class="text-center mb-3">
       {% if session.user %}
-      <a href="{{ url_for('add_case') }}" class="btn btn-success fs-4">Create a new Case</a>
+      <a href="{{ url_for('add_case') }}" class="btn btn-success fs-4">Create a new Case <i class="bi bi-card-checklist fs-4"></i></a>
       {% else %}
       <a href="{{ url_for('register') }}" class="btn btn-primary fs-4"> Register </a> / <a href="{{ url_for('login') }}" class="btn btn-outline-secondary fs-4"> Log In </a>
       {% endif %}

@@ -36,9 +36,14 @@
   </div>
   <div class="mb-3">
     <label for="criminal" class="form-label"> Deemed Criminal : </label> 
-    <select class="form-select fs-4" id="criminal" aria-label="Deemed criminal" name="criminal" value="{{ case.criminal }}">
+    <select class="form-select fs-4" id="criminal" aria-label="Deemed criminal" name="criminal">
+      {% if case.criminal == "Yes" %}
+        <option value="Yes" selected>Yes</option>
+        <option value="No">No</option>
+      {% else %} 
         <option value="Yes">Yes</option>
         <option value="No" selected>No</option>
+      {% endif %}      
       </select>
     </div>
   </fieldset>
@@ -78,13 +83,13 @@
     </ul>
   </div>
   <div class="mb-3">
-    <button id="saveCaseBtn"" type="submit" class="btn btn-success visually-hidden fs-4">Save changes <i class="bi bi-save"></i></button>
+    <button id="saveCaseBtn" type="submit" class="btn btn-success visually-hidden fs-4">Save changes <i class="bi bi-save"></i></button>
     <button id="deleteCaseBtn" type="button" class="btn btn-outline-danger visually-hidden fs-4" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Delete Case <i class="bi bi-trash-fill"></i></button>
   </div>
 </fieldset>
 {% if (session.user|lower == case.created_by|lower) or (session.user|lower == 'admin@wildliferescue.com')  %} <!-- this section only loads if the user is the admin or is the creator of the case-->
 <div class="mb-3">
-  <button id="editCaseBtn"" type="button" class="btn btn-primary fs-4">Edit this case <i class="bi bi-pencil"></i></button>
+  <button id="editCaseBtn" type="button" class="btn btn-primary fs-4">Edit this case <i class="bi bi-pencil"></i></button>
 </div>
 {% endif %}
 <div class="mb-3">
@@ -106,7 +111,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-        <a type="button" class="btn btn-primary" href="{{ url_for('delete_case', case_id=case._id) }}">Yes</a>
+        <a class="btn btn-primary" href="{{ url_for('delete_case', case_id=case._id) }}">Yes</a>
       </div>
     </div>
   </div>
@@ -134,10 +139,10 @@ document.getElementById("date").max = formatDate(today);
 <script src="{{ url_for('static', filename='js/case-edit.js') }}"></script>
 <script
 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBE9p_HgjASrdVg5WwHtTUzxgODTOe41mo&libraries=places&callback=initAutocomplete"
-async defer>;
+async defer>
 </script>
 <script src="{{ url_for('static', filename='js/google-places.js') }}"></script>
-<script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>
+<script src="https://upload-widget.cloudinary.com/global/all.js"></script>
 <script src="{{ url_for('static', filename='js/cloudinary.js') }}"></script>
 {% endif %}
 {% endblock %}

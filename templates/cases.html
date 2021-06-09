@@ -9,7 +9,7 @@
         <form action="{{ url_for('search') }}" method="post">
         <div class="input-group mb-3 my-3">
           
-          <input type="text" class="form-control maximum-width" name="query" id="query" minlength="3" aria-label="Search query" aria-describedby="button-addon2" required>
+          <input type="text" class="form-control maximum-width" name="query" id="query" minlength="3" aria-label="Search query" aria-describedby="query" required>
           <div class="btn-group">
             <button type="submit" class="btn btn-outline-secondary fw-bold fs-4"> Search <i class="bi bi-search pe-3"></i> </button>
             <button type="button" class="btn dropdown-toggle dropdown-toggle-split btn-outline-secondary" data-bs-toggle="dropdown" aria-expanded="false">
@@ -52,7 +52,6 @@
 <div class="row">
     <div class="col-md-6 offset-md-4 mt-5 ps-5 text-center">
     {{ pagination.links }}   <!-- this is the pagination links at the bottom to the search results section, this panel only appears if there is more then one page of results  -->
-  </div>
     </div>
 </div>
 </div>

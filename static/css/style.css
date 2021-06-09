@@ -13,7 +13,7 @@ body{
     font-family: 'Rubik', sans-serif; 
     font-size: 1.6rem;
     background-color: #FFFFFD ; /* Black White */
-    color:  #6C6666  ; /* Dove Gray */
+    color:  #000  ; 
 }
 
 #header {

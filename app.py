@@ -263,7 +263,7 @@ def add_case():
 @login_required
 def edit_case(case_id):
     if request.method == "POST":
-        # here the updated form values is gathered for DB
+        # here the updated form values is gathered for DB later
         submit = {
             "date": request.form.get("date"),
             "location": request.form.get("location"),
@@ -273,9 +273,10 @@ def edit_case(case_id):
             "image_url": request.form.get("image_url"),
             "status": request.form.get("status")
         }
-        mongo.db.cases.update_one({"_id": ObjectId(case_id)}, {"$set": submit})
         # if user enters a note:
         if request.form.get("notes"):
+            # makes notes array value in submit dict
+            submit["notes"] = []
             note = {
                     "case_id": ObjectId(case_id),
                     "date_time": datetime.datetime.now().strftime("%c"),
@@ -284,13 +285,11 @@ def edit_case(case_id):
             # Notes is added to the notes table in DB, 
             # The note ObjectID is returned
             note_id = mongo.db.notes.insert_one(note)
-            # case document notes array field is then
-            # pushed the linked note ID
-            mongo.db.cases.update_one(
-                {"_id": ObjectId(case_id)}, 
-                {"$push": { "notes" : ObjectId(note_id.inserted_id)}}
-                )       
-
+            # case document notes array is appended with the above note_id
+            submit["notes"].append(ObjectId(note_id.inserted_id))
+        
+        # case values sent to DB
+        mongo.db.cases.update_one({"_id": ObjectId(case_id)}, {"$set": submit})       
         flash("Case Successfully Updated")
 
     # here the values for the case form are pulled from the DB

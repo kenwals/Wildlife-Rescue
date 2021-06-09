@@ -238,7 +238,7 @@ def add_case():
             # if user enters a note:
             note = {
                     "case_id": ObjectId(case_id),
-                    "date_time": datetime.datetime.now(),
+                    "date_time": datetime.datetime.now().strftime("%c"),
                     "note": request.form.get("notes")
             }
             # Notes is added to the notes table in DB, 
@@ -278,7 +278,7 @@ def edit_case(case_id):
         if request.form.get("notes"):
             note = {
                     "case_id": ObjectId(case_id),
-                    "date_time": datetime.datetime.now(),
+                    "date_time": datetime.datetime.now().strftime("%c"),
                     "note": request.form.get("notes")
             }
             # Notes is added to the notes table in DB, 

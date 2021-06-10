@@ -291,6 +291,27 @@ For version control, I used the UI on VS Code for making git commits or the GitH
 
 ### HTML5 validator
 
+Home 
+
+![Home page](wireframe/w3-Html-Checker-Home.png)
+
+Cases list 
+
+![cases list page](wireframe/w3-Html-Checker-cases.png)
+
+New Case 
+
+View/Edit  case
+
+Profile
+
+Login
+
+![Login page ](wireframe/w3-Html-Checker-login.png)
+
+Register
+
+
 ### JavaScript validator
 
 ### Usability Testing

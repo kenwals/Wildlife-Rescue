@@ -251,6 +251,23 @@ If this section grows too long, you may want to split it off into a separate fil
 
 ### Performance Testing
 
+Page 1 - Home page
+
+Page 2 - Case List Page
+
+Page 3 - New Case Page 
+
+Page 4 - View/Edit Case Page
+
+Page 5 - Profile Page
+
+Page 6 - Login Page
+
+Page 7 - Register Page
+
+Page 8 - 404 error Page
+
+
 ### Bugs encountered on the way
 
 #### Depreciated code warnings
@@ -332,35 +349,35 @@ The results are below. 14 Passes and 1 Fail.
 
 ### HTML5 validator
 
-Home 
+Page 1 - Home page
 
 ![Home page](wireframe/w3-Html-Checker-Home.png)
 
-Cases list
+Page 2 - Case List Page
 
 ![Cases list page](wireframe/w3-Html-Checker-cases.png)
 
-New Case
+Page 3 - New Case Page 
 
 ![New case page](wireframe/w3-Html-add-cases.png)
 
-View/Edit case
+Page 4 - View/Edit Case Page
 
 ![View Edit case page](wireframe/w3-Html-view-case.png)
 
-Profile
+Page 5 - Profile Page
 
 ![Profile page](wireframe/w3-Html-profile.png)
 
-Login
+Page 6 - Login Page
 
 ![Login page ](wireframe/w3-Html-Checker-login.png)
 
-Register
+Page 7 - Register Page
 
 ![Register page](wireframe/w3-Html-register.png)
 
-404 page
+Page 8 - 404 error Page
 
 ![404 error page](wireframe/w3-Html-404.png)
 
@@ -451,7 +468,7 @@ The most complex function has a cyclomatic complexity value of 1 while the media
 
 ### Usability Testing
 
-I shared the project on the peer-review channel on slack, and also with friends/family. There were several problems highlighted to me which I have since fixed. Such as responsiveness to device screen width size and issues with timer.
+I shared the project on the peer-review channel on slack, and also with friends/family. 
 
 I tested and improved accessibility with lighthouse and Firefox developer tools.
 

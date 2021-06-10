@@ -8,11 +8,11 @@
 
 <div class="col-md-6">
   <fieldset id="fieldset1" disabled="disabled">
-  <div class="mb-3">
+  <div class="mb-3 maximum-width">
     <label for="date"  class="form-label">Date :</label>
     <input type="date" class="form-control fs-4" id="date" name="date" value="{{ case.date }}" min="2021-04-01" required>
   </div>
-  <div class="mb-3">
+  <div class="mb-3 maximum-width">
     <label for="species" class="form-label">Species :</label>
     <input class="form-control fs-4" list="specieslistOptions" id="species" aria-label="Species" name="species" required value="{{ case.species }}">
     <datalist id="specieslistOptions">
@@ -25,7 +25,7 @@
     <label for="location" class="form-label">Location : </label> <!-- Google places API is linked to this input field -->
     <input type="text" class="form-control fs-4" id="location" name="location" value="{{ case.location }}" required>
   </div>
-  <div class="mb-3">
+  <div class="mb-3 maximum-width">
     <label for="reason" class="form-label">Reason for rescue : </label>
     <input class="form-control fs-4" list="reasonOptions" id="reason" aria-label="Reason" name="reason" value="{{ case.reason}}" required>
     <datalist id="reasonOptions">
@@ -34,7 +34,7 @@
       {% endfor %}
     </datalist>
   </div>
-  <div class="mb-3">
+  <div class="mb-3 maximum-width">
     <label for="criminal" class="form-label"> Deemed Criminal : </label> 
     <select class="form-select fs-4" id="criminal" aria-label="Deemed criminal" name="criminal">
       {% if case.criminal == "Yes" %}
@@ -61,7 +61,7 @@
       <button id="upload_widget" class="btn btn-outline-secondary fs-4 mx-3 visually-hidden" type="button">Upload/replace Image <i class="bi bi-cloud-arrow-up-fill"></i></button>
       <input type="url" class="form-control fs-4 visually-hidden" id="image" name="image_url" value="{{ case.image_url }}"> <!-- Cloudinary API is linked to this imput field -->
     </div>
-  <div class="mb-3">
+  <div class="mb-3 maximum-width">
     <label for="status" class="form-label">Status:</label>
     <select class="form-select fs-4" id="status" aria-label="status" name="status" >
       {% for status in statuses %}

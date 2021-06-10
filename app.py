@@ -20,9 +20,10 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
+
 # @login_required decorator
 # https://flask.palletsprojects.com/en/2.0.x/patterns/viewdecorators/#login-required-decorator
-# Sourced from Tim Nelson's updated task manager repo 
+# Sourced from Tim Nelson's updated task manager repo
 # https://github.com/TravelTimN/flask-task-manager-project/tree/demo
 def login_required(f):
     @wraps(f)
@@ -68,10 +69,11 @@ def get_cases():
     # Paginates the values
     paginatedCases = cases[offset: offset + per_page]
 
-    # please note boostrap4 is used here as bootstrap5 doesn't seem to be supported
+    # please note boostrap4 is used here as bootstrap5 doesn't
+    # seem to be supported
     pagination = Pagination(page=page, per_page=per_page, total=total,
                             css_framework='bootstrap4',
-                            record_name='cases')  
+                            record_name='cases')
 
     return render_template("cases.html",
                            cases=paginatedCases,
@@ -96,7 +98,8 @@ def search():
     # Paginates the values
     paginatedCases = cases[offset: offset + per_page]
 
-    # Please note boostrap4 is used here as bootstrap5 doesn't seem to be supported
+    # Please note boostrap4 is used here as bootstrap5 doesn't
+    # seem to be supported
     pagination = Pagination(page=page, per_page=per_page, total=total,
                             css_framework='bootstrap4',
                             record_name='cases')
@@ -147,12 +150,13 @@ def login():
             if existing_user:
                 # ensure hashed password matches user input
                 if check_password_hash(
-                        existing_user["password"], request.form.get("password")):
-                            session["user"] = request.form.get("username").lower()
-                            flash("Welcome, {}".format(
-                                session["user"]))
-                            return redirect(url_for(
-                                "profile", username=session["user"]))
+                        existing_user["password"],
+                        request.form.get("password")):
+                        session["user"] = request.form.get("username").lower()
+                        flash("Welcome, {}".format(
+                            session["user"]))
+                        return redirect(url_for(
+                            "profile", username=session["user"]))
                 else:
                     # invalid password match
                     flash("Incorrect Username and/or Password")
@@ -225,7 +229,7 @@ def add_case():
             "criminal": request.form.get("criminal"),
             "species": request.form.get("species"),
             "image_url": request.form.get("image_url"),
-            "notes": [], # notes is an array variable
+            "notes": [],  # notes is an array variable
             "status": "Pending",
             "case_number": caseno["sequence_value"],
             "created_by": session["user"]
@@ -237,18 +241,18 @@ def add_case():
         if request.form.get("notes"):
             # if user enters a note:
             note = {
-                    "case_id": ObjectId(case_id),
-                    "date_time": datetime.datetime.now().strftime("%X  %d %b %Y"),
-                    "note": request.form.get("notes")
+                "case_id": ObjectId(case_id),
+                "date_time": datetime.datetime.now().strftime("%X  %d %b %Y"),
+                "note": request.form.get("notes")
             }
-            # Notes is added to the notes table in DB, 
+            # Notes is added to the notes table in DB,
             # The note ObjectID is returned
             note_id = mongo.db.notes.insert_one(note)
             # case document notes array field is then
             # pushed the linked note ID
             mongo.db.cases.update_one(
-                {"_id": ObjectId(case_id)}, 
-                {"$push": { "notes" : ObjectId(note_id.inserted_id)}}
+                {"_id": ObjectId(case_id)},
+                {"$push": {"notes": ObjectId(note_id.inserted_id)}}
                 )
 
         flash("Case is Successfully Added")
@@ -278,23 +282,24 @@ def edit_case(case_id):
             # makes notes array value in submit dict
             submit["notes"] = []
             note = {
-                    "case_id": ObjectId(case_id),
-                    "date_time": datetime.datetime.now().strftime("%X  %d %b %Y"),
-                    "note": request.form.get("notes")
+                "case_id": ObjectId(case_id),
+                "date_time": datetime.datetime.now().strftime("%X  %d %b %Y"),
+                "note": request.form.get("notes")
             }
-            # Notes is added to the notes table in DB, 
+            # Notes is added to the notes table in DB,
             # The note ObjectID is returned
             note_id = mongo.db.notes.insert_one(note)
             # case document notes array is appended with the above note_id
             submit["notes"].append(ObjectId(note_id.inserted_id))
-        
+
         # case values sent to DB
-        mongo.db.cases.update_one({"_id": ObjectId(case_id)}, {"$set": submit})       
+        mongo.db.cases.update_one({"_id": ObjectId(case_id)}, {"$set": submit})
         flash("Case Successfully Updated")
 
     # here the values for the case form are pulled from the DB
     case = mongo.db.cases.find_one({"_id": ObjectId(case_id)})
-    notes_array = mongo.db.notes.find({"case_id": ObjectId(case_id)}).sort("date_time", -1)
+    notes_array = mongo.db.notes.find(
+        {"case_id": ObjectId(case_id)}).sort("date_time", -1)
     reasons = mongo.db.reason.find().sort("Reason", 1)
     speciess = mongo.db.species.find().sort("species", 1)
     statuses = mongo.db.status.find().sort("status", 1)
@@ -317,6 +322,7 @@ def delete_case(case_id):
     mongo.db.notes.delete_many({"case_id": ObjectId(case_id)})
     flash("Case Successfully Deleted")
     return redirect(url_for("get_cases"))
+
 
 @app.errorhandler(404)
 def page_not_found(e):

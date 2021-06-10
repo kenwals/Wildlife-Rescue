@@ -285,9 +285,45 @@ For version control, I used the UI on VS Code for making git commits or the GitH
 
 ### Functionality Testing
 
+Page 1 - Home page
+
+Page 2 - Case List Page
+
+Page 3 - New Case Page 
+
+Page 4 - View/Edit Case Page
+
+Page 5 - Profile Page
+
+Page 6 - Login Page
+
+Page 7 - Register Page
+
+Page 8 - 404 error Page
+
 ### Responsiveness Testing
 
+For this test, I got a list of [15 most common screen sizes](https://www.designrush.com/trends/website-dimensions) and used [http://responsivetesttool.com/](http://responsivetesttool.com/) to check responsiveness for each screen size.
 
+The results are below. 14 Passes and 1 Fail.
+
+| Device category | Model                 | Size Px (%popularity) | Result |
+| --------------- | --------------------- | ------------------ | ------ |
+| Desktop/Laptop  | NA                    | 1366x768 (22.98%)  | Pass   |
+| Desktop/Laptop  | NA                    | 1920x1080 (20.7%)  | Pass   |
+| Desktop/Laptop  | NA                    | 1536x864 (7.92%)   | Pass   |
+| Desktop/Laptop  | NA                    | 1440x900 (7.23%)   | Pass   |
+| Desktop/Laptop  | NA                    | 1280x720 (4.46%)   | Pass   |
+| Mobile Phone    | Samsung Galaxy Note 4 | 360x640 (18.7%)    | Pass   |
+| Mobile Phone    | Apple iPhone 6        | 375x667 (7.34%)    | Pass   |
+| Mobile Phone    | Apple iPhone XR       | 414x896 (6.76%)    | Pass   |
+| Mobile Phone    | Samsung Galaxy S8     | 360x780 (5.31%)    | Pass   |
+| Mobile Phone    | Apple iPhone X        | 375x812 (5.01%)    | Pass   |
+| Tablet          | Apple iPad            | 768x1024 (51.43%)  | Pass   |
+| Tablet          | unknown               | 1280x800 (7.28%)   | Pass   |
+| Tablet          | Samsung Galaxy Tab    | 800x1280 (5.26%)   | Pass   |
+| Tablet          | Google Nexus 7        | 601x962 (4.32%)    | Pass   |
+| Tablet          | unknown               | 962x601 (2.99%)    | Fail   |
 
 ### CSS3 validator
 
@@ -327,11 +363,38 @@ Register
 
 ![404 error page](wireframe/w3-Html-404.png)
 
+### Python validator 
+
+no issues. results below. Resource:  <https://pep8online.com//>
+
+```python
+
+
+```
+
 ### JavaScript validator
+
+no issues. results below. Resource:  <https://jshint.com/>
+
+```js
+
+
+```
+
 
 ### Usability Testing
 
+I shared the project on the peer-review channel on slack, and also with friends/family. There were several problems highlighted to me which I have since fixed. Such as responsiveness to device screen width size and issues with timer.
+
+I tested and improved accessibility with lighthouse and Firefox developer tools.
+
 ### Compatibility Testing
+
+| Screen size\Browser                          | Chrome | Firefox | Edge |
+| -------------------------------------------- | ------ | ------- | ---- |
+| Android Mobile phone (Screen width 412px) xs | Pass | Pass | Pass |
+| Android Tablet (Screen width 600px) sm       | Pass | Pass | Pass |
+| Windows laptop (Screen width 2560px)         |   Pass |  Pass |  Pass    |
 
 ### Testing User Stories
 

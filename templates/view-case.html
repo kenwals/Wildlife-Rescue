@@ -137,11 +137,11 @@ let today = new Date();
 document.getElementById("date").max = formatDate(today);
 </script>
 <script src="{{ url_for('static', filename='js/case-edit.js') }}"></script>
+<script src="{{ url_for('static', filename='js/google-places.js') }}"></script>
 <script
 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBE9p_HgjASrdVg5WwHtTUzxgODTOe41mo&libraries=places&callback=initAutocomplete"
 async defer>;
 </script>
-<script src="{{ url_for('static', filename='js/google-places.js') }}"></script>
 <script src="https://upload-widget.cloudinary.com/global/all.js"></script>
 <script src="{{ url_for('static', filename='js/cloudinary.js') }}"></script>
 {% endif %}

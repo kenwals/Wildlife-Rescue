@@ -367,20 +367,86 @@ Register
 
 no issues. results below. Resource:  <https://pep8online.com//>
 
-```python
-
-
-```
+![pep8 validation results](wireframe/pep8-python-check.png)
 
 ### JavaScript validator
 
 no issues. results below. Resource:  <https://jshint.com/>
 
+static\js\case-date-cut-off.js
+
 ```js
 
+Metrics
+There is only one function in this file.
+
+It takes one argument.
+
+This function contains 4 statements.
+
+Cyclomatic complexity number for this function is 3.
 
 ```
 
+static\js\case-edit.js
+
+```js
+
+Metrics
+There are 2 functions in this file.
+
+Function with the largest signature take 0 arguments, while the median is 0.
+
+Largest function has 7 statements in it, while the median is 4.5.
+
+The most complex function has a cyclomatic complexity value of 1 while the median is 1.
+
+```
+static\js\cloudinary.js
+
+```js
+
+Metrics
+There are 2 functions in this file.
+
+Function with the largest signature take 2 arguments, while the median is 1.
+
+Largest function has 3 statements in it, while the median is 2.
+
+The most complex function has a cyclomatic complexity value of 4 while the median is 2.5.
+
+```
+
+static\js\google-places.js
+
+```js
+
+There are 2 functions in this file.
+
+Function with the largest signature take 0 arguments, while the median is 0.
+
+Largest function has 3 statements in it, while the median is 2.5.
+
+The most complex function has a cyclomatic complexity value of 2 while the median is 1.5.
+
+One unused variable
+3	initAutocomplete
+
+```
+
+static\js\profile-edit.js
+
+```js
+
+Metrics
+There are 2 functions in this file.
+
+Function with the largest signature take 0 arguments, while the median is 0.
+
+Largest function has 3 statements in it, while the median is 2.5.
+
+The most complex function has a cyclomatic complexity value of 1 while the median is 1.
+```
 
 ### Usability Testing
 

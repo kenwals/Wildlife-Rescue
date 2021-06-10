@@ -253,20 +253,31 @@ If this section grows too long, you may want to split it off into a separate fil
 
 Page 1 - Home page
 
+![page 1](wireframe/lighthouse-p1-home.png)
+
 Page 2 - Case List Page
 
-Page 3 - New Case Page 
+![page 2](wireframe/lighthouse-p2-cases.png)
+
+Page 3 - New Case Page
+
+![page 3](wireframe/lighthouse-p3-new-case.png)
 
 Page 4 - View/Edit Case Page
 
+![page 4](wireframe/lighthouse-p4-view-case.png)
+
 Page 5 - Profile Page
+
+![page 5](wireframe/lighthouse-p5-profile.png)
 
 Page 6 - Login Page
 
+![page 6](wireframe/lighthouse-p6-login.png)
+
 Page 7 - Register Page
 
-Page 8 - 404 error Page
-
+![page 7](wireframe/lighthouse-p7-register.png)
 
 ### Bugs encountered on the way
 

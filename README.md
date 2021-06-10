@@ -287,7 +287,11 @@ For version control, I used the UI on VS Code for making git commits or the GitH
 
 ### Responsiveness Testing
 
+
+
 ### CSS3 validator
+
+![CSS3 validation](wireframe\CSS-validation.png)
 
 ### HTML5 validator
 
@@ -295,15 +299,21 @@ Home
 
 ![Home page](wireframe/w3-Html-Checker-Home.png)
 
-Cases list 
+Cases list
 
-![cases list page](wireframe/w3-Html-Checker-cases.png)
+![Cases list page](wireframe/w3-Html-Checker-cases.png)
 
-New Case 
+New Case
 
-View/Edit  case
+![New case page](wireframe/w3-Html-add-cases.png)
+
+View/Edit case
+
+![View Edit case page](wireframe/w3-Html-view-case.png)
 
 Profile
+
+![Profile page](wireframe/w3-Html-profile.png)
 
 Login
 
@@ -311,6 +321,11 @@ Login
 
 Register
 
+![Register page](wireframe/w3-Html-register.png)
+
+404 page
+
+![404 error page](wireframe/w3-Html-404.png)
 
 ### JavaScript validator
 

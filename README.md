@@ -425,9 +425,13 @@ The results are below. 15 Passes.
 
 ### CSS3 validator
 
+No errors.  Resource: <https://jigsaw.w3.org/css-validator/>
+
 ![CSS3 validation](wireframe\css-validation.png)
 
 ### HTML5 validator
+
+No errors for pages listed below . Resource: <https://validator.w3.org/>
 
 Page 1 - Home page
 

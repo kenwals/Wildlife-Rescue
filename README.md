@@ -486,7 +486,29 @@ I tested and improved accessibility with lighthouse and Firefox developer tools.
 
 #### Visitor Stories
 
+As a user of this database , I want to be able to register myself a login easily.
+
+As a user of this database , I want to be able to easily capture information on any mobile device.
+
+As a user of this database , I want to edit case records I submitted.
+
+As a user of this database , I want to be able to delete any information I created.
+
+As a user of this database , I want to be able to search and filter results easily.
+
+As a user of this database , I want to be able to edit my contact details.
+
+As a user of this database , I want to be able to upload an image as part of my case.
+
+As a user of this database , I want some of the form fields to autocomplete or auto suggest while i type.
+
 #### Owner Story
+
+As an owner of this database site, I want each case incident to have a unique case number.
+
+As an owner of this database site, I want to be able to have a user with superuser read/write access , this user can have read/write access to all records.
+
+As an owner of this database site, I want to be able to search and filter results easily.
 
 ## Deployment
 

@@ -6,6 +6,72 @@ There are various wildlife charities that rescue or rehabilitate animals whom ha
 
 A part of taking care of the animals is completing paperwork as the animal's care may requires licensing. The aim of this app is to make the process easier. Members of the public can register incident cases and the charity or Governing body can follow up.
 
+---
+
+## Table of contents
+
+- [UX](#ux)
+  * [Scope](#scope)
+    + [User Stories](#user-stories)
+      - [Visitor goals](#visitor-goals)
+      - [Owner goals](#owner-goals)
+  * [Structure](#structure)
+  * [Skeleton](#skeleton)
+    + [Website page line up / Flask templates](#website-page-line-up---flask-templates)
+    + [Non relational Database tables schema](#non-relational-database-tables-schema)
+      - [cases table](#cases-table)
+      - [User details table](#user-details-table)
+      - [notes  table](#notes--table)
+      - [reason  table](#reason--table)
+      - [species table](#species-table)
+      - [status table](#status-table)
+      - [casenumbers table](#casenumbers-table)
+    + [Wireframes](#wireframes)
+  * [Surface](#surface)
+    + [Colours](#colours)
+    + [Icons](#icons)
+    + [Images](#images)
+    + [Fonts](#fonts)
+- [Features](#features)
+  * [Existing Features](#existing-features)
+  * [Features Left to Implement](#features-left-to-implement)
+- [Technologies Used](#technologies-used)
+  * [Frontend](#frontend)
+    + [Languages](#languages)
+    + [Libraries and Frameworks](#libraries-and-frameworks)
+    + [Tools](#tools)
+- [Testing](#testing)
+  * [Performance Testing](#performance-testing)
+  * [Bugs encountered on the way](#bugs-encountered-on-the-way)
+    + [Depreciated code warnings](#depreciated-code-warnings)
+    + [Favicon handling in Python Flask](#favicon-handling-in-python-flask)
+  * [Known issues](#known-issues)
+    + [Pagination orientation problem](#pagination-orientation-problem)
+  * [Project barriers and solutions](#project-barriers-and-solutions)
+  * [Version control](#version-control)
+  * [Functionality Testing](#functionality-testing)
+  * [Responsiveness Testing](#responsiveness-testing)
+  * [CSS3 validator](#css3-validator)
+  * [HTML5 validator](#html5-validator)
+  * [Python validator](#python-validator)
+  * [JavaScript validator](#javascript-validator)
+  * [Usability Testing](#usability-testing)
+  * [Compatibility Testing](#compatibility-testing)
+  * [Testing User Stories](#testing-user-stories)
+    + [Visitor Stories](#visitor-stories)
+    + [Owner Story](#owner-story)
+- [Deployment](#deployment)
+  * [GitHub](#github)
+  * [Gitpod](#gitpod)
+  * [Heruko](#heruko)
+  * [Local Deployment](#local-deployment)
+  * [Forking](#forking)
+- [Credits](#credits)
+  * [Content](#content)
+  * [Resources](#resources)
+  * [Media](#media)
+  * [Acknowledgements](#acknowledgements)
+
 ## UX
 
 ### Scope
@@ -166,6 +232,10 @@ Font used is Rubik from Google fonts.
 
   ![font sample](wireframe/font-sample.png)
 
+back to [contents](#table-of-contents)
+
+---
+
 ## Features
 
 ### Existing Features
@@ -186,6 +256,10 @@ Font used is Rubik from Google fonts.
 - Change password functionality
 - Portal to edit user access
 - Firebase Authentication API
+
+back to [contents](#table-of-contents)
+
+---
 
 ## Technologies Used
 
@@ -235,6 +309,10 @@ Font used is Rubik from Google fonts.
 - [site preview tool](http://ami.responsivedesign.is/)
 - [Grammarly](https://chrome.google.com/webstore/detail/grammarly-for-chrome/kbfnbcaeplbcioakkpcpgfkobkghlhen?hl=en)
 - [Microsoft Excel](https://www.microsoft.com/en-ww/microsoft-365/excel) : used for slicing and dicing wildlife species list.
+
+back to [contents](#table-of-contents)
+
+---
 
 ## Testing
 
@@ -510,6 +588,10 @@ As an owner of this database site, I want to be able to have a user with superus
 
 As an owner of this database site, I want to be able to search and filter results easily.
 
+back to [contents](#table-of-contents)
+
+---
+
 ## Deployment
 
 For easy deployment on Heruko.com , you will need a GitHub user account and possibly a Gitpod user account. If you wish to make changes to this repository, please follow the GitHub steps first.
@@ -581,6 +663,10 @@ You may wish to contribute to this website and have your contribution published,
 6. If your pull request is approved, it will be merged into the master version of the Wildlife-rescue repository at a future date.
 
 more detailed instructions available [here](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo)
+
+back to [contents](#table-of-contents)
+
+---
 
 ## Credits
 

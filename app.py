@@ -231,7 +231,7 @@ def add_case():
             "image_url": request.form.get("image_url"),
             "notes": [],  # notes is an array variable
             "status": "Pending",
-            "case_number": caseno["sequence_value"],
+            "case_number": str(caseno["sequence_value"]),
             "created_by": session["user"]
         }
         # case is added to DB, and case ObjectID is returned

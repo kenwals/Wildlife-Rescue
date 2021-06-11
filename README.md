@@ -356,41 +356,41 @@ The results are below. 14 Passes and 1 Fail.
 
 ### CSS3 validator
 
-![CSS3 validation](wireframe\CSS-validation.png)
+![CSS3 validation](wireframe\css-validation.png)
 
 ### HTML5 validator
 
 Page 1 - Home page
 
-![Home page](wireframe/w3-Html-Checker-Home.png)
+![Home page](wireframe/w3-html-checker-home.png)
 
 Page 2 - Case List Page
 
-![Cases list page](wireframe/w3-Html-Checker-cases.png)
+![Cases list page](wireframe/w3-html-checker-cases.png)
 
 Page 3 - New Case Page 
 
-![New case page](wireframe/w3-Html-add-cases.png)
+![New case page](wireframe/w3-html-add-cases.png)
 
 Page 4 - View/Edit Case Page
 
-![View Edit case page](wireframe/w3-Html-view-case.png)
+![View Edit case page](wireframe/w3-html-view-case.png)
 
 Page 5 - Profile Page
 
-![Profile page](wireframe/w3-Html-profile.png)
+![Profile page](wireframe/w3-html-profile.png)
 
 Page 6 - Login Page
 
-![Login page ](wireframe/w3-Html-Checker-login.png)
+![Login page ](wireframe/w3-html-checker-login.png)
 
 Page 7 - Register Page
 
-![Register page](wireframe/w3-Html-register.png)
+![Register page](wireframe/w3-html-register.png)
 
 Page 8 - 404 error Page
 
-![404 error page](wireframe/w3-Html-404.png)
+![404 error page](wireframe/w3-html-404.png)
 
 ### Python validator 
 

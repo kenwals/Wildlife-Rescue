@@ -214,6 +214,7 @@ Font used is Rubik from Google fonts.
 - [Python Tutor](http://pythontutor.com/): I used this very handy virtual IDE for experimenting with Python code before applying to this project.
 - [MongoDB compass](https://www.mongodb.com/products/compass): Really handy desktop application for viewing and maintaining my DB.
 - Wireframe: [Balsamiq](https://balsamiq.com/)
+- DB Schema diagram : [quick database diagrams](https://app.quickdatabasediagrams.com/#/d/myq6qw)
 - IDE: Visual Studio Code (VS Code).
 - Version control: Git
 - Browser Developer tools : [Google Chrome](https://www.google.com/chrome) for console.logging everything.

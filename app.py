@@ -255,7 +255,8 @@ def add_case():
                 {"$push": {"notes": ObjectId(note_id.inserted_id)}}
                 )
 
-        flash("Case is Successfully Added")
+        message = f"Case is successfully created under case #{caseno['sequence_value']}"
+        flash(message)
         return redirect(url_for("get_cases"))
 
     reasons = mongo.db.reason.find().sort("status", 1)

@@ -212,7 +212,7 @@ Font used is Rubik from Google fonts.
 
 - JSfiddle : I used this online IDE to build and play with [Cloudinary API](https://jsfiddle.net/kenwals/8ze3u4ok/33/) and [Google places API](https://jsfiddle.net/kenwals/gv2oe4dp/8/) before i added them to this project confidently
 - [Python Tutor](http://pythontutor.com/): I used this very handy virtual IDE for experimenting with Python code before applying to this project.
-- [MongoDB compass](https://www.mongodb.com/products/compass): Really handy desktop application for viewing and maintaining my DB.
+- [MongoDB compass](https://www.mongodb.com/products/compass): Really handy desktop application for viewing and easily maintaining my database configuration.
 - Wireframe: [Balsamiq](https://balsamiq.com/)
 - DB Schema diagram : [quick database diagrams](https://app.quickdatabasediagrams.com/#/d/myq6qw)
 - IDE: Visual Studio Code (VS Code).

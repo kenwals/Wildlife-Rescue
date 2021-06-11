@@ -1,6 +1,6 @@
 function ready() {
 /**
- * This enables for the profile page form for editing
+ * This enables the profile page form for editing
  * Edit profile button is hidden
  * update profile button is made visible
  */

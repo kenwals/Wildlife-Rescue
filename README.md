@@ -309,7 +309,7 @@ Page 1 - Home page
 
 Page 2 - Case List Page
 
-Page 3 - New Case Page 
+Page 3 - New Case Page
 
 Page 4 - View/Edit Case Page
 
@@ -325,7 +325,7 @@ Page 8 - 404 error Page
 
 For this test, I got a list of [15 most common screen sizes](https://www.designrush.com/trends/website-dimensions) and used [http://responsivetesttool.com/](http://responsivetesttool.com/) to check responsiveness for each screen size.
 
-The results are below. 14 Passes and 1 Fail.
+The results are below. 15 Passes.
 
 | Device category | Model                 | Size Px (%popularity) | Result |
 | --------------- | --------------------- | ------------------ | ------ |
@@ -343,7 +343,7 @@ The results are below. 14 Passes and 1 Fail.
 | Tablet          | unknown               | 1280x800 (7.28%)   | Pass   |
 | Tablet          | Samsung Galaxy Tab    | 800x1280 (5.26%)   | Pass   |
 | Tablet          | Google Nexus 7        | 601x962 (4.32%)    | Pass   |
-| Tablet          | unknown               | 962x601 (2.99%)    | Fail   |
+| Tablet          | unknown               | 962x601 (2.99%)    | Pass   |
 
 ### CSS3 validator
 

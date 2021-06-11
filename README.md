@@ -68,7 +68,7 @@ The page content is dynamic and composed of Jinja templates which are put togeth
 
 #### Non relational Database tables schema
 
-![DB flowchart](wireframe/db-flowchart.png)
+![DB schema chart](wireframe/db-flowchart.png)
 
 ##### cases table
 

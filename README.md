@@ -172,7 +172,7 @@ Font used is Rubik from Google fonts.
 
 - Pagination on cases results page.
 - Autocomplete on certain fields in the new case and edit case screen.
-- filtered views on cases results cases
+- Filtered views on cases results cases
 - Visitor can register , login and update their contact details
 - Visitor has full CRUD access to each case they create.
 - Google places integration on the case location field

@@ -652,11 +652,11 @@ Heruko is a cloud platform that can hosts dynamic web applications.Once you have
 1. Before you setup Heruko , you first need to create some files that are necessary for it to run on the Heruko server.
 2. Open a terminal window in your IDE on the root folder of the project, run the command below, this will create a new file called procfile.
 
-    `` echo web: python run.py > Procfile ``
+    ``` echo web: python run.py > Procfile ```
 
 3. Now run the command line below. this will create a new file called requirements.txt
 
-    `` pip3 freeze --local > requirements.txt ``
+    ``` pip3 freeze --local > requirements.txt ```
 
 4. Create a [Heruko user account](https://signup.heroku.com/login)
 5. Click on the New button and choose Create a new app.

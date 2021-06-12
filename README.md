@@ -365,7 +365,7 @@ update_many instead. mongo.db.cases.update({"_id": ObjectId(case_id)}, { "$set":
 
 #### Google Places API warning
 
-For a while during development I had an error message appearing occasionally in the console log for google places API, I thought it was some little glitch that wasn't important. But while refactoring the JavaScript to combine them in one script (if possible!), I realised I have the google API scripts loading backwards. I also had to abandon combining the scripts as they need to be loaded in a sequence that I can only achieve from the page load.
+For a while during development I had an error message appearing occasionally in the console log for google places API, I thought it was some little glitch that wasn't important. But while refactoring the JavaScript to combine them in one script (if possible!), I realised I had the google API scripts loading backwards. I also had to abandon combining the scripts as they need to be loaded in a sequence that I can only achieve from the page load.
 
 #### Favicon handling in Python Flask
 
@@ -375,7 +375,7 @@ Favicons was causing errors with flask in the early stages, but i eventually got
 
 #### Pagination orientation problem
 
-For Pagination , I am using flask-paginate. At the time this project was being developed , this module didn't appear to support Bootstrap5 . So I have had to configure it to Bootstrap4. I uses CSS to hide a "Current Page" label section that was looking off. A Bootstrap offset container is also used as i was unable to center align the pagination otherwise.
+For Pagination , I am using flask-paginate. At the time this project was being developed , this module didn't appear to support Bootstrap5. So I have had to configure it to Bootstrap4. I use CSS to hide a "Current Page" label section that was looking off. A Bootstrap offset container is also used as i was unable to center align the pagination otherwise.
 
 #### Linting False warning messages that can be ignored
 
@@ -391,7 +391,7 @@ On New case and view case pages, a tag must be paired warning is showing. Comply
 
 ![HTML error message ](wireframe/lint-message-2.png)
 
-On the view case page, the warning below believes that there is a duplicate #id tag on the page , but only one #id tag shows on the page as the image displayed dynamically based on a If / ELSE statement in the Python / Jinja template code block.
+On the view case page, the warning below believes that there is a duplicate #id tag on the page , but only one #id tag shows on the rendered page as the image is displayed dynamically based on a If / ELSE statement in the Python / Jinja template code block.
 
 ![HTML error message ](wireframe/lint-message-4.png)
 

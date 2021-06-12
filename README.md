@@ -395,6 +395,8 @@ On the view case page, the warning below believes that there is a duplicate #id 
 
 ![HTML error message ](wireframe/lint-message-4.png)
 
+For the Google places API script , an "unused variable" linting error comes up for initAutocomplete . But the function is called by the other Google places s
+
 ### Project barriers and solutions
 
 MongoDB verses PyMongo

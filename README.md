@@ -700,6 +700,8 @@ back to [contents](#table-of-contents)
 
 - [Google places autocomplet API info](https://developers.google.com/maps/documentation/javascript/places-autocomplete#add-autocomplete)
 
+- Filters were created based on [this Stack Overflow post](https://stackoverflow.com/questions/11774265/how-do-you-access-the-query-string-in-flask-routes)
+
 - [Bootstrap components](https://getbootstrap.com/)
 
 - [W3schools](https://www.w3schools.com/)

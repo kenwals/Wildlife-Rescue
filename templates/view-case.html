@@ -103,15 +103,15 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Are you sure ?</h5>
+        <h5 class="modal-title fs-3" id="staticBackdropLabel"> Warning <i class="bi bi-exclamation-octagon"></i></h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
+      <div class="modal-body fs-4">
         Are you sure you want to delete this case?
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-        <a class="btn btn-primary" href="{{ url_for('delete_case', case_id=case._id) }}">Yes</a>
+        <button type="button" class="btn btn-secondary fs-4" data-bs-dismiss="modal">Cancel</button>
+        <a class="btn btn-danger fs-4" href="{{ url_for('delete_case', case_id=case._id) }}">Yes</a>
       </div>
     </div>
   </div>

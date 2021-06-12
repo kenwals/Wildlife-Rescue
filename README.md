@@ -703,9 +703,9 @@ back to [contents](#table-of-contents)
 
 ### Content
 
-- The foundation of this site is sourced from Code Institute Educational material - [Tim Nelson's Task Manager project](https://github.com/TravelTimN/flask-task-manager-project/tree/demo).
+- The foundation of this site is sourced from Code Institute Educational material - [Tim Nelson's Task Manager project (recently updated)](https://github.com/TravelTimN/flask-task-manager-project/tree/demo).
 - Homepage text was sourced from [DIY Garden rescue guide](https://diygarden.co.uk/wildlife/rescue-guide/)
-- Homepage text, lists of species, reasons, and statuses were sourced from [wildlife incidents app](https://wildlife-incidents.com/)
+- Homepage text, lists of species, reasons, and statuses were sourced from the [wildlife incidents app](https://wildlife-incidents.com/)
 
 ### Resources
 
@@ -737,7 +737,9 @@ back to [contents](#table-of-contents)
 
 ### Acknowledgements
 
-- I received inspiration for this project from Feargal Timon at <https://wildlife-incidents.com/> and Galway swan rescue.
+- I received inspiration for this project from Feargal Timon at the [wildlife incidents app](https://wildlife-incidents.com/) and Galway swan rescue.
 - Kudos to Ed Bradly for his excellent advice and tips on #data-centric-dev Slack channel and on the recorded zoom call from March.
-- My Mentor [Maranatha Ilesanmi](https://github.com/mbilesanmi)
+- My Mentor [Maranatha Ilesanmi](https://github.com/mbilesanmi) for helpful guidance and laser sharp attention to detail.
 - Code Institute's [Tim Nelson](https://github.com/TravelTimN/) who gave me some useful pointers with this project.
+
+back to [contents](#table-of-contents)

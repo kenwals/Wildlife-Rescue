@@ -14,7 +14,7 @@
 </div>
 
 <form class="row mx-auto mt-3 g-3 maximum-width" method="POST" action="{{ url_for('profile', username=session['user']) }}">
-    <fieldset id="fieldsetProfile" disabled="disabled col-md-12">
+    <fieldset id="fieldsetProfile" disabled="disabled" class="col-md-12">
     <div>
         <label for="inputName" class="form-label">Full Name</label>
         <input type="text" class="form-control fs-4" id="inputName" name="name" value="{{ fullname }}">
@@ -24,11 +24,11 @@
         <input type="text" class="form-control fs-4" id="inputAddress" name="phone" value="{{ phone }}">
     </div>
     <div class="mt-3">
-        <button id="updateProfileBtn"" type="submit" class="btn btn-success visually-hidden fs-4">Update your contact details</button>
+        <button id="updateProfileBtn" type="submit" class="btn btn-success visually-hidden fs-4">Update your contact details</button>
     </div>
     </fieldset>
     <div class="mb-3">
-        <button id="editProfileBtn"" type="button" class="btn btn-outline-primary fs-4">Edit your contact details</button>
+        <button id="editProfileBtn" type="button" class="btn btn-outline-primary fs-4">Edit your contact details</button>
     </div>
 
 </form>

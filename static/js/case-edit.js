@@ -1,6 +1,6 @@
 function ready() {
     /**
-    * this enables to form for updating, 
+    * this enables the form for updating, 
     * Edit button is hidden
     * Edit case, Delete case and upload image buttons are made visible,
     * the heading is changed to reflect the view is an edit case view

@@ -1,8 +1,16 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap'); /* google fonts*/
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"); /* bootstap icons*/
 
 * {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 /* */
 html {
@@ -13,7 +21,7 @@ body{
     font-family: 'Rubik', sans-serif; 
     font-size: 1.6rem;
     background-color: #FFFFFD ; /* Black White */
-    color:  #6C6666  ; /* Dove Gray */
+    color:  #000  ; 
 }
 
 #header {

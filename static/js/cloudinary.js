@@ -8,7 +8,7 @@ var myWidget = cloudinary.createUploadWidget({
       document.getElementById("image").value = result.info.url;
       document.getElementById("img-thumbnail").src = result.info.url;
     }
-  })
+  });
   // the event listener is on the upload image button on the view case page
   // it opens a widget from Cloudinary 
   document.getElementById("upload_widget").addEventListener("click", function() {

@@ -242,6 +242,7 @@ back to [contents](#table-of-contents)
 
 - Pagination on cases results page.
 - Autocomplete on certain fields in the new case and edit case screen.
+- Security checks are made in the code to ensure visitor is logged in , preventing brute force attacks.
 - Filtered views on cases results cases
 - Visitor can register , login and update their contact details
 - Visitor has full CRUD access to each case they create.

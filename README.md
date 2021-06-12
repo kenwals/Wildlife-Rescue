@@ -6,6 +6,8 @@ There are various wildlife charities that rescue or rehabilitate animals whom ha
 
 A part of taking care of the animals is completing paperwork as the animal's care may requires licensing. The aim of this app is to make the process easier. Members of the public can register incident cases and the charity or Governing body can follow up.
 
+![wildlife rescue page preview image](wireframe/wildlife-rescue-preview-image.png)
+
 ---
 
 ## Table of contents

@@ -451,7 +451,7 @@ The results are below. 15 Passes.
 
 No errors.  Resource: <https://jigsaw.w3.org/css-validator/>
 
-![CSS3 validation](wireframe\css-validation.png)
+![CSS3 validation](wireframe/css-validation.png)
 
 ### HTML5 validator
 

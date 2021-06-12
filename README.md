@@ -295,6 +295,7 @@ back to [contents](#table-of-contents)
 - Browser Developer tools : [Google Chrome](https://www.google.com/chrome) for console.logging everything.
 - Kanban planner : [Github projects](https://github.com/kenwals/Wildlife-Rescue/projects/1).
 - Markdown editor: [Typora](https://typora.io/) was used when appropriate, VS code editor was used for most updates.
+- Markdown Preview Github Styling : this brilliant vscode extension helps me read my markdown in Github format.
 - File renaming utility: PowerRename from [PowerToys on Windows 10](https://www.windowscentral.com/how-bulk-rename-your-files-windows-10-powertoys)
 - Pomodoro timer : [Tomato Clock](https://chrome.google.com/webstore/detail/tomato-clock/enemipdanmallpjakiehedcgjmibjihj)
 - Favicon creator : [favicon.io](https://favicon.io/favicon-generator/)

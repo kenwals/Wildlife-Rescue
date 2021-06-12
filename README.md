@@ -376,9 +376,23 @@ Favicons was causing errors with flask in the early stages, but i eventually got
 
 For Pagination , I am using flask-paginate. At the time this project was being developed , this module didn't appear to support Bootstrap5 . So I have had to configure it to Bootstrap4. I uses CSS to hide a "Current Page" label section that was looking off. A Bootstrap offset container is also used as i was unable to center align the pagination otherwise.
 
-#### PyLint message appearing
+#### Linting False warning messages that can be ignored
 
-When Linting the Python code on PyLint a warning message appears stating "Possible unbalanced tuple unpacking with sequence defined at line 237 of flask_paginate: left side has 3 label(s), right side has 2 value(s)" . I believe this can be safely ignored, it's been discussed on the Slack Channels as being a standard message for Flask Pagination .
+When Linting the Python code on PyLint a warning message appears stating "Possible unbalanced tuple". I believe this can be safely ignored, it's been discussed on the Slack Channels as being a standard message for Flask Pagination.
+
+![pylint error message ](wireframe/lint-message-3.png)
+
+For HTML linting, "Doctype must be declared first" can be ignored as the files are template blocks that join together with other blocks which have the Doctype info.
+
+![HTML error message ](wireframe/lint-message-1.png)
+
+On New case and view case pages, a tag must be paired warning is showing. Complying with this warning would result in all the dropdown list values appearing in duplicate. So this warning has to be ignored! . 
+
+![HTML error message ](wireframe/lint-message-2.png)
+
+On the view case page, the warning below believes that there is a duplicate #id tag on the page , but only one #id tag shows on the page as the image displayed dynamically based on a If / ELSE statement in the Python / Jinja template code block.
+
+![HTML error message ](wireframe/lint-message-4.png)
 
 ### Project barriers and solutions
 

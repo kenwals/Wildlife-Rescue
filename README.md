@@ -1,6 +1,6 @@
 # Wildlife Rescue Dublin
 
-This is a Data Centric web app for a fictional wildlife animal rescue charity.
+This is a [Data Centric web app](https://wildlife-rescue.herokuapp.com/) for a fictional wildlife animal rescue charity.
 
 There are various wildlife charities that rescue or rehabilitate animals whom have been involved in accidents or become ill. Sometimes members of the public find these animals and become their carers.
 
@@ -360,6 +360,10 @@ Example warning message:
 DeprecationWarning: update is deprecated. Use replace_one, update_one or 
 update_many instead. mongo.db.cases.update({"_id": ObjectId(case_id)}, { "$set": submit})
 ```
+
+#### Google Places API warning
+
+For a while during development I had an error message appearing occasionally in the console log for google places API, I thought it was some little glitch that wasn't important. But while refactoring the JavaScript to combine them in one script (if possible!), I realised I have the google API scripts loading backwards. I also had to abandon combining the scripts as they need to be loaded in a sequence that I can only achieve from the page load.
 
 #### Favicon handling in Python Flask
 

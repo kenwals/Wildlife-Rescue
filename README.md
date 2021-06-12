@@ -241,14 +241,14 @@ back to [contents](#table-of-contents)
 ### Existing Features
 
 - Pagination on cases results page.
-- Autocomplete on certain fields in the new case and edit case screen.
-- Security checks are made in the code to ensure visitor is logged in , preventing brute force attacks.
-- Filtered views on cases results cases
+- Autocomplete on species and reason fields in the new case and edit case screen.
+- Google places Autocomplete API integration on the case location field
+- Security checks are made in the page routing code to ensure visitor is logged in, preventing brute force attacks.
+- Filtered views on cases results cases such as my cases, pending cases and all open cases.
 - Visitor can register , login and update their contact details
 - Visitor has full CRUD access to each case they create.
-- Google places integration on the case location field
-- Unique case number generated for each case
-- Cloudinary image upload integration case image field
+- Unique case number is generated for each case
+- Cloudinary image upload API integration case image field
 - Each case has a notes journal , so case notes history can be audited.
 
 ### Features Left to Implement

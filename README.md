@@ -2,9 +2,9 @@
 
 This is a [Data Centric web app](https://wildlife-rescue.herokuapp.com/) for a fictional wildlife animal rescue charity.
 
-There are various wildlife charities that rescue or rehabilitate animals whom have been involved in accidents or become ill. Sometimes members of the public find these animals and become their carers.
+These wildlife charities care for animals, who have been involved in accidents or become ill. Sometimes members of the public find these animals and become their carers.
 
-A part of taking care of the animals is completing paperwork as the animal's care may requires licensing. The aim of this app is to make the process easier. Members of the public can register incident cases and the charity or Governing body can follow up.
+A part of taking care of the animals is completing paperwork as the animal's care may require licensing. This app aims to make the process easier. Members of the public can register incident cases, and the charity or Governing body can then follow up.
 
 ![wildlife rescue page preview image](wireframe/wildlife-rescue-preview-image.png)
 
@@ -81,39 +81,39 @@ A part of taking care of the animals is completing paperwork as the animal's car
 
 ### Scope
 
-This is a fictional charity page, so there are no limitations on the content. The site will be made to an MVP first, and if there is additional time, content/features can be added.
+This is a fictional charity page, so there are no limitations on the content. The site will be first made to an MVP, and if there is additional time, content/features can be added.
 
 #### User Stories
 
 ##### Visitor goals
 
-1. As a user of this database , I want to be able to register myself a login easily.
+1. As a user of this database, I want to be able to register myself a login easily.
 
-2. As a user of this database , I want to be able to easily capture information on any mobile device.
+2. As a user of this database, I want to be able to easily capture information on any mobile device.
 
-3. As a user of this database , I want to edit case records I submitted.
+3. As a user of this database, I want to edit the case records I submitted.
 
-4. As a user of this database , I want to be able to delete any information I created.
+4. As a user of this database, I want to be able to delete any information I created.
 
-5. As a user of this database , I want to be able to search and filter results easily.
+5. As a user of this database, I want to be able to search and filter results easily.
 
-6. As a user of this database , I want to be able to edit my contact details.
+6. As a user of this database, I want to be able to edit my contact details.
 
-7. As a user of this database , I want to be able to upload an image as part of my case.
+7. As a user of this database, I want to be able to upload an image as part of my case.
 
-8. As a user of this database , I want some of the form fields to autocomplete or auto suggest while i type.
+8. As a user of this database, I want some of the form fields to autocomplete or auto suggests while I type.
 
 ##### Owner goals
 
 1. As an owner of this database site, I want each case incident to have a unique case number.
 
-2. As an owner of this database site, I want to be able to have a user with superuser read/write access , this user can have read/write access to all records.
+2. As an owner of this database site, I want to be able to have a user with superuser read/write access, this user can have read/write access to all records.
 
 3. As an owner of this database site, I want to be able to search and filter results easily.
 
 ### Structure
 
-This Data centric site is put together with HTML, using the bootstrap framework along with some CSS.
+This Data-centric site is put together with HTML, using the bootstrap framework along with some CSS.
 
 The Database is done using Python and Flask fronted onto a MongoDB backend.
 

@@ -115,7 +115,7 @@ This is a fictional charity page, so there are no limitations on the content. Th
 
 This Data-centric site is put together with HTML, using the bootstrap framework along with some CSS.
 
-The Database is done using Python and Flask fronted onto a MongoDB backend.
+The Database is integrated using Python and Flask fronted onto a MongoDB backend.
 
 ### Skeleton
 

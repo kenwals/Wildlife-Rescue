@@ -43,6 +43,10 @@ body{
     background-color: #FEE579 ; /* Kournikova */ 
 }
 
+.btn-success, .btn-primary{
+    background-color: #829B38 ; /* Sushi */ 
+}
+
 .minimum-height{
     min-height: 83rem;
 } /* this ensures footer is alligned on all pages */

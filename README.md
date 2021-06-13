@@ -654,27 +654,49 @@ I tested and improved accessibility with lighthouse and Firefox developer tools.
 
 1. As a user of this database , I want to be able to register myself a login easily.
 
+![user story 1](wireframe/user-story1-test-result.png)
+
 2. As a user of this database , I want to be able to easily capture information on any mobile device.
+
+![user story 2](wireframe/user-story2-test-result.png)
 
 3. As a user of this database , I want to edit case records I submitted.
 
+![user story 3](wireframe/user-story3-test-result.png)
+
 4. As a user of this database , I want to be able to delete any information I created.
+
+![user story 4](wireframe/user-story4-test-result.png)
 
 5. As a user of this database , I want to be able to search and filter results easily.
 
+![user story 5](wireframe/user-story5-test-result.png)
+
 6. As a user of this database , I want to be able to edit my contact details.
+
+![user story 6](wireframe/user-story6-test-result.png)
 
 7. As a user of this database , I want to be able to upload an image as part of my case.
 
+![user story 7](wireframe/user-story7-test-result.png)
+
 8. As a user of this database , I want some of the form fields to autocomplete or auto suggest while i type.
+
+![user story 8](wireframe/user-story8-test-result.png)
 
 #### Owner Story
 
 1. As an owner of this database site, I want each case incident to have a unique case number.
 
+![owner user story](wireframe/owner-story1-test-result.png)
+
 2. As an owner of this database site, I want to be able to have a user with superuser read/write access , this user can have read/write access to all records.
 
+![owner user story](wireframe/owner-story2-test-result.png)
+
 3. As an owner of this database site, I want to be able to search and filter results easily.
+
+![owner user story](wireframe/owner-story3-test-result.png)
 
 back to [contents](#table-of-contents)
 

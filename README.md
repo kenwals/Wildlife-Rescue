@@ -403,7 +403,11 @@ On the view case page, the warning below believes that there is a duplicate #id 
 
 ![HTML error message ](wireframe/lint-message-4.png)
 
-For the Google places API script , an "unused variable" linting error comes up for initAutocomplete . But the function is called by the other Google places s
+For the Google places API script , an "unused variable" linting error comes up for initAutocomplete . But the function is called by the other Google places script embedded on the page.
+
+#### Case number verses Case _id
+
+It might be worth flagging that case number and case _id are two seperate fields , which could get mixed up when being talked about in coversation with others, as they do have a one to one relationship. The difference is Case number is visible to the user and is in a human friendly format and is searchable for the user. case _id is unknown to the user, but the developer needs to use it when working with case and notes creation, editing and deletion.
 
 ### Project barriers and solutions
 

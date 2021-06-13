@@ -219,7 +219,9 @@ Colour are natural and sourced from [a nature photo](https://photos.app.goo.gl/3
 - #ADCE4B Turmeric - taken from Green river reeds on the River Liffey
 - #6C6666 Dove Gray - taken from the colour of the feathers of a Grey Heron bird
 - #FEE579 Kournikova  - taken from the colour of the beak of a Grey Heron bird
+- #829B38 Sushi - a shade variation of Tumeric
 
+![Colour swatches](wireframe/colour-swatch.png)
 #### Icons
 
 Bootstrap is used for icons

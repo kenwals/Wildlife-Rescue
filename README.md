@@ -423,19 +423,64 @@ For version control, I used the UI on VS Code for making git commits or the GitH
 
 Page 1 - Home page
 
+- Page is responsive to screen size
+- If you type a invalid webpage address, a 404 error page shows up.
+- The main section paragraph and navbar is dynamic based on if a user is logged in or not.
+
 Page 2 - Case List Page
+
+- Page is responsive to screen size
+- User must be logged in to view this page, if not logged in they are redirected to the login screen.
+- when list of cases is greater then 10 cases the pagination links appear at the bottom
 
 Page 3 - New Case Page
 
+- User must be logged in to view this page, if not logged in they are redirected to the login screen.
+- The Date field only accepts dates less then or equal to today's date. This field is mandatory.
+- Species field autocomplete suggests species to the user , values not appearing on the list is allowed.This field is mandatory.
+- The location field autocomplete pulls info from google places, values not appearing on the list is allowed.This field is mandatory.
+- Reason for rescue field autocomplete suggests reasons to the user , values not appearing on the list is allowed. This field is mandatory.
+- Image upload works , and the upload image appears after uploading. This is an optional field.
+- Any notes can be entered. This is an optional field.
+- When case is saved the case number is displayed on the flash message at the top of the screen.
+- By default all new cases are given a status of Pending.
+
 Page 4 - View/Edit Case Page
+
+- User must be logged in to view this page, if not logged in they are redirected to the login screen.
+- This page is read only by default. If the current user logged in is the case creator or the Admin user then the "Edit this case" button is visible.
+- When the edit the case button is clicked all the fields are enabled and the page heading changes.
+- The status field can only be changed to another value on the dropdown list.
+- A new note can be saved in the notes section, it is added to the list of notes below with a datetimestamp.
+- if the user deletes a case , then a modal shows asking the user if they are sure they want to delete the case.
+- A flash message appears when the user saves changes or deletes a case.
 
 Page 5 - Profile Page
 
+- User must be logged in to view this page, if not logged in they are redirected to the login screen.
+- This page is read only by default. When user clicks on edit your contact details button , the fields are enabled. 
+- User is able to update contact details as expected.
+- A Confirmation Flash message is appearing when changes are saved.
+
 Page 6 - Login Page
+
+- User is able to login as expected.
+- Flash message appears to confirm user is logged in.
+- Navbar is updated with new items.
+- user is redirected to profile page.
 
 Page 7 - Register Page
 
+- User is able to register as expected.
+- Username, password and Full name are mandatory fields.
+- User is blocked from entering a usernames that is already registered.
+- Passwords less then 8 characters are not accepted.
+- A Confirmation Flash message is appearing when registration is sucessful.
+
 Page 8 - 404 error Page
+
+- When User enters a random URL then a page not found message appears on screen.
+- The link is guiding user back to the homepage.
 
 ### Responsiveness Testing
 

@@ -14,12 +14,11 @@
 }
 /* */
 html {
-    font-size: 68%;
     background-color: #6C6666  ; /* Dove Gray */
 }
 body{
     font-family: 'Rubik', sans-serif; 
-    font-size: 1.6rem;
+    font-size: 1rem;
     background-color: #FFFFFD ; /* Black White */
     color:  #000  ; 
 }
@@ -48,7 +47,7 @@ body{
 }
 
 .minimum-height{
-    min-height: 83rem;
+    min-height: 40rem;
 } /* this ensures footer is alligned on all pages */
 
 .maximum-width{

@@ -255,7 +255,7 @@ def add_case():
                 {"$push": {"notes": ObjectId(note_id.inserted_id)}}
                 )
 
-        message = f"Case is successfully created under case #{caseno['sequence_value']}"
+        message = f"Case is now created under case #{caseno['sequence_value']}"
         flash(message)
         return redirect(url_for("get_cases"))
 

@@ -2,9 +2,9 @@
 
 This is a [Data Centric web app](https://wildlife-rescue.herokuapp.com/) for a fictional wildlife animal rescue charity.
 
-There are various wildlife charities that rescue or rehabilitate animals whom have been involved in accidents or become ill. Sometimes members of the public find these animals and become their carers.
+These wildlife charities care for animals, who have been involved in accidents or become ill. Sometimes members of the public find these animals and become their carers.
 
-A part of taking care of the animals is completing paperwork as the animal's care may requires licensing. The aim of this app is to make the process easier. Members of the public can register incident cases and the charity or Governing body can follow up.
+A part of taking care of the animals is completing paperwork as the animal's care may require licensing. This app aims to make the process easier. Members of the public can register incident cases, and the charity or Governing body can then follow up.
 
 ![wildlife rescue page preview image](wireframe/wildlife-rescue-preview-image.png)
 
@@ -13,14 +13,14 @@ A part of taking care of the animals is completing paperwork as the animal's car
 ## Table of contents
 
 - [UX](#ux)
-  - [Scope](#scope)
-    - [User Stories](#user-stories)
+  * [Scope](#scope)
+    + [User Stories](#user-stories)
       - [Visitor goals](#visitor-goals)
       - [Owner goals](#owner-goals)
-  - [Structure](#structure)
-  - [Skeleton](#skeleton)
-    - [Website page line up / Flask templates](#website-page-line-up---flask-templates)
-    - [Non relational Database tables schema](#non-relational-database-tables-schema)
+  * [Structure](#structure)
+  * [Skeleton](#skeleton)
+    + [Website page line up / Flask templates](#website-page-line-up---flask-templates)
+    + [Non relational Database tables schema](#non-relational-database-tables-schema)
       - [cases table](#cases-table)
       - [User details table](#user-details-table)
       - [notes  table](#notes--table)
@@ -28,91 +28,94 @@ A part of taking care of the animals is completing paperwork as the animal's car
       - [species table](#species-table)
       - [status table](#status-table)
       - [casenumbers table](#casenumbers-table)
-    - [Wireframes](#wireframes)
-  - [Surface](#surface)
-    - [Colours](#colours)
-    - [Icons](#icons)
-    - [Images](#images)
-    - [Fonts](#fonts)
+    + [Wireframes](#wireframes)
+  * [Surface](#surface)
+    + [Colours](#colours)
+    + [Icons](#icons)
+    + [Images](#images)
+    + [Fonts](#fonts)
 - [Features](#features)
-  - [Existing Features](#existing-features)
-  - [Features Left to Implement](#features-left-to-implement)
+  * [Existing Features](#existing-features)
+  * [Features Left to Implement](#features-left-to-implement)
 - [Technologies Used](#technologies-used)
-  - [Frontend](#frontend)
-    - [Languages](#languages)
-    - [Libraries and Frameworks](#libraries-and-frameworks)
-    - [Tools](#tools)
+  * [Frontend](#frontend)
+    + [Languages](#languages)
+    + [Libraries and Frameworks](#libraries-and-frameworks)
+    + [Tools](#tools)
 - [Testing](#testing)
-  - [Performance Testing](#performance-testing)
-  - [Bugs encountered on the way](#bugs-encountered-on-the-way)
-    - [Depreciated code warnings](#depreciated-code-warnings)
-    - [Favicon handling in Python Flask](#favicon-handling-in-python-flask)
-  - [Known issues](#known-issues)
-    - [Pagination orientation problem](#pagination-orientation-problem)
-  - [Project barriers and solutions](#project-barriers-and-solutions)
-  - [Version control](#version-control)
-  - [Functionality Testing](#functionality-testing)
-  - [Responsiveness Testing](#responsiveness-testing)
-  - [CSS3 validator](#css3-validator)
-  - [HTML5 validator](#html5-validator)
-  - [Python validator](#python-validator)
-  - [JavaScript validator](#javascript-validator)
-  - [Usability Testing](#usability-testing)
-  - [Compatibility Testing](#compatibility-testing)
-  - [Testing User Stories](#testing-user-stories)
-    - [Visitor Stories](#visitor-stories)
-    - [Owner Story](#owner-story)
+  * [Performance Testing](#performance-testing)
+  * [Bugs encountered on the way](#bugs-encountered-on-the-way)
+    + [Depreciated code warnings](#depreciated-code-warnings)
+    + [Google Places API warning](#google-places-api-warning)
+    + [Favicon handling in Python Flask](#favicon-handling-in-python-flask)
+  * [Known issues](#known-issues)
+    + [Pagination orientation problem](#pagination-orientation-problem)
+    + [Linting False warning messages that can be ignored](#linting-false-warning-messages-that-can-be-ignored)
+    + [Case number verses Case _id](#case-number-verses-case--id)
+  * [Project barriers and solutions](#project-barriers-and-solutions)
+  * [Version control](#version-control)
+  * [Functionality Testing](#functionality-testing)
+  * [Responsiveness Testing](#responsiveness-testing)
+  * [CSS3 validator](#css3-validator)
+  * [HTML5 validator](#html5-validator)
+  * [Python validator](#python-validator)
+  * [JavaScript validator](#javascript-validator)
+  * [Usability Testing](#usability-testing)
+  * [Compatibility Testing](#compatibility-testing)
+  * [Testing User Stories](#testing-user-stories)
+    + [Visitor Stories](#visitor-stories)
+    + [Owner Story](#owner-story)
 - [Deployment](#deployment)
-  - [GitHub](#github)
-  - [Gitpod](#gitpod)
-  - [Heruko](#heruko)
-  - [Local Deployment](#local-deployment)
-  - [Forking](#forking)
+  * [GitHub](#github)
+  * [Gitpod](#gitpod)
+  * [Heruko](#heruko)
+  * [Local Deployment](#local-deployment)
+  * [Forking](#forking)
 - [Credits](#credits)
-  - [Content](#content)
-  - [Resources](#resources)
-  - [Media](#media)
-  - [Acknowledgements](#acknowledgements)
+  * [Content](#content)
+  * [Resources](#resources)
+  * [Media](#media)
+  * [Acknowledgements](#acknowledgements)
 
 ## UX
 
 ### Scope
 
-This is a fictional charity page, so there are no limitations on the content. The site will be made to an MVP first, and if there is additional time, content/features can be added.
+This is a fictional charity page, so there are no limitations on the content. The site will be first made to an MVP, and if there is additional time, content/features can be added.
 
 #### User Stories
 
 ##### Visitor goals
 
-1. As a user of this database , I want to be able to register myself a login easily.
+1. As a user of this database, I want to be able to register myself a login easily.
 
-2. As a user of this database , I want to be able to easily capture information on any mobile device.
+2. As a user of this database, I want to be able to easily capture information on any mobile device.
 
-3. As a user of this database , I want to edit case records I submitted.
+3. As a user of this database, I want to edit the case records I submitted.
 
-4. As a user of this database , I want to be able to delete any information I created.
+4. As a user of this database, I want to be able to delete any information I created.
 
-5. As a user of this database , I want to be able to search and filter results easily.
+5. As a user of this database, I want to be able to search and filter results easily.
 
-6. As a user of this database , I want to be able to edit my contact details.
+6. As a user of this database, I want to be able to edit my contact details.
 
-7. As a user of this database , I want to be able to upload an image as part of my case.
+7. As a user of this database, I want to be able to upload an image as part of my case.
 
-8. As a user of this database , I want some of the form fields to autocomplete or auto suggest while i type.
+8. As a user of this database, I want some of the form fields to autocomplete or auto suggests while I type.
 
 ##### Owner goals
 
 1. As an owner of this database site, I want each case incident to have a unique case number.
 
-2. As an owner of this database site, I want to be able to have a user with superuser read/write access , this user can have read/write access to all records.
+2. As an owner of this database site, I want to be able to have a user with superuser read/write access, this user can have read/write access to all records.
 
 3. As an owner of this database site, I want to be able to search and filter results easily.
 
 ### Structure
 
-This Data centric site is put together with HTML, using the bootstrap framework along with some CSS.
+This Data-centric site is put together with HTML, using the bootstrap framework along with some CSS.
 
-The Database is done using Python and Flask fronted onto a MongoDB backend.
+The Database is integrated using Python and Flask fronted onto a MongoDB backend.
 
 ### Skeleton
 
@@ -138,11 +141,15 @@ The page content is dynamic and composed of Jinja templates which are put togeth
 
 ![DB schema chart](wireframe/db-flowchart.png)
 
+The above diagram is just a visual guide of the database. The tables do not have forced relationships, as MongoDB is a non relational database. But some values in the cases table can linked to other tables which are used for dropdown lists on the cases input form.
+
+I should mention the user is allowed to input species or reasons that doesn't appear on lists. Other fields are locked in to the list values in the associated tables. But can be over-riden by the MongoDB administrator in the background if needed.
+
 ##### cases table
 
 ```bash
 _ID: (auto-generated by MongoDB) ObjectId PRIMARY KEY (Not changeable)
-case_number: (auto-generated and used as reference for the case) STRING (INDEXED FIELD) (Not changeable)
+case_number: (auto-generated and used as reference for the case) STRING (INDEXED FIELD) (Not changeable) Value taken from casenumbers table sequence_value
 created_by: (username from logged in session) STRING
 date: date
 Status: STRING
@@ -219,7 +226,9 @@ Colour are natural and sourced from [a nature photo](https://photos.app.goo.gl/3
 - #ADCE4B Turmeric - taken from Green river reeds on the River Liffey
 - #6C6666 Dove Gray - taken from the colour of the feathers of a Grey Heron bird
 - #FEE579 Kournikova  - taken from the colour of the beak of a Grey Heron bird
+- #829B38 Sushi - a shade variation of Tumeric
 
+![Colour swatches](wireframe/colour-swatch.png)
 #### Icons
 
 Bootstrap is used for icons
@@ -397,7 +406,11 @@ On the view case page, the warning below believes that there is a duplicate #id 
 
 ![HTML error message ](wireframe/lint-message-4.png)
 
-For the Google places API script , an "unused variable" linting error comes up for initAutocomplete . But the function is called by the other Google places s
+For the Google places API script , an "unused variable" linting error comes up for initAutocomplete . But the function is called by the other Google places script embedded on the page.
+
+#### Case number verses Case _id
+
+It might be worth flagging that case number and case _id are two seperate fields , which could get mixed up when being talked about in coversation with others, as they do have a one to one relationship. The difference is Case number is visible to the user and is in a human friendly format and is searchable for the user. case _id is unknown to the user, but the developer needs to use it when working with case and notes creation, editing and deletion.
 
 ### Project barriers and solutions
 
@@ -413,19 +426,64 @@ For version control, I used the UI on VS Code for making git commits or the GitH
 
 Page 1 - Home page
 
+- Page is responsive to screen size
+- If you type a invalid webpage address, a 404 error page shows up.
+- The main section paragraph and navbar is dynamic based on if a user is logged in or not.
+
 Page 2 - Case List Page
+
+- Page is responsive to screen size
+- User must be logged in to view this page, if not logged in they are redirected to the login screen.
+- when list of cases is greater then 10 cases the pagination links appear at the bottom
 
 Page 3 - New Case Page
 
+- User must be logged in to view this page, if not logged in they are redirected to the login screen.
+- The Date field only accepts dates less then or equal to today's date. This field is mandatory.
+- Species field autocomplete suggests species to the user , values not appearing on the list is allowed.This field is mandatory.
+- The location field autocomplete pulls info from google places, values not appearing on the list is allowed.This field is mandatory.
+- Reason for rescue field autocomplete suggests reasons to the user , values not appearing on the list is allowed. This field is mandatory.
+- Image upload works , and the upload image appears after uploading. This is an optional field.
+- Any notes can be entered. This is an optional field.
+- When case is saved the case number is displayed on the flash message at the top of the screen.
+- By default all new cases are given a status of Pending.
+
 Page 4 - View/Edit Case Page
+
+- User must be logged in to view this page, if not logged in they are redirected to the login screen.
+- This page is read only by default. If the current user logged in is the case creator or the Admin user then the "Edit this case" button is visible.
+- When the edit the case button is clicked all the fields are enabled and the page heading changes.
+- The status field can only be changed to another value on the dropdown list.
+- A new note can be saved in the notes section, it is added to the list of notes below with a datetimestamp.
+- if the user deletes a case , then a modal shows asking the user if they are sure they want to delete the case.
+- A flash message appears when the user saves changes or deletes a case.
 
 Page 5 - Profile Page
 
+- User must be logged in to view this page, if not logged in they are redirected to the login screen.
+- This page is read only by default. When user clicks on edit your contact details button , the fields are enabled. 
+- User is able to update contact details as expected.
+- A Confirmation Flash message is appearing when changes are saved.
+
 Page 6 - Login Page
+
+- User is able to login as expected.
+- Flash message appears to confirm user is logged in.
+- Navbar is updated with new items.
+- user is redirected to profile page.
 
 Page 7 - Register Page
 
+- User is able to register as expected.
+- Username, password and Full name are mandatory fields.
+- User is blocked from entering a usernames that is already registered.
+- Passwords less then 8 characters are not accepted.
+- A Confirmation Flash message is appearing when registration is sucessful.
+
 Page 8 - 404 error Page
+
+- When User enters a random URL then a page not found message appears on screen.
+- The link is guiding user back to the homepage.
 
 ### Responsiveness Testing
 
@@ -599,27 +657,74 @@ I tested and improved accessibility with lighthouse and Firefox developer tools.
 
 1. As a user of this database , I want to be able to register myself a login easily.
 
+      ![user story 1](wireframe/user-story1-test-result.png)
+
+      *To register a login all the visitor has to do is complete a simply form below.*
+
+
 2. As a user of this database , I want to be able to easily capture information on any mobile device.
+
+      ![user story 2](wireframe/user-story2-test-result.png)
+
+      *thanks to the Bootstrap framework this web app is fully responsive to screen size*
+
 
 3. As a user of this database , I want to edit case records I submitted.
 
+   ![user story 3](wireframe/user-story3-test-result.png)
+
+  *When viewing a case that is already created by the user will see the edit button, which lets them  make and save changes*
+
+
 4. As a user of this database , I want to be able to delete any information I created.
+
+    ![user story 4](wireframe/user-story4-test-result.png)
+
+    *When viewing a case already created by the user, the delete button is available to access.*
 
 5. As a user of this database , I want to be able to search and filter results easily.
 
+  ![user story 5](wireframe/user-story5-test-result.png)
+
+  *A search box and dropdown menu of filters is located on the cases screen.*
+
 6. As a user of this database , I want to be able to edit my contact details.
+
+    ![user story 6](wireframe/user-story6-test-result.png)
+
+    *there is a form located on the profile page where the user can update their contact details*
 
 7. As a user of this database , I want to be able to upload an image as part of my case.
 
+    ![user story 7](wireframe/user-story7-test-result.png)
+
+    *With the Cloudinary API , the user can upload a picture from their device.*
+
 8. As a user of this database , I want some of the form fields to autocomplete or auto suggest while i type.
+
+    ![user story 8](wireframe/user-story8-test-result.png)
+
+    *Several fields have autocomplete prompts that show up while typing. Fields such as species , location and reasons.*
 
 #### Owner Story
 
 1. As an owner of this database site, I want each case incident to have a unique case number.
 
+    ![owner user story](wireframe/owner-story1-test-result.png)
+
+    *A unique case number is created for each new case, the sequence value is stored in MongoDB and is incremented each time it's accessed.*
+
 2. As an owner of this database site, I want to be able to have a user with superuser read/write access , this user can have read/write access to all records.
 
+    ![owner user story](wireframe/owner-story2-test-result.png)
+
+    *The username admin@wildliferescue.com has superuser access and can edit/delete any case.*
+
 3. As an owner of this database site, I want to be able to search and filter results easily.
+
+    ![owner user story](wireframe/owner-story3-test-result.png)
+
+      *A search box and dropdown menu of filters is located on the cases screen.*
 
 back to [contents](#table-of-contents)
 

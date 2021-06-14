@@ -41,20 +41,20 @@
             </div>
           </nav>
     </header>
-    <section>
-      <!-- flash messages -->
-      <h2 class="visually-hidden">Flash Message Section</h2>
-      {% with messages = get_flashed_messages() %}
-      {% if messages %}
-      {% for message in messages %}
-      <div class="row pt-3 mt-5">
-          <h4 class="text-center alert alert-heron">{{ message }}</h4>
-      </div>
-      {% endfor %}
-      {% endif %}
-      {% endwith %}
-  </section>
-    <main class="minimum-height pt-5 mt-5">
+    <main class="minimum-height pt-2 mt-5">
+      <section>
+        <!-- flash messages -->
+        <h2 class="visually-hidden">Flash Message Section</h2>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+        <div class="row">
+            <h4 class="text-center alert alert-heron">{{ message }}</h4>
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+      </section>
       {% block content %}
       {% endblock %}
     </main>

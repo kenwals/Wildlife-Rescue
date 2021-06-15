@@ -11,9 +11,9 @@
           
           <input type="text" class="form-control maximum-width" name="query" id="query" minlength="3" aria-label="Search query" aria-describedby="query" required>
           <div class="btn-group">
-            <button type="submit" class="btn btn-outline-secondary fw-bold "> Search <i class="bi bi-search pe-3"></i> </button>
+            <button type="submit" class="btn btn-outline-secondary fw-bold "><span class="d-none d-sm-inline">Search </span><i class="bi bi-search pe-1"></i></button>
             <button type="button" class="btn dropdown-toggle dropdown-toggle-split btn-outline-secondary" data-bs-toggle="dropdown" aria-expanded="false">
-              <span class="fw-bold ">Filters <i class="bi bi-funnel"></i></span>
+              <span class="fw-bold "><span class="d-none d-sm-inline">Filters </span><i class="bi bi-funnel"></i></span>
             </button>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item " href="{{ url_for('get_cases', filter='user') }}">My Cases</a></li>

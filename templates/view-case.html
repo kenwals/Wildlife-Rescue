@@ -15,10 +15,9 @@
               <input class="form-control" list="specieslistOptions" id="species" aria-label="Species" name="species" required value="{{ case.species }}" />
               <datalist id="specieslistOptions">
                   {% for species in speciess %}
-                  <option value="{{ species.species }}">
-                      <!-- This option tag syntax might be showing a linting error but the autocomplete displays better this way -->
-                      {% endfor %}
-                  </option>
+                  <option value="{{ species.species }}"></option>
+                  {% endfor %}
+                  
               </datalist>
           </div>
           <div class="mb-3">
@@ -31,10 +30,8 @@
               <input class="form-control" list="reasonOptions" id="reason" aria-label="Reason" name="reason" value="{{ case.reason}}" required />
               <datalist id="reasonOptions">
                   {% for reason in reasons %}
-                  <option value="{{ reason.Reason }}">
-                      <!-- This option tag syntax might be showing a linting error but the autocomplete displays better this way -->
-                      {% endfor %}
-                  </option>
+                  <option value="{{ reason.Reason }}"></option>
+                  {% endfor %}
               </datalist>
           </div>
           <div class="mb-3 maximum-width">

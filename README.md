@@ -68,7 +68,7 @@ A part of taking care of the animals is completing paperwork as the animal's car
 - [Deployment](#deployment)
   * [GitHub](#github)
   * [Gitpod](#gitpod)
-  * [Heruko](#heruko)
+  * [Heroku](#Heroku)
   * [Local Deployment](#local-deployment)
   * [Forking](#forking)
 - [Credits](#credits)
@@ -732,7 +732,7 @@ back to [contents](#table-of-contents)
 
 ## Deployment
 
-For easy deployment on Heruko.com , you will need a GitHub user account and possibly a Gitpod user account. If you wish to make changes to this repository, please follow the GitHub steps first.
+For easy deployment on Heroku.com , you will need a GitHub user account and possibly a Gitpod user account. If you wish to make changes to this repository, please follow the GitHub steps first.
 
 **Please note** this project contains several restricted APIs that will not work outside of this project without you refactoring in your own keys. Please check the current documentation for each API listed below.
 
@@ -752,11 +752,11 @@ The site can be edited easily on a Gitpod online workspace, you first register a
 
 Once you have the extension on your browser, a green Gitpod button will appear beside this repository in GitHub. For best results fork the repository in your personal account before you open it in Gitpod.
 
-### Heruko
+### Heroku
 
-Heruko is a cloud platform that can hosts dynamic web applications.Once you have the completed site in your own repository, you can deploy it to Heruko by the following steps.
+Heroku is a cloud platform that can hosts dynamic web applications. Once you have the completed site in your own repository, you can deploy it to Heroku by the following steps.
 
-1. Before you setup Heruko , you first need to create some files that are necessary for it to run on the Heruko server.
+1. Before you setup Heroku , you first need to create some files that are necessary for it to run on the Heroku server.
 2. Open a terminal window in your IDE on the root folder of the project, run the command below, this will create a new file called procfile.
 
     ``` echo web: python run.py > Procfile ```
@@ -765,7 +765,7 @@ Heruko is a cloud platform that can hosts dynamic web applications.Once you have
 
     ``` pip3 freeze --local > requirements.txt ```
 
-4. Create a [Heruko user account](https://signup.heroku.com/login)
+4. Create a [Heroku user account](https://signup.heroku.com/login)
 5. Click on the New button and choose Create a new app.
 6. Input an app name and choose a region that is closest to you.
 7. To input the necessary environmental variables, simply go to Settings tab, and under Config Vars, Click on Reveal Config Vars

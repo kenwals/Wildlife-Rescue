@@ -103,5 +103,5 @@ span.sr-only{
 
 .footer-list-item {
 	color: #FFFFFD ; /* Black White */
-	padding: 1rem;
+	padding-inline: 1rem;
 }

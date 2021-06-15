@@ -4,26 +4,26 @@
 <h3 class="text-center my-2">Register</h3>
 
 <div class="row">
-<form class="col g-3 text-center" method="POST" action="{{ url_for('register') }}">
-  <div class="form-section mx-auto py-2">
+<form class="col g-3" method="POST" action="{{ url_for('register') }}">
+  <div class="form-section mx-auto p-2">
     <div>
       <label for="inputEmail4" class="form-label">Email / Username</label>
-      <input type="email" class="form-control maximum-width mx-auto " id="inputEmail4" name="username" 
+      <input type="email" class="form-control  mx-auto " id="inputEmail4" name="username" 
       placeholder="Please enter a valid email address" autocomplete="username" required>
     </div>
     <div>
       <label for="inputPassword4" class="form-label">Password</label>
-      <input type="password" class="form-control maximum-width mx-auto " id="inputPassword4" name="password" minlength="8" autocomplete="new-password" required>
+      <input type="password" class="form-control  mx-auto " id="inputPassword4" name="password" minlength="8" autocomplete="new-password" required>
     </div>
     <div>
       <label for="inputFullName" class="form-label">Full Name</label>
-      <input type="text" class="form-control maximum-width mx-auto " id="inputFullName" name="full-name" placeholder="Please enter your full name" required>
+      <input type="text" class="form-control  mx-auto " id="inputFullName" name="full-name" placeholder="Please enter your full name" required>
     </div>
     <div>
       <label for="inputPhoneNumber" class="form-label">Phone Number</label>
-      <input type="text" class="form-control maximum-width mx-auto " id="inputPhoneNumber" name="phone" placeholder="Phone number">
+      <input type="text" class="form-control  mx-auto " id="inputPhoneNumber" name="phone" placeholder="Phone number">
     </div>
-    <div class="text-center">
+    <div>
       <button type="submit" class="btn btn-primary my-3 ">Register</button>
     </div>
   </div>

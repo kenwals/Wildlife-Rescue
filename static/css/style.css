@@ -51,6 +51,11 @@ body{
     max-width: 20rem;
 } /* this is the image thumbnail on the view case screen */
 
+
+.sub-text-login, .sub-text-register{
+    font-size: .85rem ;
+}
+
 /* Pagination section on the cases screen */
 
 .pagination-page-info {

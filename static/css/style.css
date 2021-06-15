@@ -43,10 +43,6 @@ body{
     background-color: #829B38 ; /* Sushi */ 
 }
 
-.minimum-height{
-    min-height: 40rem;
-} /* this ensures footer is alligned on all pages */
-
 .maximum-width{
     max-width: 33rem;
 } /* this keeps sections narrow for smaller screens */

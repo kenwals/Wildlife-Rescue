@@ -1,33 +1,37 @@
 {% extends "base-min.html" %}
 {% block content %}
 <div class="container-lg">
-<h3 class="text-center">Register</h3>
+<h3 class="text-center my-2">Register</h3>
 
-<form class="row g-3 mx-auto text-center" method="POST" action="{{ url_for('register') }}">
-    <div class="col-md-12">
+<div class="row">
+<form class="col g-3 text-center" method="POST" action="{{ url_for('register') }}">
+  <div class="form-section mx-auto py-2">
+    <div>
       <label for="inputEmail4" class="form-label">Email / Username</label>
       <input type="email" class="form-control maximum-width mx-auto " id="inputEmail4" name="username" 
       placeholder="Please enter a valid email address" autocomplete="username" required>
     </div>
-    <div class="col-md-12">
+    <div>
       <label for="inputPassword4" class="form-label">Password</label>
       <input type="password" class="form-control maximum-width mx-auto " id="inputPassword4" name="password" minlength="8" autocomplete="new-password" required>
     </div>
-    <div class="col-md-12">
+    <div>
       <label for="inputFullName" class="form-label">Full Name</label>
       <input type="text" class="form-control maximum-width mx-auto " id="inputFullName" name="full-name" placeholder="Please enter your full name" required>
     </div>
-    <div class="col-md-12">
+    <div>
       <label for="inputPhoneNumber" class="form-label">Phone Number</label>
       <input type="text" class="form-control maximum-width mx-auto " id="inputPhoneNumber" name="phone" placeholder="Phone number">
     </div>
-    <div class="col-md-12 text-center">
+    <div class="text-center">
       <button type="submit" class="btn btn-primary my-3 ">Register</button>
     </div>
+  </div>
 </form>
+</div>
 <div class="row">
     <div class="col-md-12">
-        <p class="text-center sub-text-register">
+        <p class="text-center sub-text-register mt-3">
             Already Registered?
             <a href="{{ url_for('login') }}" >Log In</a>
         </p>

@@ -56,7 +56,7 @@
           <div class="mb-3">
               <label for="image" class="form-label visually-hidden">Image : </label>
               {% if case.image_url %}
-              <a href="{{ case.image_url }}" target="_blank"><img src="{{ case.image_url }}" class="img-thumbnail" id="img-thumbnail" alt="uploaded image for case" /></a>
+              <a href="{{ case.image_url }}" target="_blank" rel="noreferrer"><img src="{{ case.image_url }}" class="img-thumbnail" id="img-thumbnail" alt="uploaded image for case" /></a>
               {% else %}
               <img src="{{ url_for('static', filename='images/blank-image.png') }}" class="img-thumbnail" id="img-thumbnail" alt="blank image" />
               {% endif %}

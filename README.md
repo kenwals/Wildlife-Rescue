@@ -789,7 +789,7 @@ If you prefer working on the repository locally on your preferred Desktop IDE, y
 
 more detailed instructions available [here](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 
-### Forking
+### Contribution and Forking
 
 You may wish to contribute to this website and have your contribution published, if so, you are welcome to follow these steps below.
 

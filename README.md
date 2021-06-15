@@ -553,13 +553,13 @@ Page 8 - 404 error Page
 
 ### Python validator
 
-no issues. results below. Resource:  <https://pep8online.com//>
+No issues. Results below. Resource:  <https://pep8online.com//>
 
 ![pep8 validation results](wireframe/pep8-python-check.png)
 
 ### JavaScript validator
 
-no issues. results below. Resource:  <https://jshint.com/>
+No issues. Results below. Resource:  <https://jshint.com/>
 
 static\js\case-date-cut-off.js
 

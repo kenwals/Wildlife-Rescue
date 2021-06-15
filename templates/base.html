@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-100">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +16,7 @@
 {% endblock %}
 <title>Wildlife Rescue</title>
 </head>
-<body>
+<body class="d-flex flex-column h-100">
     <header id="header" class="fixed-top">
         <nav class="container-lg navbar navbar-expand-lg navbar-light">  <!-- Nav bar section -->
             <div class="container-fluid">
@@ -41,7 +41,7 @@
             </div>
           </nav>
     </header>
-    <main class="pt-2 mt-5">
+    <main class="pt-2 mt-5 flex-shrink-0">
       <section>
         <!-- flash messages -->
         <h2 class="visually-hidden">Flash Message Section</h2>
@@ -58,7 +58,7 @@
       {% block content %}
       {% endblock %}
     </main>
-     <footer id="footer" class="mt-5"> <!--     Footer  section   -->
+     <footer id="footer" class="mt-auto"> <!--     Footer  section   -->
       <div class="container-xxl py-5">
         <div class="row">
           <div class="col-md-4 text-center"> <p class="fw-bold pt-5">Contact Details: </p>

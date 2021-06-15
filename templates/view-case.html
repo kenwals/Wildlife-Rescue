@@ -78,7 +78,7 @@
   <textarea class="form-control " name="notes" id="notes" rows="3" cols="30"></textarea>
     <ul>
     {% for note in notes_array %}
-    <li>  {{ note.note }} ({{ note.date_time }})</li>
+    <li class="case-note"> <span> {{ note.note }}</span> <span class="case-note-subtext"> Added on: ({{ note.date_time }}) </span></li>
     {% endfor %}
     </ul>
   </div>

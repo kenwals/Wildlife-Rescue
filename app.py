@@ -141,7 +141,7 @@ def register():
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if "user" not in session:
-        # only if there isn't a current session["user"]
+        # here user is not currently logged in
         if request.method == "POST":
             # check if username exists in db
             existing_user = mongo.db.users.find_one(

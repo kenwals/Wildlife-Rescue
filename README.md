@@ -684,7 +684,7 @@ Any issues found were resolved.
 
    ![user story 3](wireframe/user-story3-test-result.png)
 
-  *When viewing a case that is already created by the user, an edit button will be visible, which lets them  make and save changes*
+      *When viewing a case that is already created by the user, an edit button will be visible, which lets them  make and save changes*
 
 4. As a user of this database , I want to be able to delete any information I created.
 

@@ -48,7 +48,7 @@ def get_cases():
     page, per_page, offset = get_page_args(page_parameter='page',
                                            per_page_parameter='per_page')
 
-    # graps the keyword from the url that is equal to filter
+    # grabs the keyword from the url that is equal to filter
     filter = request.args.get("filter")
 
     if filter == "pending":
@@ -114,7 +114,7 @@ def search():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
-        # check if username already exists in db
+        # checks if username already exists in db
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 

@@ -385,7 +385,7 @@ Favicons was causing errors with flask in the early stages, but i eventually got
 
 #### Pagination orientation problem
 
-For Pagination , I am using flask-paginate. At the time this project was being developed , this module didn't appear to support Bootstrap5. So I have had to configure it to Bootstrap4. I use CSS to hide a "Current Page" label section that was looking off. A Bootstrap offset container is also used as i was unable to center align the pagination otherwise.
+For Pagination, I am using flask-paginate. At the time this project was being developed, this module didn't appear to support Bootstrap5. So I have had to configure it to Bootstrap4. I use CSS to hide a "Current Page" label section that was looking off. A Bootstrap offset container is also used as i was unable to center align the pagination otherwise.
 
 #### Linting False warning messages that can be ignored
 
@@ -397,7 +397,7 @@ For HTML linting, "Doctype must be declared first" can be ignored as the files a
 
 ![HTML error message ](wireframe/lint-message-1.png)
 
-On New case and view case pages, a tag must be paired warning is showing. Complying with this warning would result in all the dropdown list values appearing in duplicate. So this warning has to be ignored! .
+On New case and view case pages, a tag must be paired warning is showing. Complying with this warning would result in all the dropdown list values appearing in duplicate. So this warning has to be ignored!.
 
 ![HTML error message ](wireframe/lint-message-2.png)
 
@@ -405,7 +405,7 @@ On the view case page, the warning below believes that there is a duplicate #id 
 
 ![HTML error message ](wireframe/lint-message-4.png)
 
-For the Google places API script , an "unused variable" linting error comes up for initAutocomplete . But the function is called by the other Google places script embedded on the page.
+For the Google places API script, an "unused variable" linting error comes up for initAutocomplete. But the function is called by the other Google places script embedded on the page.
 
 #### Case number verses Case _id
 

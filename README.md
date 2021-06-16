@@ -659,40 +659,46 @@ Any issues found were resolved.
 
       ![user story 1](wireframe/user-story1-test-result.png)
 
-      *To register a login all the visitor has to do is complete a simply form below.*
-
+      *To register a login all the visitor has to do is complete a simply form above.*
 
 2. As a user of this database , I want to be able to easily capture information on any mobile device.
 
       ![user story 2](wireframe/user-story2-test-result.png)
 
-      *thanks to the Bootstrap framework this web app is fully responsive to screen size*
-
+      *Thanks to the Bootstrap framework this web app is fully responsive to screen size.*
 
 3. As a user of this database , I want to edit case records I submitted.
 
    ![user story 3](wireframe/user-story3-test-result.png)
 
-  *When viewing a case that is already created by the user will see the edit button, which lets them  make and save changes*
-
+  *When viewing a case that is already created by the user, an edit button will be visible, which lets them  make and save changes*
 
 4. As a user of this database , I want to be able to delete any information I created.
 
     ![user story 4](wireframe/user-story4-test-result.png)
 
-    *When viewing a case already created by the user, the delete button is available to access.*
+    *When viewing a case already created by the user, the delete button is available to access, a confirmation message appears to prevent accidental deletions.*
 
 5. As a user of this database , I want to be able to search and filter results easily.
 
   ![user story 5](wireframe/user-story5-test-result.png)
 
-  *A search box and dropdown menu of filters is located on the cases screen.*
+  *A search box and dropdown menu of filters is located on the cases screen.
+  User can any search query for cases by case no, created by username, Location, reason or species.*
+
+  *The filters are My cases = all cases created by logged in user.*
+
+  *All pending cases = all cases that have a status of pending (this are new cases).*
+
+  *All open cases = all cases that don't have a status of closed.*
+
+  *All cases = all cases.*
 
 6. As a user of this database , I want to be able to edit my contact details.
 
     ![user story 6](wireframe/user-story6-test-result.png)
 
-    *there is a form located on the profile page where the user can update their contact details*
+    *There is a form located on the profile page where the user can update their contact details*
 
 7. As a user of this database , I want to be able to upload an image as part of my case.
 
@@ -706,7 +712,7 @@ Any issues found were resolved.
 
     *Several fields have autocomplete prompts that show up while typing. Fields such as species , location and reasons.*
 
-#### Owner Story
+#### Owner Stories
 
 1. As an owner of this database site, I want each case incident to have a unique case number.
 

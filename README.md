@@ -385,7 +385,7 @@ Favicons was causing errors with flask in the early stages, but i eventually got
 
 #### Pagination orientation problem
 
-For Pagination, I am using flask-paginate. At the time this project was being developed, this module didn't appear to support Bootstrap5. So I have had to configure it to Bootstrap4. I use CSS to hide a "Current Page" label section that was looking off. A Bootstrap offset container is also used as i was unable to center align the pagination otherwise.
+For Pagination, I am using flask-paginate. At the time this project was being developed, this module didn't appear to support Bootstrap5. So I have had to configure it to Bootstrap4. I use CSS to hide a "Current Page" label section that was showing unexpectedly. A Bootstrap offset container is also used as i was unable to center align the pagination links otherwise.
 
 #### Linting False warning messages that can be ignored
 

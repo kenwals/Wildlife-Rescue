@@ -449,14 +449,15 @@ Page 4 - View/Edit Case Page
 - This page is read only by default. If the current user logged in is the case creator or the Admin user then the "Edit this case" button is visible.
 - When the edit the case button is clicked all the fields are enabled and the page heading changes.
 - The status field can only be changed to another value on the dropdown list.
+- If an image is uploaded then a thumbnail appears, when clicked on the image appear enlarged on a new tab.
 - A new note can be saved in the notes section, it is added to the list of notes below with a datetimestamp.
 - if the user deletes a case , then a modal shows asking the user if they are sure they want to delete the case.
-- A flash message appears when the user saves changes or deletes a case.
+- A Confirmation flash message appears when the user saves changes or deletes a case.
 
 Page 5 - Profile Page
 
 - User must be logged in to view this page, if not logged in they are redirected to the login screen.
-- This page is read only by default. When user clicks on edit your contact details button , the fields are enabled. 
+- This page is read only by default. When user clicks on edit your contact details button , the fields are enabled.
 - User is able to update contact details as expected.
 - A Confirmation Flash message is appearing when changes are saved.
 

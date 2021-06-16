@@ -863,7 +863,7 @@ back to [contents](#table-of-contents)
 
 - Images on front page are sourced from [here](https://diygarden.co.uk/wildlife/rescue-guide/) and [here](https://unsplash.com/photos/b027q9eF3Yo)
 
-- Images that are appear in cases are [my own](https://photos.app.goo.gl/gfTHEMqgWUXWp6A6A)
+- Images that are appear in cases are [my own](https://photos.app.goo.gl/gfTHEMqgWUXWp6A6A) or are taken from google image searches.
 
 ### Acknowledgements
 

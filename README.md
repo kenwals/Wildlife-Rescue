@@ -641,6 +641,8 @@ I shared the project on the peer-review channel on slack, and also with friends/
 
 I tested and improved accessibility with lighthouse and Firefox developer tools.
 
+Any issues found were resolved.
+
 ### Compatibility Testing
 
 | Screen size\Browser                          | Chrome | Firefox | Edge |

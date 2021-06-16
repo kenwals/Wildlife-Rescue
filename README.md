@@ -397,10 +397,6 @@ For HTML linting, "Doctype must be declared first" can be ignored as the files a
 
 ![HTML error message ](wireframe/lint-message-1.png)
 
-On New case and view case pages, a tag must be paired warning is showing. Complying with this warning would result in all the dropdown list values appearing in duplicate. So this warning has to be ignored!.
-
-![HTML error message ](wireframe/lint-message-2.png)
-
 On the view case page, the warning below believes that there is a duplicate #id tag on the page , but only one #id tag shows on the rendered page as the image is displayed dynamically based on a If / ELSE statement in the Python / Jinja template code block.
 
 ![HTML error message ](wireframe/lint-message-4.png)

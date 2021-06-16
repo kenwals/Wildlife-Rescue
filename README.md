@@ -828,7 +828,7 @@ back to [contents](#table-of-contents)
 
 - The pagination code is taken and refactored from Code Insitute tutor Stephen's repo [here](https://github.com/smoodydev/flaskpaginate), it had been mentioned on slack by Ed.
 
-- The method i used for making Case and profile pages read only was based on [this article](https://stackoverflow.com/questions/3507958/how-can-i-make-an-entire-html-form-readonly)
+- The method I used for making Case and profile pages read only was based on [this article](https://stackoverflow.com/questions/3507958/how-can-i-make-an-entire-html-form-readonly)
 
 - [Cloudinary Widget info](https://cloudinary.com/documentation/upload_widget#api_events) and [Cloudinary Academy - Introduction for API Users & Developers (One-Hour Course)](https://training.cloudinary.com/).
 

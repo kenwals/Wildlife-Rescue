@@ -602,7 +602,9 @@ The most complex function has a cyclomatic complexity value of 4 while the media
 
 ```
 
-static\js\google-places.js
+static\js\google-places.js 
+
+PLEASE NOTE: initAutocomplete is used in another google places script that's embedded on the same pages this script appears. 
 
 ```js
 

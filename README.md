@@ -4,7 +4,7 @@ This is a [Data Centric web app](https://wildlife-rescue.herokuapp.com/) for a f
 
 These wildlife charities care for animals, who have been involved in accidents or become ill. Sometimes members of the public find these animals and become their carers.
 
-A part of taking care of the animals is completing paperwork as the animal's care may require licensing. This app aims to make the process easier. Members of the public can register incident cases, and the charity or Governing body can then follow up.
+One part of taking care of the animals is completing paperwork as the animal's care may require licensing. This app aims to make the process easier. Members of the public can register incident cases, and the charity or Governing body can then follow up.
 
 ![wildlife rescue page preview image](wireframe/wildlife-rescue-preview-image.png)
 
@@ -123,7 +123,7 @@ The page content is dynamic and composed of Jinja templates which are put togeth
 
 #### Website page line up / Flask templates
 
-- Home/index
+- Home / Index
 
 - Login / Logout
 
@@ -143,7 +143,7 @@ The page content is dynamic and composed of Jinja templates which are put togeth
 
 The above diagram is just a visual guide of the database. The tables do not have forced relationships, as MongoDB is a non relational database. But some values in the cases table can linked to other tables which are used for dropdown lists on the cases input form.
 
-I should mention the user is allowed to input species or reasons that doesn't appear on lists. Other fields are locked in to the list values in the associated tables. But can be over-riden by the MongoDB administrator in the background if needed.
+I should mention the user is allowed to input species or reasons that do not appear on lists. Other fields are locked into the list values in the associated tables. But can be over-ridden by the MongoDB administrator in the background if needed.
 
 ##### cases table
 

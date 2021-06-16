@@ -43,6 +43,22 @@ body{
     background-color: #829B38 ; /* Sushi */ 
 }
 
+/* login and register screen */
+
+.form-section{
+    max-width: 600px;
+    -webkit-box-shadow: 0px 0px 2px rgb(0 0 0 / 70%);
+            box-shadow: 0px 0px 2px rgb(0 0 0 / 70%);
+    border-radius: 6px;
+    background-color: #adce4ba3;
+}
+
+.sub-text-login, .sub-text-register{
+    font-size: .85rem ;
+}
+
+/* view case and add case screens */
+
 .maximum-width{
     max-width: 33rem;
 } /* this keeps sections narrow for smaller screens */
@@ -51,21 +67,14 @@ body{
     max-width: 20rem;
 } /* this is the image thumbnail on the view case screen */
 
-.form-section{
-    max-width: 600px;
-    box-shadow: 0px 0px 2px rgb(0 0 0 / 70%);
-    border-radius: 6px;
-    background-color: #adce4ba3;
-}
-
-
-.sub-text-login, .sub-text-register{
-    font-size: .85rem ;
-}
-
 .case-note{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 .case-note-subtext{
@@ -73,7 +82,6 @@ body{
     font-style: italic;
     color: #8f8f8f;
 }
-
 
 /* Pagination section on the cases screen */
 

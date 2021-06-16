@@ -16,7 +16,7 @@
 {% endblock %}
 <title>Wildlife Rescue</title>
 </head>
-<body>
+<body> <!-- Note this base template does not have a footer, it's used for all pages other than the homepage -->
     <header id="header" class="fixed-top">
         <nav class="container-lg navbar navbar-expand-lg navbar-light">  <!-- Nav bar section -->
             <div class="container-fluid">
@@ -58,7 +58,7 @@
       {% block content %}
       {% endblock %}
     </main>
-    	<!-- No Footer as this template is for login and register pages - -->
+    	<!-- No Footer on this template -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
 </body>

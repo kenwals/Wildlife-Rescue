@@ -1,62 +1,64 @@
-{% extends "base.html" %}
+{% extends "base-min.html" %}
 {% block content %}
 <div class="container-lg">
 <h3 class="my-3 fw-bold">New Case</h3>  <!-- This is the new Case screen -->
 
 <form class="row g-3 mx-auto" method="POST" action="{{ url_for('add_case') }}">
-<div class="col-md-6">
-  <div class="mb-3 maximum-width">
-    <label for="date"  class="form-label">Date :</label>
-    <input type="date" class="form-control fs-4" id="date" name="date" min="2021-04-01" required>
+  <div class="col-md-6">
+      <div class="mb-3 maximum-width">
+          <label for="date" class="form-label">Date :</label>
+          <input type="date" class="form-control" id="date" name="date" min="2021-04-01" required />
+      </div>
+      <div class="mb-3 maximum-width">
+          <label for="species" class="form-label">Species :</label>
+          <input class="form-control" list="specieslistOptions" id="species" aria-label="Species" name="species" required placeholder="Type to search..." />
+          <datalist id="specieslistOptions">
+              {% for species in speciess %}
+              <option value="{{ species.species }}"></option>
+              {% endfor %}
+          </datalist>
+      </div>
+      <div class="mb-3">
+          <label for="location" class="form-label">Location : </label>
+          <!-- Google places API is linked to this input field -->
+          <input type="text" class="form-control" id="location" name="location" placeholder="Please enter the location you found the wildlife animal" required />
+      </div>
+      <div class="mb-3 maximum-width">
+          <label for="reason" class="form-label">Reason for rescue : </label>
+          <input class="form-control" list="reasonOptions" id="reason" aria-label="Reason" name="reason" placeholder="Type to search..." required />
+          <datalist id="reasonOptions">
+              {% for reason in reasons %}
+              <option value="{{ reason.Reason }}"></option>
+              {% endfor %}
+          </datalist>
+      </div>
+      <div class="mb-3 maximum-width">
+          <label for="criminal" class="form-label"> Deemed Criminal : </label>
+          <select class="form-select" id="criminal" aria-label="Deemed criminal" name="criminal">
+              <option value="Yes">Yes</option>
+              <option value="No" selected>No</option>
+          </select>
+      </div>
   </div>
-  <div class="mb-3 maximum-width">
-    <label for="species" class="form-label">Species :</label>
-    <input class="form-control fs-4" list="specieslistOptions" id="species" aria-label="Species" name="species" required placeholder="Type to search...">
-    <datalist id="specieslistOptions">
-      {% for species in speciess %}
-      <option value="{{ species.species }}"> <!-- This option tag syntax might be showing a linting error but the autocomplete displays better this way -->
-      {% endfor %}
-    </datalist>
+  <div class="col-md-6">
+      <div class="mb-3">
+          <img src="{{ url_for('static', filename='images/blank-image.png') }}" class="img-thumbnail" id="img-thumbnail" alt="blank image or case image" />
+          <label for="image" class="form-label visually-hidden">Image : </label>
+          <button id="upload_widget" class="btn btn-outline-secondary mx-3" type="button">Image upload</button>
+          <input type="url" class="form-control visually-hidden" id="image" name="image_url" />
+          <!-- Cloudinary API is linked to this imput field -->
+      </div>
+      <div class="mb-3">
+          <label for="notes" class="form-label">Any notes or comments :</label>
+          <textarea class="form-control" name="notes" id="notes" rows="3" cols="30"></textarea>
+      </div>
+      <div class="mb-3">
+          <button type="submit" class="btn btn-primary">Save <i class="bi bi-save"></i></button>
+      </div>
+      <div class="mb-3">
+          <a href="{{ url_for('get_cases') }}" class="btn btn-link">Go back to all cases</a>
+      </div>
   </div>
-  <div class="mb-3">
-    <label for="location" class="form-label">Location : </label> <!-- Google places API is linked to this input field -->
-    <input type="text" class="form-control fs-4" id="location" name="location" placeholder="Please enter the location you found the wildlife animal" required>
-  </div>
-  <div class="mb-3 maximum-width">
-    <label for="reason" class="form-label">Reason for rescue : </label>
-    <input class="form-control fs-4" list="reasonOptions" id="reason" aria-label="Reason" name="reason" placeholder="Type to search..." required>
-    <datalist id="reasonOptions">
-      {% for reason in reasons %}
-      <option value="{{ reason.Reason }}"> <!-- This option tag syntax might be showing a linting error but the autocomplete displays better this way -->
-      {% endfor %}
-    </datalist>
-  </div>
-  <div class="mb-3 maximum-width">
-    <label for="criminal" class="form-label"> Deemed Criminal : </label> 
-    <select class="form-select fs-4" id="criminal" aria-label="Deemed criminal" name="criminal">
-        <option value="Yes">Yes</option>
-        <option value="No" selected>No</option>
-      </select>
-    </div>
-</div>
-<div class="col-md-6">
-  <div class="mb-3">
-    <img src="{{ url_for('static', filename='images/blank-image.png') }}" class="img-thumbnail" id="img-thumbnail" alt="blank image or case image">
-    <label for="image" class="form-label visually-hidden">Image : </label> 
-    <button id="upload_widget" class="btn btn-outline-secondary fs-4 mx-3" type="button">Image upload</button>
-    <input type="url" class="form-control fs-4 visually-hidden" id="image" name="image_url"> <!-- Cloudinary API is linked to this imput field -->
-  </div>
-  <div class="mb-3">
-  <label for="notes" class="form-label">Any notes or comments :</label>
-  <textarea class="form-control fs-4" name="notes" id="notes" rows="3" cols="30"></textarea>
-  </div>
-  <div class="mb-3">
-    <button type="submit" class="btn btn-primary fs-4">Save <i class="bi bi-save"></i></button>
-  </div>
-  <div class="mb-3">
-    <a href="{{ url_for('get_cases') }}" class="btn btn-link fs-4">Go back to all cases</a>
-  </div>
-</div>
 </form>
 </div>
 <script src="{{ url_for('static', filename='js/case-date-cut-off.js') }}"></script>

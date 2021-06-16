@@ -863,6 +863,8 @@ back to [contents](#table-of-contents)
 
 - Images on front page are sourced from [here](https://diygarden.co.uk/wildlife/rescue-guide/) and [here](https://unsplash.com/photos/b027q9eF3Yo)
 
+- Images that are appear in cases are [my own](https://photos.app.goo.gl/gfTHEMqgWUXWp6A6A)
+
 ### Acknowledgements
 
 - I received inspiration for this project from Feargal Timon at the [wildlife incidents app](https://wildlife-incidents.com/) and Galway swan rescue.

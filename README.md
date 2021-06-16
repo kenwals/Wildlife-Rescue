@@ -13,14 +13,14 @@ One part of taking care of the animals is completing paperwork as the animal's c
 ## Table of contents
 
 - [UX](#ux)
-  * [Scope](#scope)
-    + [User Stories](#user-stories)
+  - [Scope](#scope)
+    - [User Stories](#user-stories)
       - [Visitor goals](#visitor-goals)
       - [Owner goals](#owner-goals)
-  * [Structure](#structure)
-  * [Skeleton](#skeleton)
-    + [Website page line up / Flask templates](#website-page-line-up---flask-templates)
-    + [Non relational Database tables schema](#non-relational-database-tables-schema)
+  - [Structure](#structure)
+  - [Skeleton](#skeleton)
+    - [Website page line up / Flask templates](#website-page-line-up---flask-templates)
+    - [Non relational Database tables schema](#non-relational-database-tables-schema)
       - [cases table](#cases-table)
       - [user details table](#user-details-table)
       - [notes  table](#notes--table)
@@ -28,54 +28,54 @@ One part of taking care of the animals is completing paperwork as the animal's c
       - [species table](#species-table)
       - [status table](#status-table)
       - [casenumbers table](#casenumbers-table)
-    + [Wireframes](#wireframes)
-  * [Surface](#surface)
-    + [Colours](#colours)
-    + [Icons](#icons)
-    + [Images](#images)
-    + [Fonts](#fonts)
+    - [Wireframes](#wireframes)
+  - [Surface](#surface)
+    - [Colours](#colours)
+    - [Icons](#icons)
+    - [Images](#images)
+    - [Fonts](#fonts)
 - [Features](#features)
-  * [Existing Features](#existing-features)
-  * [Features Left to Implement](#features-left-to-implement)
+  - [Existing Features](#existing-features)
+  - [Features Left to Implement](#features-left-to-implement)
 - [Technologies Used](#technologies-used)
-  * [Frontend](#frontend)
-    + [Languages](#languages)
-    + [Libraries and Frameworks](#libraries-and-frameworks)
-    + [Tools](#tools)
+  - [Frontend](#frontend)
+    - [Languages](#languages)
+    - [Libraries and Frameworks](#libraries-and-frameworks)
+    - [Tools](#tools)
 - [Testing](#testing)
-  * [Performance Testing](#performance-testing)
-  * [Bugs encountered on the way](#bugs-encountered-on-the-way)
-    + [Depreciated code warnings](#depreciated-code-warnings)
-    + [Google Places API warning](#google-places-api-warning)
-    + [Favicon handling in Python Flask](#favicon-handling-in-python-flask)
-  * [Known issues](#known-issues)
-    + [Pagination orientation problem](#pagination-orientation-problem)
-    + [Linting False warning messages that can be ignored](#linting-false-warning-messages-that-can-be-ignored)
-    + [Case number verses Case _id](#case-number-verses-case--id)
-  * [Project barriers and solutions](#project-barriers-and-solutions)
-  * [Version control](#version-control)
-  * [Functionality Testing](#functionality-testing)
-  * [Responsiveness Testing](#responsiveness-testing)
-  * [CSS3 validator](#css3-validator)
-  * [HTML5 validator](#html5-validator)
-  * [Python validator](#python-validator)
-  * [JavaScript validator](#javascript-validator)
-  * [Usability Testing](#usability-testing)
-  * [Compatibility Testing](#compatibility-testing)
-  * [Testing User Stories](#testing-user-stories)
-    + [Visitor Stories](#visitor-stories)
-    + [Owner Story](#owner-story)
+  - [Performance Testing](#performance-testing)
+  - [Bugs encountered on the way](#bugs-encountered-on-the-way)
+    - [Depreciated code warnings](#depreciated-code-warnings)
+    - [Google Places API warning](#google-places-api-warning)
+    - [Favicon handling in Python Flask](#favicon-handling-in-python-flask)
+  - [Known issues](#known-issues)
+    - [Pagination orientation problem](#pagination-orientation-problem)
+    - [Linting False warning messages that can be ignored](#linting-false-warning-messages-that-can-be-ignored)
+    - [Case number verses Case _id](#case-number-verses-case--id)
+  - [Project barriers and solutions](#project-barriers-and-solutions)
+  - [Version control](#version-control)
+  - [Functionality Testing](#functionality-testing)
+  - [Responsiveness Testing](#responsiveness-testing)
+  - [CSS3 validator](#css3-validator)
+  - [HTML5 validator](#html5-validator)
+  - [Python validator](#python-validator)
+  - [JavaScript validator](#javascript-validator)
+  - [Usability Testing](#usability-testing)
+  - [Compatibility Testing](#compatibility-testing)
+  - [Testing User Stories](#testing-user-stories)
+    - [Visitor Stories](#visitor-stories)
+    - [Owner Stories](#owner-stories)
 - [Deployment](#deployment)
-  * [GitHub](#github)
-  * [Gitpod](#gitpod)
-  * [Heroku](#Heroku)
-  * [Local Deployment](#local-deployment)
-  * [Forking](#forking)
+  - [GitHub](#github)
+  - [Gitpod](#gitpod)
+  - [Heroku](#heroku)
+  - [Local Deployment](#local-deployment)
+  - [Contribution and Forking](#contribution-and-forking)
 - [Credits](#credits)
-  * [Content](#content)
-  * [Resources](#resources)
-  * [Media](#media)
-  * [Acknowledgements](#acknowledgements)
+  - [Content](#content)
+  - [Resources](#resources)
+  - [Media](#media)
+  - [Acknowledgements](#acknowledgements)
 
 ## UX
 
@@ -229,6 +229,7 @@ Colour are natural and sourced from [a nature photo](https://photos.app.goo.gl/3
 - #829B38 Sushi - a shade variation of Tumeric
 
 ![Colour swatches](wireframe/colour-swatch.png)
+
 #### Icons
 
 Bootstrap is used for icons
@@ -360,6 +361,8 @@ Page 7 - Register Page
 
 ![page 7](wireframe/lighthouse-p7-register.png)
 
+back to [contents](#table-of-contents)
+
 ### Bugs encountered on the way
 
 #### Depreciated code warnings
@@ -380,6 +383,8 @@ For a while during development I had an error message appearing occasionally in 
 #### Favicon handling in Python Flask
 
 Favicons was causing errors with flask in the early stages, but i eventually got them working for all devices by experimenting with the format I think Flask expected it to be.
+
+back to [contents](#table-of-contents)
 
 ### Known issues
 
@@ -406,6 +411,8 @@ For the Google places API script, an "unused variable" linting error comes up fo
 #### Case number verses Case _id
 
 It might be worth flagging that case number and case id are two seperate fields, which could get mixed up when being talked about in coversation with others, as they do have a one to one relationship. The difference is Case number is visible to the user and is in a human friendly format. It also is searchable for the user. case _id is unknown to the user, but the developer needs to use it when working with case and notes creation, editing and deletion.
+
+back to [contents](#table-of-contents)
 
 ### Project barriers and solutions
 
@@ -481,6 +488,8 @@ Page 8 - 404 error Page
 - When User enters a random URL then a page not found message appears on screen.
 - The link is guiding user back to the homepage.
 
+back to [contents](#table-of-contents)
+
 ### Responsiveness Testing
 
 For this test, I got a list of [15 most common screen sizes](https://www.designrush.com/trends/website-dimensions) and used [http://responsivetesttool.com/](http://responsivetesttool.com/) to check responsiveness for each screen size.
@@ -547,6 +556,8 @@ Page 8 - 404 error Page
 
 ![404 error page](wireframe/w3-html-404.png)
 
+back to [contents](#table-of-contents)
+
 ### Python validator
 
 No issues. Results below. Resource:  <https://pep8online.com//>
@@ -602,9 +613,9 @@ The most complex function has a cyclomatic complexity value of 4 while the media
 
 ```
 
-static\js\google-places.js 
+static\js\google-places.js
 
-PLEASE NOTE: initAutocomplete is used in another google places script that's embedded on the same pages this script appears. 
+PLEASE NOTE: initAutocomplete is used in another google places script that's embedded on the same pages this script appears.
 
 ```js
 
@@ -634,6 +645,8 @@ Largest function has 3 statements in it, while the median is 2.5.
 
 The most complex function has a cyclomatic complexity value of 1 while the median is 1.
 ```
+
+back to [contents](#table-of-contents)
 
 ### Usability Testing
 

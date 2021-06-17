@@ -818,7 +818,7 @@ You may wish to contribute to this website and have your contribution published,
 5. Run the project locally and make your required changes.
 6. You can push these changes to your repository.
 7. Once you're finished making changes you can locate the **New Pull Request** button just above the file listing in the original repository (<https://github.com/kenwals/wildlife-rescue>).
-8. Your pull request will be reviewed and if approved, it will be merged into the master version of the Wildlife-rescue repository at a future date.
+8. Your pull request will be reviewed and if approved, it will be merged into the main version of the Wildlife-rescue repository at a future date.
 
 more detailed instructions available [here](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo)
 

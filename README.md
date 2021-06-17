@@ -143,7 +143,7 @@ The page content is dynamic and composed of Jinja templates which are put togeth
 
 The above diagram is just a visual guide of the database. The tables do not have forced relationships, as MongoDB is a non-relational database. But some values in the cases table can be linked to other tables which are used for dropdown lists on the cases input form.
 
-I should mention the user is allowed to input species or reasons that do not appear on lists. Other fields are locked into the list values in the associated tables. But can be over-ridden by the MongoDB administrator in the background if needed.
+I should mention the user is allowed to input species or reasons that do not appear on lists. The Location field has Google places autocomplete, but user is allowed to populate the field with other values if they want. Other fields are locked into the list values in the associated tables. But can be over-ridden by the MongoDB administrator in the background if needed.
 
 ##### cases table
 

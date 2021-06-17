@@ -388,9 +388,9 @@ back to [contents](#table-of-contents)
 
 ### Known issues
 
-#### Pagination orientation problem
+#### Pagination links section orientation problem
 
-For Pagination, I am using flask-paginate. At the time this project was being developed, this module didn't appear to support Bootstrap5. So I have had to configure it to Bootstrap4. I use CSS to hide a "Current Page" label section that was showing unexpectedly. A Bootstrap offset container is also used as I was unable to centre align the pagination links otherwise.
+For Pagination, I am using flask-paginate. At the time this project was being developed, this module didn't appear to support Bootstrap5. So I have had to configure it to Bootstrap4. I use CSS to hide a "Current Page" label section that was showing unexpectedly in the pagination links section which appears at the bottom of the cases page. A Bootstrap offset container is also used as I was unable to centre align the pagination links otherwise. On mobile devices, the pagination links are still a bit unbalanced.
 
 #### Linting False warning messages that can be ignored
 

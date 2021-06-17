@@ -694,18 +694,17 @@ Any issues found were resolved.
 
 5. As a user of this database, I want to be able to search and filter results easily.
 
-  ![user story 5](wireframe/user-story5-test-result.png)
+    ![user story 5](wireframe/user-story5-test-result.png)
 
-  *A search box and dropdown menu of filters are located on the cases screen.
-  User can any search query for cases by case no, created by username, Location, reason or species.*
+    *A search box and dropdown menu of filters are located on the cases screen. User can any search query for cases by case no, created by username, Location, reason or species.*
 
-  *The filters are My cases = all cases created by logged in user.*
+    *The filters are My cases = all cases created by logged in user.*
 
-  *All pending cases = all cases that have a status of pending (these are new cases).*
+    *All pending cases = all cases that have a status of pending (these are new cases).*
 
-  *All open cases = all cases that don't have a status of closed.*
+    *All open cases = all cases that don't have a status of closed.*
 
-  *All cases = all cases.*
+    *All cases = all cases.*
 
 6. As a user of this database, I want to be able to edit my contact details.
 
